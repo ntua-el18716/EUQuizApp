@@ -1,0 +1,31 @@
+import { useSelector } from 'react-redux';
+import QuestionAspect from '../features/questions/QuestionAspect';
+import QuestionNavigation from '../features/questions/QuestionNavigation';
+import Question from '../features/questions/Question';
+import {
+  getCurrentQuestion,
+  getQuestions,
+} from '../features/questions/questionsSlice';
+
+function Questions() {
+  const questions = useSelector(getQuestions);
+  const currentQuestion = useSelector(getCurrentQuestion);
+  const aspect = questions[currentQuestion].questionAspect;
+
+  return (
+    <div className="mx-auto flex w-80 flex-col gap-0 bg-cyan-100 pt-8 md:w-screen md:max-w-[45rem]">
+      <div className="flex w-full flex-row justify-between outline outline-1 outline-cyan-500 ">
+        <QuestionNavigation />
+      </div>
+      <div className="flex justify-between pb-[1px] pt-0.5 md:hidden">
+        <div></div>
+        <QuestionAspect aspect={aspect} />
+      </div>
+      <div className="md:pt-5">
+        <Question question={questions[currentQuestion]} />
+      </div>
+    </div>
+  );
+}
+
+export default Questions;
