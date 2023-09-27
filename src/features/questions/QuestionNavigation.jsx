@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import {
+  getAnswerPerQuestion,
   getCurrentQuestion,
   getNumberOfQuestions,
   goToIndex,
@@ -8,6 +9,7 @@ import {
 function QuestionNavigation() {
   const num = useSelector(getNumberOfQuestions);
   const currentQuestion = useSelector(getCurrentQuestion);
+  const answerPerQuestion = useSelector(getAnswerPerQuestion);
   const dispatch = useDispatch();
 
   let a = new Array(num).fill('');
@@ -18,8 +20,12 @@ function QuestionNavigation() {
         {a.map((_, index) => (
           <button
             key={index}
-            className={`mr-[7.5px] w-[1.4rem] justify-center py-[5px] font-bold text-indigo-50 md:w-[1.7rem] md:py-[8px] ${
-              currentQuestion === index ? 'bg-indigo-600' : 'bg-cyan-500'
+            className={`mr-[7.5px] w-[1.4rem] justify-center py-[5px] font-bold text-indigo-50 hover:bg-gradient-to-r hover:from-sky-600 hover:to-indigo-600 md:w-[1.7rem]  md:py-[8px] ${
+              currentQuestion === index
+                ? 'bg-indigo-600'
+                : currentQuestion > index && answerPerQuestion[index] === 0
+                ? 'bg-slate-500 text-white'
+                : 'bg-cyan-500'
             }`}
             onClick={() => dispatch(goToIndex(index))}
           >

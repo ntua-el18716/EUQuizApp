@@ -1,16 +1,20 @@
 import { useDispatch, useSelector } from 'react-redux';
 import AspectList from '../features/aspects/AspectList';
 import {
-  calculateResults,
-  submitAnswers,
+  calculateImportanceResults,
+  resetResults,
 } from '../features/results/resultsSlice';
 import Button from '../ui/Button';
 import { useNavigate } from 'react-router-dom';
-import { getAnswerPerQuestion } from '../features/questions/questionsSlice';
+import {
+  getAnswerPerQuestion,
+  getAspects,
+} from '../features/questions/questionsSlice';
 
 function AspectsReview() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const aspects = useSelector(getAspects);
   const answerPerQuestion = useSelector(getAnswerPerQuestion);
 
   return (
@@ -21,10 +25,22 @@ function AspectsReview() {
         <AspectList />
       </div>
       <div className="flex justify-between">
-        <Button>Edit Answers</Button>
         <Button
           onClick={() => {
-            dispatch(calculateResults());
+            dispatch(resetResults());
+            navigate('/questions');
+          }}
+        >
+          Edit Answers
+        </Button>
+        <Button
+          onClick={() => {
+            dispatch(
+              calculateImportanceResults({
+                aspects: aspects,
+                answerPerQuestion: answerPerQuestion,
+              }),
+            );
             navigate('/results');
           }}
         >

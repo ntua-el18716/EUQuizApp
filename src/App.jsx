@@ -1,28 +1,28 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Home from "./pages/Home";
-import Results from "./pages/Results";
-import AppLayout from "./ui/AppLayout";
-import Questions from "./pages/Questions";
-import AspectsReview from "./pages/AspectsReview";
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Home from './pages/Home';
+import Results from './pages/Results';
+import AppLayout from './ui/AppLayout';
+import Questions from './pages/Questions';
+import AspectsReview from './pages/AspectsReview';
 
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Home />,
       },
       {
-        path: "/questions",
+        path: '/questions',
         element: <Questions />,
       },
       {
-        path: "/review",
+        path: '/review',
         element: <AspectsReview />,
       },
       {
-        path: "/results",
+        path: '/results',
         element: <Results />,
       },
     ],

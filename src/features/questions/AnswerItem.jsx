@@ -1,6 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
-import { getAnswerOfQuestion, pickAnswer } from "./questionsSlice";
-import { current } from "@reduxjs/toolkit";
+import { useDispatch, useSelector } from 'react-redux';
+import { getAnswerOfQuestion, pickAnswer } from './questionsSlice';
+import { current } from '@reduxjs/toolkit';
 
 function AnswerItem({ answer }) {
   const { answerId, answerText, answerPoints } = answer;
@@ -9,10 +9,10 @@ function AnswerItem({ answer }) {
   const currentQuestion = answerOfQuestion === answerId;
   return (
     <div
-      className={`checkbox-wrapper ${
+      className={`checkbox-wrapper cursor-pointer  hover:bg-gradient-to-l hover:from-indigo-500 hover:via-sky-600 hover:to-indigo-500  hover:font-semibold hover:text-white ${
         currentQuestion
-          ? "bg-indigo-500 text-white font-semibold"
-          : "bg-cyan-200"
+          ? 'bg-indigo-600 font-semibold text-white'
+          : 'bg-cyan-200'
       }`}
     >
       <label className="flex flex-row gap-2">
@@ -23,7 +23,7 @@ function AnswerItem({ answer }) {
           checked={answerOfQuestion === answerId}
           disabled={answerOfQuestion === answerId}
         />
-        <span className="py-2 px-4 w-screen">{answerText} </span>
+        <span className="w-screen px-4 py-2">{answerText} </span>
       </label>
     </div>
   );

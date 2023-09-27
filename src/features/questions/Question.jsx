@@ -10,13 +10,13 @@ import {
   goNext,
   goPrevious,
 } from './questionsSlice';
-import { calculateResults, submitAnswers } from '../results/resultsSlice';
+import { submitAnswers, calculateResults } from '../results/resultsSlice';
 import QuestionAspect from './QuestionAspect';
 
 function Question({ question }) {
   const { questionId, questionTitle, answers, questionAspect } = question;
   const numberOfQuestions = useSelector(getNumberOfQuestions);
-  const answer = useSelector(getAnswerOfQuestion);
+  // const answer = useSelector(getAnswerOfQuestion);
   const dispatch = useDispatch();
   const answerPerQuestion = useSelector(getAnswerPerQuestion);
   const navigate = useNavigate();
@@ -25,7 +25,6 @@ function Question({ question }) {
     <div className="flex flex-col gap-0 bg-cyan-100">
       <div className="flex justify-between bg-cyan-700">
         <QuestionTitle title={questionTitle} />
-        {/* <div className="float-right w-fit justify-items-end"> */}
         <div className="hidden md:block">
           <QuestionAspect aspect={questionAspect} />
         </div>
@@ -42,13 +41,14 @@ function Question({ question }) {
       <div className="flex justify-between px-6 pb-3 pt-6">
         <Button onClick={() => dispatch(goPrevious())}>BACK</Button>
         {questionId !== numberOfQuestions ? (
-          <Button disabled={answer === 0} onClick={() => dispatch(goNext())}>
-            NEXT
-          </Button>
+          <Button onClick={() => dispatch(goNext())}>NEXT</Button>
         ) : (
           <Button
+            disabled={answerPerQuestion.includes(0)}
             onClick={() => {
+              console.log('sry');
               dispatch(submitAnswers(answerPerQuestion));
+              dispatch(calculateResults());
               navigate('/review');
             }}
           >
