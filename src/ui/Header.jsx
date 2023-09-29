@@ -1,7 +1,7 @@
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import { resetQuestions } from "../features/questions/questionsSlice";
-import { resetResults } from "../features/results/resultsSlice";
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { resetQuestions } from '../features/questions/questionsSlice';
+import { resetResults } from '../features/results/resultsSlice';
 
 function Header() {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ function Header() {
 
     <Link
       to="/"
-      className="flex items-center justify-left gap-5 bg-indigo-700 uppercase px-6 py-4 text-white text-xl font-bold"
+      className="justify-left flex items-center gap-5 bg-indigo-700 px-6 py-4 text-xl font-bold uppercase text-white"
       onClick={handleReset}
     >
       <h1>EU ELECTIONS 2023 </h1>

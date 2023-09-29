@@ -12,7 +12,7 @@ function ResultsPresentation({ resultsPerParty }) {
 
   return (
     <div>
-      <ul className="flex flex-col gap-6">
+      <ul id="print" className="flex flex-col gap-6">
         {results.map((party) => (
           <PartyResult party={party[0]} result={party[1]} key={party[0]} />
         ))}
