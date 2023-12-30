@@ -1,0 +1,430 @@
+{
+  "questions": [
+    {
+      "questionId": 1,
+      "questionTitle": "Ποια βάση λύσης υποστηρίζετε για το Κυπριακό;",
+      "questionAspect": "Κυπριακό Πρόβλημα",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Διζωνική Δικοινοτική Ομοσπονδία",
+          "answerPoints": [
+            { "party": "disy", "value": 1 },
+            { "party": "akel", "value": 1 },
+            { "party": "diko", "value": 1 },
+            { "party": "depa", "value": 1 }
+          ]
+        },
+        {
+          "answerId": 2,
+          "answerText": "Ενιαίο κράτος",
+          "answerPoints": [
+            { "party": "edek", "value": 1 },
+            { "party": "elam", "value": 1 }
+          ]
+        },
+        {
+          "answerId": 3,
+          "answerText": "Δύο κράτη",
+          "answerPoints": []
+        },
+        {
+          "answerId": 4,
+          "answerText": "Διπλή ένωση",
+          "answerPoints": []
+        },
+        {
+          "answerId": 5,
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 2,
+      "questionTitle": "Τι πιστεύετε για τη διαδικασία ολοκλήρωσης της Ευρωπαϊκής Ένωσης;",
+      "questionAspect": "Εξωτερική Πολιτική",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Η ΕΕ πρέπει να εξελιχθεί σε Ευρωπαϊκή Ομοσπονδία",
+          "answerPoints": [
+            { "party": "disy", "value": 1 },
+            { "party": "depa", "value": 1 }
+          ]
+        },
+        {
+          "answerId": 2,
+          "answerText": "Η ΕΕ πρέπει να συνεχίσει τη διαδικασία ολοκλήρωσης",
+          "answerPoints": []
+        },
+        {
+          "answerId": 3,
+          "answerText": "Η ΕΕ πρέπει να παραμείνει όπως είναι",
+          "answerPoints": [{ "party": "akel", "value": 1 }]
+        },
+        {
+          "answerId": 4,
+          "answerText": "Τα εθνικά κράτη πρέπει να αποκτήσουν ξανά κυριαρχία",
+          "answerPoints": [
+            { "party": "disy", "value": 1 },
+            { "party": "elam", "value": 1 },
+            { "party": "edek", "value": 1 }
+          ]
+        },
+        {
+          "answerId": 5,
+          "answerText": "Δεν γνωρίζω",
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 3,
+      "questionTitle": "Αποδέχεστε την εκ περιτροπής προεδρία στο πλαίσιο μιας λύσης για το Κυπριακό;",
+      "questionAspect": "Κυπριακό Πρόβλημα",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Ναι, η εκ περιτροπής προεδρία μπορεί να γίνει αποδεκτή ως μέρος μιας συνολικά αποδεκτής λύσης",
+          "answerPoints": [
+            { "party": "disy", "value": 1 },
+            { "party": "akel", "value": 1 },
+            { "party": "depa", "value": 1 }
+          ]
+        },
+        {
+          "answerId": 2,
+          "answerText": "Όχι, καμιά μορφή εκ περιτροπής προεδρίας δεν μπορεί να γίνει  αποδεκτή",
+          "answerPoints": [
+            { "party": "edek", "value": 1 },
+            { "party": "elam", "value": 1 },
+            { "party": "greens", "value": 1 }
+          ]
+        },
+        {
+          "answerId": 3,
+          "answerText": "Ναι μόνο εάν είναι με κοινό ψηφοδέλτιο και ενιαία εκλογική βάση",
+          "answerPoints": [{ "party": "diko", "value": 1 }]
+        },
+        {
+          "answerId": 4,
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 4,
+      "questionTitle": "Ποια στάση πρέπει να τηρήσει η Κύπρος στο Μεσανατολίτικο Πρόβλημα",
+      "questionAspect": "Economy",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Πρέπει να υποστηρίξει την άμεση κατάπαυση του πυρός στην Γάζα και τον τερματισμό της κατοχής",
+          "answerPoints": [{ "party": "disy", "value": 1 }]
+        },
+        {
+          "answerId": 2,
+          "answerText": "Πρέπει να υπερασπιστεί το δικαίμα του Ισραήλ στην άμυνα και τον συνεχισμό της επιχείρησης στην Γάζα",
+          "answerPoints": []
+        },
+        {
+          "answerId": 3,
+          "answerText": "Πρέπει να τηρήσει στάση ουδερότητας",
+          "answerPoints": []
+        },
+        {
+          "answerId": 4,
+          "answerText": "Πρεπει να υποστηρίξει την",
+          "answerPoints": []
+        },
+        {
+          "answerId": 5,
+          "answerText": "Δεν ξέρω / Δεν απαντώ",
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 5,
+      "questionTitle": "Ποια στάση πρέπει να τηρήσει η Κύπρος εντός ΕΕ για το Ουρκανικό",
+      "questionAspect": "Ευρωπαϊκή Ένωση",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Πρέπει να συνεχίσει να υποστηρίζει την επιβολή κυρώσεων στην Ρωσία",
+          "answerPoints": []
+        },
+        {
+          "answerId": 2,
+          "answerText": "Πρέπει να μπλοκάρει ",
+          "answerPoints": []
+        },
+        {
+          "answerId": 3,
+          "answerText": "Και στα δύο",
+          "answerPoints": [{ "party": "disy", "value": 1 }]
+        },
+        {
+          "answerId": 4,
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 6,
+      "questionTitle": "Που πρέπει να επικεντρωθούν οι προσπάθειες της Κυπριακής Δημοκρατίας σε σχέση με την Τουρκία",
+      "questionAspect": "Ευρωπαϊκή Ένωση",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Στην επιβολή κυρώσεων κατά της Τουρκίας",
+          "answerPoints": []
+        },
+        {
+          "answerId": 2,
+          "answerText": "Στην εφαρμογή ουσιαστικών Μέτρων Οικοδόμησης Εμπιστοσύνης",
+          "answerPoints": []
+        },
+        {
+          "answerId": 3,
+          "answerText": "Και στα δύο",
+          "answerPoints": [{ "party": "disy", "value": 1 }]
+        },
+        {
+          "answerId": 4,
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 7,
+      "questionTitle": "Ποια στρατηγική πρέπει να ακολουθηθεί για την επίτευξη λύσης του Κυπριακού",
+      "questionAspect": "Κυπριακό Πρόβλημα",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Επικέντρωση στην επανέναρξη των συνομιλιών απο το σημείο που διακόπηκαν στο Κραν Μοντανα αποδεχόμενοι το Πλαίσιο Γκουτέρες ως έχει",
+          "answerPoints": []
+        },
+        {
+          "answerId": 2,
+          "answerText": "Επικέντρωση στην επανέναρξη των συνομιλιών χωρίς όμως να αποδεκτούμε τις εώς τώρα απαράδεκτες συγκλίσεις",
+          "answerPoints": [{ "party": "disy", "value": 1 }]
+        },
+        {
+          "answerId": 3,
+          "answerText": "Επανατοποθέτηση του κυπριακού ως πρόβλημα εισβολής και κατοχής",
+          "answerPoints": []
+        },
+        {
+          "answerId": 4,
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "questionTitle": "Ποια είναι η θέση σας για τις αμβλώσεις",
+      "questionAspect": "Κοινωνικά Θέματα",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Το δικαίωμα της γυναίκας να επιλέγει για το σώμα της πρέπει να διαφυλαχθεί.",
+          "answerPoints": []
+        },
+        {
+          "answerId": 2,
+          "answerText": "Μόνο σε περιπτώσεις βιασμού, ασθένειας του εμβρύου ή κίνδύνου της υγείας της μητέρας",
+          "answerPoints": [{ "party": "disy", "value": 1 }]
+        },
+        {
+          "answerId": 3,
+          "answerText": "Πρέπει να απαγορευθούν. Η ζωή του εμβρύου πρέπει να διαφυλαχθεί",
+          "answerPoints": []
+        },
+        {
+          "answerId": 4,
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "questionTitle": "Ευθανασία",
+      "questionAspect": "Κοινωνικά Θέματα",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Το δικαίωμα της γυναίκας να επιλέγει για το σώμα της πρέπει να διαφυλαχθεί.",
+          "answerPoints": []
+        },
+        {
+          "answerId": 2,
+          "answerText": "Επικέντρωση στην επανέναρξη των συνομιλιών χωρίς όμως να αποδεκτούμε τις εώς τώρα απαράδεκτες συγκλίσεις",
+          "answerPoints": [{ "party": "disy", "value": 1 }]
+        },
+        {
+          "answerId": 3,
+          "answerText": "Επανατοποθέτηση του κυπριακού ως πρόβλημα εισβολής και κατοχής",
+          "answerPoints": []
+        },
+        {
+          "answerId": 4,
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "questionTitle": "Ιδιωτικοποιησεις",
+      "questionAspect": "Οικονομία",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Το δικαίωμα της γυναίκας να επιλέγει για το σώμα της πρέπει να διαφυλαχθεί.",
+          "answerPoints": []
+        },
+        {
+          "answerId": 2,
+          "answerText": "Επικέντρωση στην επανέναρξη των συνομιλιών χωρίς όμως να αποδεκτούμε τις εώς τώρα απαράδεκτες συγκλίσεις",
+          "answerPoints": [{ "party": "disy", "value": 1 }]
+        },
+        {
+          "answerId": 3,
+          "answerText": "Επανατοποθέτηση του κυπριακού ως πρόβλημα εισβολής και κατοχής",
+          "answerPoints": []
+        },
+        {
+          "answerId": 4,
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "questionTitle": "Οριζόντια Μετρα στηριξης",
+      "questionAspect": "Οικονομία",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Το δικαίωμα της γυναίκας να επιλέγει για το σώμα της πρέπει να διαφυλαχθεί.",
+          "answerPoints": []
+        },
+        {
+          "answerId": 2,
+          "answerText": "Επικέντρωση στην επανέναρξη των συνομιλιών χωρίς όμως να αποδεκτούμε τις εώς τώρα απαράδεκτες συγκλίσεις",
+          "answerPoints": [{ "party": "disy", "value": 1 }]
+        },
+        {
+          "answerId": 3,
+          "answerText": "Επανατοποθέτηση του κυπριακού ως πρόβλημα εισβολής και κατοχής",
+          "answerPoints": []
+        },
+        {
+          "answerId": 4,
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "questionTitle": "Νομιμοποίηση της Κάνναβης",
+      "questionAspect": "Οικονομία",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Ναι, για ιατρική και ψυχαγωγική χρήση.",
+          "answerPoints": []
+        },
+        {
+          "answerId": 2,
+          "answerText": "Ναι αλλά μόνο για αυστηρά ιατρική χρήση",
+          "answerPoints": [{ "party": "disy", "value": 1 }]
+        },
+        {
+          "answerId": 3,
+          "answerText": "Επανατοποθέτηση του κυπριακού ως πρόβλημα εισβολής και κατοχής",
+          "answerPoints": []
+        },
+        {
+          "answerId": 4,
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "questionTitle": "Σεξουαλική Διαπαιδαγώγιση",
+      "questionAspect": "Παιδεία",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Ναι, για ιατρική και ψυχαγωγική χρήση.",
+          "answerPoints": []
+        },
+        {
+          "answerId": 2,
+          "answerText": "Ναι αλλά μόνο για αυστηρά ιατρική χρήση",
+          "answerPoints": [{ "party": "disy", "value": 1 }]
+        },
+        {
+          "answerId": 3,
+          "answerText": "Επανατοποθέτηση του κυπριακού ως πρόβλημα εισβολής και κατοχής",
+          "answerPoints": []
+        },
+        {
+          "answerId": 4,
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
+          "answerPoints": []
+        }
+      ]
+    }
+  ],
+  "aspects": [
+    {
+      "aspectId": 1,
+      "value": "Κυπριακό Πρόβλημα",
+      "importance": 1
+    },
+    {
+      "aspectId": 2,
+      "value": "Ευρωπαϊκή Ένωση",
+      "importance": 1
+    },
+    {
+      "aspectId": 3,
+      "value": "Εξωτερική Πολιτική",
+      "importance": 1
+    },
+    {
+      "aspectId": 4,
+      "value": "Οικονομία",
+      "importance": 1
+    },
+    {
+      "aspectId": 5,
+      "value": "Μεταναστευτικό",
+      "importance": 1
+    },
+    {
+      "aspectId": 6,
+      "value": "Περιβάλλον",
+      "importance": 1
+    },
+    {
+      "aspectId": 7,
+      "value": "Κοινωνικά Θέματα",
+      "importance": 1
+    }
+  ]
+}

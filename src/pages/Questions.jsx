@@ -1,11 +1,11 @@
-import { useSelector } from 'react-redux';
-import QuestionAspect from '../features/questions/QuestionAspect';
-import QuestionNavigation from '../features/questions/QuestionNavigation';
-import Question from '../features/questions/Question';
+import { useSelector } from "react-redux";
+import QuestionAspect from "../features/questions/QuestionAspect";
+import QuestionNavigation from "../features/questions/QuestionNavigation";
+import Question from "../features/questions/Question";
 import {
   getCurrentQuestion,
   getQuestions,
-} from '../features/questions/questionsSlice';
+} from "../features/questions/questionsSlice";
 
 function Questions() {
   const questions = useSelector(getQuestions);

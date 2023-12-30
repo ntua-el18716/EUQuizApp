@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
 const Bar = styled.div`
   width: ${(props) => props.percentage};
@@ -7,9 +7,10 @@ const Bar = styled.div`
 `;
 
 function ResultBar({ result }) {
-  let result2 = Math.round(result) + '%';
+  let result2 = Math.round(result) + "%";
   return (
-    <div className="h-7 w-[450px] bg-indigo-100 outline outline-indigo-600">
+    // <div className="h-7 w-[450px] bg-indigo-100 outline outline-indigo-600">
+    <div className="h-7 w-[450px] bg-indigo-100 outline outline-2 outline-indigo-600">
       <Bar percentage={result2}></Bar>
     </div>
   );

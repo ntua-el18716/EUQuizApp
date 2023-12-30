@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { questions as questionsArray } from '../../data/questions';
+import { createSlice } from "@reduxjs/toolkit";
+import { questions as questionsArray } from "../../data/questions3";
 
 export const NUMBER_OF_QUESTIONS = questionsArray.length;
 
@@ -20,13 +20,13 @@ const answerPerQuestion = Array(NUMBER_OF_QUESTIONS).fill(0);
 // }
 
 const aspectsArr = [
-  { aspectId: 1, value: 'Cyprus Problem', importance: 1, questions: [] },
-  { aspectId: 2, value: 'European Union', importance: 1, questions: [] },
-  { aspectId: 3, value: 'Foreign Policy', importance: 1, questions: [] },
-  { aspectId: 4, value: 'Economy', importance: 1, questions: [] },
-  { aspectId: 5, value: 'Immigration', importance: 1, questions: [] },
-  { aspectId: 6, value: 'Green Politics', importance: 1, questions: [] },
-  { aspectId: 7, value: 'Social Issues', importance: 1, questions: [] },
+  { aspectId: 1, value: "Cyprus Problem", importance: 1, questions: [] },
+  { aspectId: 2, value: "European Union", importance: 1, questions: [] },
+  { aspectId: 3, value: "Foreign Policy", importance: 1, questions: [] },
+  { aspectId: 4, value: "Economy", importance: 1, questions: [] },
+  { aspectId: 5, value: "Immigration", importance: 1, questions: [] },
+  { aspectId: 6, value: "Green Politics", importance: 1, questions: [] },
+  { aspectId: 7, value: "Social Issues", importance: 1, questions: [] },
 ];
 
 const initialState = {
@@ -39,7 +39,7 @@ const initialState = {
 };
 
 const questionsSlice = createSlice({
-  name: 'questions',
+  name: "questions",
   initialState,
   reducers: {
     goNext(state) {
