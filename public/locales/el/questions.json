@@ -35,7 +35,7 @@
         },
         {
           "answerId": 5,
-          "answerText": "Δεν ξέρω / Δεν απαντώ",
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
           "answerPoints": []
         }
       ]
@@ -74,7 +74,7 @@
         },
         {
           "answerId": 5,
-          "answerText": "Δεν ξέρω",
+          "answerText": "Δεν γνωρίζω",
           "answerPoints": []
         }
       ]
@@ -109,7 +109,7 @@
         },
         {
           "answerId": 4,
-          "answerText": "Δεν ξέρω / Δεν απαντώ",
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
           "answerPoints": []
         }
       ]
@@ -168,7 +168,7 @@
         },
         {
           "answerId": 4,
-          "answerText": "Δεν ξέρω / Δεν απαντώ",
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
           "answerPoints": []
         }
       ]
@@ -195,7 +195,7 @@
         },
         {
           "answerId": 4,
-          "answerText": "Δεν ξέρω / Δεν απαντώ",
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
           "answerPoints": []
         }
       ]
@@ -222,7 +222,7 @@
         },
         {
           "answerId": 4,
-          "answerText": "Δεν ξέρω / Δεν απαντώ",
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
           "answerPoints": []
         }
       ]
@@ -249,91 +249,96 @@
         },
         {
           "answerId": 4,
-          "answerText": "Δεν ξέρω / Δεν απαντώ",
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
           "answerPoints": []
         }
       ]
     },
     {
-      "questionId": 9,
-      "questionTitle": "Πρέπει να νομιμοποιηθούν οι γάμοι και οι υιοθεσίες παιδιών από ομόφυλα ζευγάρια;",
+      "questionId": 8,
+      "questionTitle": "Ευθανασία",
       "questionAspect": "Κοινωνικά Θέματα",
       "answers": [
         {
           "answerId": 1,
-          "answerText": "Ναι, πρέπει να νομιμοποιηθούν και τα δύο, τα ομοόφυλα ζευγάρια πρέπει να έχουν ίσα δικαιώματα με τα ετεροφυλόφυλα",
+          "answerText": "Το δικαίωμα της γυναίκας να επιλέγει για το σώμα της πρέπει να διαφυλαχθεί.",
           "answerPoints": []
         },
         {
           "answerId": 2,
-          "answerText": "Πρέπει να νομιμοποιηθεί ο γάμος, όχι όμως η υιοθεσία παιδιών",
+          "answerText": "Επικέντρωση στην επανέναρξη των συνομιλιών χωρίς όμως να αποδεκτούμε τις εώς τώρα απαράδεκτες συγκλίσεις",
           "answerPoints": [{ "party": "disy", "value": 1 }]
         },
         {
           "answerId": 3,
-          "answerText": "Όχι και στα δύο, πρέπει να διαφυλαχθεί ο θεσμός της οικογένειας",
+          "answerText": "Επανατοποθέτηση του κυπριακού ως πρόβλημα εισβολής και κατοχής",
           "answerPoints": []
         },
         {
           "answerId": 4,
-          "answerText": "Δεν ξέρω / Δεν απαντώ",
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
           "answerPoints": []
         }
       ]
     },
     {
-      "questionId": 10,
-      "questionTitle": "Υποστηρίζεται την δημιουργία Ευρωπαικού Στρατού",
-      "questionAspect": "Ευρωπαϊκή Ένωση",
+      "questionId": 8,
+      "questionTitle": "Ιδιωτικοποιησεις",
+      "questionAspect": "Οικονομία",
       "answers": [
         {
           "answerId": 1,
-          "answerText": "Ναι",
+          "answerText": "Το δικαίωμα της γυναίκας να επιλέγει για το σώμα της πρέπει να διαφυλαχθεί.",
           "answerPoints": []
         },
         {
           "answerId": 2,
-          "answerText": "Όχι",
+          "answerText": "Επικέντρωση στην επανέναρξη των συνομιλιών χωρίς όμως να αποδεκτούμε τις εώς τώρα απαράδεκτες συγκλίσεις",
           "answerPoints": [{ "party": "disy", "value": 1 }]
         },
         {
           "answerId": 3,
-          "answerText": "Δεν ξέρω / Δεν απαντώ",
-          "answerPoints": []
-        }
-      ]
-    },
-    {
-      "questionId": 11,
-      "questionTitle": "Ποια είναι η άποψη σας όσον αφορά την ένταξη της Κύπρου στον 'Συνεταιρισμό για την Ειρήνη' και το ΝΑΤΟ",
-      "questionAspect": "Εξωτερική Πολιτική",
-      "answers": [
-        {
-          "answerId": 1,
-          "answerText": "Η ΚΔ πρέπει να υποβάλει αίτηση ένταξης στον ΣγτΕ και στόχος για το μέλλον πρέπει να είναι και η ένταξη στο ΝΑΤΟ.",
-          "answerPoints": []
-        },
-        {
-          "answerId": 2,
-          "answerText": "Η ΚΔ πρέπει να ενταχθεί στον ΣγτΕ, όχι όμως στο ΝΑΤΟ",
-          "answerPoints": [{ "party": "disy", "value": 1 }]
-        },
-        {
-          "answerId": 3,
-          "answerText": "Η ΚΔ δεν πρέπει να ενταχθεί ούτε στον ΣγτΕ ούτε φυσικά και στο ΝΑΤΟ",
+          "answerText": "Επανατοποθέτηση του κυπριακού ως πρόβλημα εισβολής και κατοχής",
           "answerPoints": []
         },
         {
           "answerId": 4,
-          "answerText": "Δεν ξέρω / Δεν απαντώ",
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
           "answerPoints": []
         }
       ]
     },
     {
-      "questionId": 12,
-      "questionTitle": "Πρέπει να υπάρξει νομιμοποίηση της Κάνναβης",
-      "questionAspect": "Κοινωνικά Θέματα",
+      "questionId": 8,
+      "questionTitle": "Οριζόντια Μετρα στηριξης",
+      "questionAspect": "Οικονομία",
+      "answers": [
+        {
+          "answerId": 1,
+          "answerText": "Το δικαίωμα της γυναίκας να επιλέγει για το σώμα της πρέπει να διαφυλαχθεί.",
+          "answerPoints": []
+        },
+        {
+          "answerId": 2,
+          "answerText": "Επικέντρωση στην επανέναρξη των συνομιλιών χωρίς όμως να αποδεκτούμε τις εώς τώρα απαράδεκτες συγκλίσεις",
+          "answerPoints": [{ "party": "disy", "value": 1 }]
+        },
+        {
+          "answerId": 3,
+          "answerText": "Επανατοποθέτηση του κυπριακού ως πρόβλημα εισβολής και κατοχής",
+          "answerPoints": []
+        },
+        {
+          "answerId": 4,
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "questionTitle": "Νομιμοποίηση της Κάνναβης",
+      "questionAspect": "Οικονομία",
       "answers": [
         {
           "answerId": 1,
@@ -342,44 +347,44 @@
         },
         {
           "answerId": 2,
-          "answerText": "Ναι, αλλά μόνο για αυστηρά ιατρική χρήση",
+          "answerText": "Ναι αλλά μόνο για αυστηρά ιατρική χρήση",
           "answerPoints": [{ "party": "disy", "value": 1 }]
         },
         {
           "answerId": 3,
-          "answerText": "Όχι, η αποποινικοποίηση θα οδηγήσει σε σοβαρά προβλήματα",
+          "answerText": "Επανατοποθέτηση του κυπριακού ως πρόβλημα εισβολής και κατοχής",
           "answerPoints": []
         },
         {
           "answerId": 4,
-          "answerText": "Δεν ξέρω / Δεν απαντώ",
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
           "answerPoints": []
         }
       ]
     },
     {
-      "questionId": 13,
-      "questionTitle": "Ποια είναι η άποψη σας για τον υποθαλάσσιο αγωγό φυσικού αερίου East Med",
-      "questionAspect": "Ενέργεια και Περιβάλλον",
+      "questionId": 8,
+      "questionTitle": "Σεξουαλική Διαπαιδαγώγιση",
+      "questionAspect": "Παιδεία",
       "answers": [
         {
           "answerId": 1,
-          "answerText": "Πρέπει να συνεχιστούν οι προσπάθειες για δημιουργία του East Med ώστε να καταστεί η Κύπρος ενεργειακός κόμβος της Μεσογείου",
+          "answerText": "Ναι, για ιατρική και ψυχαγωγική χρήση.",
           "answerPoints": []
         },
         {
           "answerId": 2,
-          "answerText": "Η δημιουργία του αγωγού θα ήταν ωφέλιμη για την Κύπρο, όμως δεν αποτελεί ρεαλιστική επιλογή",
+          "answerText": "Ναι αλλά μόνο για αυστηρά ιατρική χρήση",
           "answerPoints": [{ "party": "disy", "value": 1 }]
         },
         {
           "answerId": 3,
-          "answerText": "Η εξόρυξη ορυκτών καυσίμων ανήκει στο παρελθόν. Πρέπει να επικεντρωθούμε στην ανάπτυξη ΑΠΕ",
+          "answerText": "Επανατοποθέτηση του κυπριακού ως πρόβλημα εισβολής και κατοχής",
           "answerPoints": []
         },
         {
           "answerId": 4,
-          "answerText": "Δεν ξέρω / Δεν απαντώ",
+          "answerText": "Δεν γνωρίζω / Δεν απαντώ",
           "answerPoints": []
         }
       ]
