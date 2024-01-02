@@ -27,35 +27,21 @@ function Header() {
         className="justify-left flex items-center gap-5 bg-indigo-700 px-6 py-4 text-xl font-bold uppercase text-white"
         onClick={handleReset}
       >
-        <h1>EU ELECTIONS 2023 </h1>
+        <h1 className="md:hidden">EU 2023 </h1>
+        <h1 className="hidden md:block">EU ELECTIONS 2023 </h1>
+
         <span className="font-size-md">🇪🇺</span>
       </Link>
-      {/* <div className="">
-        {Object.keys(lngs).map((lng) => (
-          <button
-            key={lng}
-            className={`bg-indigo-6s00 via-cyan-500 px-4 py-3 font-bold text-cyan-50 hover:bg-gradient-to-r hover:from-sky-600 hover:to-indigo-600  disabled:cursor-not-allowed ${
-              i18n.language === lng ? "bg-sky-600" : ""
-            }`}
-            type="submit"
-            onClick={() => {
-              i18n.changeLanguage(lng);
-              // console.log(i18n.language);
-            }}
-          >
-            {lngs[lng].nativeName}
-          </button>
-        ))}
-      </div> */}
+
       <div className="pr-3 pt-1 items-center">
         <select
           value={i18n.language}
           onChange={(e) => i18n.changeLanguage(e.target.value)}
-          className="bg-sky-600 text-cyan-50 font-semibold hover:bg-gradient-to-l hover:from-indigo-700 hover:via-sky-700 hover:to-indigo-500 py-3 px-4 justify-center border border-indigo-500 rounded-lg focus:outline-none focus:shadow-outline-indigo"
+          className="bg-sky-600 text-cyan-50 font-bold hover:bg-gradient-to-l hover:from-indigo-700 hover:via-sky-700 hover:to-indigo-500 py-3 px-4 justify-center border border-indigo-500 rounded-lg focus:outline-none focus:shadow-outline-indigo uppercase "
         >
           {Object.keys(lngs).map((lng) => (
             <option key={lng} value={lng}>
-              {lngs[lng].nativeName}
+              {lng}
             </option>
           ))}
         </select>

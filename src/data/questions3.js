@@ -11,12 +11,12 @@ export const parties = {
 export const questions = [
   {
     questionId: 1,
-    questionTitle: "Ποια βάση λύσης υποστηρίζετε για το Κυπριακό;",
-    questionAspect: "Κυπριακό Πρόβλημα",
+    questionTitle: "What solution model do you support?",
+    questionAspect: "Cyprus Problem",
     answers: [
       {
         answerId: 1,
-        answerText: "Διζωνική Δικοινοτική Ομοσπονδία",
+        answerText: "Bizonal Bicommunal Federation",
         answerPoints: [
           { party: "disy", value: 1 },
           { party: "akel", value: 1 },
@@ -26,7 +26,7 @@ export const questions = [
       },
       {
         answerId: 2,
-        answerText: "Ενιαίο κράτος",
+        answerText: "Unitary state",
         answerPoints: [
           { party: "edek", value: 1 },
           { party: "elam", value: 1 },
@@ -34,17 +34,17 @@ export const questions = [
       },
       {
         answerId: 3,
-        answerText: "Δύο κράτη",
+        answerText: "Two-states",
         answerPoints: [],
       },
       {
         answerId: 4,
-        answerText: "Διπλή ένωση",
+        answerText: "Double union",
         answerPoints: [],
       },
       {
         answerId: 5,
-        answerText: "Δεν ξέρω / Δεν απαντώ",
+        answerText: "I don't know",
         answerPoints: [],
       },
     ],
@@ -52,12 +52,12 @@ export const questions = [
   {
     questionId: 2,
     questionTitle:
-      "Τι πιστεύετε για τη διαδικασία ολοκλήρωσης της Ευρωπαϊκής Ένωσης;",
-    questionAspect: "Εξωτερική Πολιτική",
+      "What do you think of the European Union integration process",
+    questionAspect: "Foreign Policy",
     answers: [
       {
         answerId: 1,
-        answerText: "Η ΕΕ πρέπει να εξελιχθεί σε Ευρωπαϊκή Ομοσπονδία",
+        answerText: "The EU should evolve to a European Federation",
         answerPoints: [
           { party: "disy", value: 1 },
           { party: "depa", value: 1 },
@@ -65,17 +65,17 @@ export const questions = [
       },
       {
         answerId: 2,
-        answerText: "Η ΕΕ πρέπει να συνεχίσει τη διαδικασία ολοκλήρωσης",
+        answerText: "The EU should continue the integration process",
         answerPoints: [],
       },
       {
         answerId: 3,
-        answerText: "Η ΕΕ πρέπει να παραμείνει όπως είναι",
+        answerText: "The EU should remain as is",
         answerPoints: [{ party: "akel", value: 1 }],
       },
       {
         answerId: 4,
-        answerText: "Τα εθνικά κράτη πρέπει να αποκτήσουν ξανά κυριαρχία",
+        answerText: "The national states need to be sovereign again",
         answerPoints: [
           { party: "disy", value: 1 },
           { party: "elam", value: 1 },
@@ -84,7 +84,7 @@ export const questions = [
       },
       {
         answerId: 5,
-        answerText: "Δεν ξέρω",
+        answerText: "I don't know",
         answerPoints: [],
       },
     ],
@@ -92,13 +92,13 @@ export const questions = [
   {
     questionId: 3,
     questionTitle:
-      "Αποδέχεστε την εκ περιτροπής προεδρία στο πλαίσιο μιας λύσης για το Κυπριακό;",
-    questionAspect: "Κυπριακό Πρόβλημα",
+      "Do you accept rotating presidency within the framework of a solution to the Cyprus problem?",
+    questionAspect: "Cyprus Problem",
     answers: [
       {
         answerId: 1,
         answerText:
-          "Ναι, η εκ περιτροπής προεδρία μπορεί να γίνει αποδεκτή ως μέρος μιας συνολικά αποδεκτής λύσης",
+          "Yes, rotating presidency can be accepted within an overall acceptable solution",
         answerPoints: [
           { party: "disy", value: 1 },
           { party: "akel", value: 1 },
@@ -107,8 +107,7 @@ export const questions = [
       },
       {
         answerId: 2,
-        answerText:
-          "Όχι, καμιά μορφή εκ περιτροπής προεδρίας δεν μπορεί να γίνει  αποδεκτή",
+        answerText: "No, rotating presidency can't be accepted",
         answerPoints: [
           { party: "edek", value: 1 },
           { party: "elam", value: 1 },
@@ -118,12 +117,12 @@ export const questions = [
       {
         answerId: 3,
         answerText:
-          "Ναι μόνο εάν είναι με κοινό ψηφοδέλτιο και ενιαία εκλογική βάση",
+          "Only if it's included with a single ballot and a single voting base",
         answerPoints: [{ party: "diko", value: 1 }],
       },
       {
         answerId: 4,
-        answerText: "Δεν ξέρω / Δεν απαντώ",
+        answerText: "I don't know",
         answerPoints: [],
       },
     ],
@@ -131,24 +130,27 @@ export const questions = [
   {
     questionId: 4,
     questionTitle:
-      "Ποια στάση πρέπει να τηρήσει η Κύπρος στο Μεσανατολίτικο Πρόβλημα",
-    questionAspect: "Economy",
+      "What should be Cyprus's approach to the Israeli-Palestinian conflict?",
+    questionAspect: "Foreign Policy",
     answers: [
       {
         answerId: 1,
         answerText:
-          "Πρέπει να υποστηρίξει την άμεση κατάπαυση του πυρός στην Γάζα και τον τερματισμό της κατοχής",
-        answerPoints: [{ party: "disy", value: 1 }],
+          "Cyprus should call for immediate ceasefire in Gaza and the end of the occupation",
+        answerPoints: [
+          { party: "akel", value: 1 },
+          { party: "greens", value: 1 },
+        ],
       },
       {
         answerId: 2,
         answerText:
-          "Πρέπει να υπερασπιστεί το δικαίμα του Ισραήλ στην άμυνα και τον συνεχισμό της επιχείρησης στην Γάζα",
+          "Cyprus should defend Israel's right to defend itself and the continuation of the operation in Gaza",
         answerPoints: [],
       },
       {
         answerId: 3,
-        answerText: "Πρέπει να τηρήσει στάση ουδερότητας",
+        answerText: "Cyprus should stay neutral",
         answerPoints: [],
       },
       {
@@ -158,7 +160,7 @@ export const questions = [
       },
       {
         answerId: 5,
-        answerText: "Δεν ξέρω / Δεν απαντώ",
+        answerText: "I don't know / Prefer not to say",
         answerPoints: [],
       },
     ],
@@ -166,28 +168,29 @@ export const questions = [
   {
     questionId: 5,
     questionTitle:
-      "Ποια στάση πρέπει να τηρήσει η Κύπρος εντός ΕΕ για το Ουρκανικό",
-    questionAspect: "Ευρωπαϊκή Ένωση",
+      "Within the EU, what should be Cyprus's position regarding the invasion in Ukraine?",
+    questionAspect: "European Union",
     answers: [
       {
         answerId: 1,
         answerText:
-          "Πρέπει να συνεχίσει να υποστηρίζει την επιβολή κυρώσεων στην Ρωσία",
+          "Cyprus should continue supporting imposing of sanctions against Russia until Ukraine is free",
         answerPoints: [],
       },
       {
         answerId: 2,
-        answerText: "Πρέπει να μπλοκάρει ",
+        answerText:
+          "Cyprus should support the end of the conflict and for peace negotiations between Ukraine and Russia to begin",
         answerPoints: [],
       },
       {
         answerId: 3,
-        answerText: "Και στα δύο",
+        answerText: "Cyprus should block future sanctions to Russia",
         answerPoints: [{ party: "disy", value: 1 }],
       },
       {
         answerId: 4,
-        answerText: "Δεν ξέρω / Δεν απαντώ",
+        answerText: "I don't know / Prefer not to say",
         answerPoints: [],
       },
     ],
@@ -195,27 +198,34 @@ export const questions = [
   {
     questionId: 6,
     questionTitle:
-      "Που πρέπει να επικεντρωθούν οι προσπάθειες της Κυπριακής Δημοκρατίας σε σχέση με την Τουρκία",
-    questionAspect: "Ευρωπαϊκή Ένωση",
+      "Where should the Republic of Cyprus focus its efforts in relation to Turkey?",
+    questionAspect: "European Union",
     answers: [
       {
         answerId: 1,
-        answerText: "Στην επιβολή κυρώσεων κατά της Τουρκίας",
+        answerText: "On imposing sanctions to Turkey",
         answerPoints: [],
       },
       {
         answerId: 2,
-        answerText: "Στην εφαρμογή ουσιαστικών Μέτρων Οικοδόμησης Εμπιστοσύνης",
+        answerText:
+          "On implementing Trust Building measures(including possibly opening new crossing points)",
         answerPoints: [],
       },
       {
         answerId: 3,
-        answerText: "Και στα δύο",
+        answerText: "On both the above",
         answerPoints: [{ party: "disy", value: 1 }],
       },
       {
         answerId: 4,
-        answerText: "Δεν ξέρω / Δεν απαντώ",
+        answerText:
+          "On imposing sanctions to Turkey and to Turkish Cypriots (including possibly closing the crossing points)",
+        answerPoints: [],
+      },
+      {
+        answerId: 5,
+        answerText: "I don't know / Prefer not to say",
         answerPoints: [],
       },
     ],
@@ -223,60 +233,67 @@ export const questions = [
   {
     questionId: 7,
     questionTitle:
-      "Ποια στρατηγική πρέπει να ακολουθηθεί για την επίτευξη λύσης του Κυπριακού",
-    questionAspect: "Κυπριακό Πρόβλημα",
+      "What strategy should be followed to get closer to achieving a solution to the Cyprus problem?",
+    questionAspect: "Cyprus Problem",
     answers: [
       {
         answerId: 1,
         answerText:
-          "Επικέντρωση στην επανέναρξη των συνομιλιών απο το σημείο που διακόπηκαν στο Κραν Μοντανα αποδεχόμενοι το Πλαίσιο Γκουτέρες ως έχει",
-        answerPoints: [],
+          "We should focus on the resumption of negotiations from the point they left off in Crans Montana, accepting the Guterres Framework as is",
+        answerPoints: [
+          { party: "disy", value: 1 },
+          { party: "akel", value: 1 },
+          { party: "dipa", value: 1 },
+        ],
       },
       {
         answerId: 2,
         answerText:
-          "Επικέντρωση στην επανέναρξη των συνομιλιών χωρίς όμως να αποδεκτούμε τις εώς τώρα απαράδεκτες συγκλίσεις",
-        answerPoints: [{ party: "disy", value: 1 }],
+          "We should focus on the resumption of negotiations without accepting some of the previous unacceptable convergences",
+        answerPoints: [{ party: "diko", value: 1 }],
       },
       {
         answerId: 3,
         answerText:
-          "Επανατοποθέτηση του κυπριακού ως πρόβλημα εισβολής και κατοχής",
-        answerPoints: [],
+          "The Cyprus problem should be refocused as an issue of invasion and occupation, refraining from engaging in bi-communal dialogue",
+        answerPoints: [
+          { party: "elam", value: 1 },
+          { party: "edek", value: 1 },
+        ],
       },
       {
         answerId: 4,
-        answerText: "Δεν ξέρω / Δεν απαντώ",
+        answerText: "I don't know / Prefer not to say",
         answerPoints: [],
       },
     ],
   },
   {
     questionId: 8,
-    questionTitle: "Ποια είναι η θέση σας για τις αμβλώσεις",
-    questionAspect: "Κοινωνικά Θέματα",
+    questionTitle: "What is your stance regarding abortions",
+    questionAspect: "Social Issues",
     answers: [
       {
         answerId: 1,
         answerText:
-          "Το δικαίωμα της γυναίκας να επιλέγει για το σώμα της πρέπει να διαφυλαχθεί.",
+          "The right of women to choose what to do with their bodies needs to be protected.",
         answerPoints: [],
       },
       {
         answerId: 2,
         answerText:
-          "Μόνο σε περιπτώσεις βιασμού, ασθένειας του εμβρύου ή κίνδύνου της υγείας της μητέρας",
+          "Abortions should only be acceptable in cases of rape, fetal abnormalities, or when the life of the mother is threatened.",
         answerPoints: [{ party: "disy", value: 1 }],
       },
       {
         answerId: 3,
         answerText:
-          "Πρέπει να απαγορευθούν. Η ζωή του εμβρύου πρέπει να διαφυλαχθεί",
+          "They need to be banned. The life of the embryo must be protected",
         answerPoints: [],
       },
       {
         answerId: 4,
-        answerText: "Δεν ξέρω / Δεν απαντώ",
+        answerText: "I don't know / Prefer not to say",
         answerPoints: [],
       },
     ],
@@ -284,52 +301,51 @@ export const questions = [
   {
     questionId: 9,
     questionTitle:
-      "Πρέπει να νομιμοποιηθούν οι γάμοι και οι υιοθεσίες παιδιών από ομόφυλα ζευγάρια;",
-    questionAspect: "Κοινωνικά Θέματα",
+      "Should same-sex marriages and the adoption of children by same-sex couples be legalized?",
+    questionAspect: "Social Issues",
     answers: [
       {
         answerId: 1,
         answerText:
-          "Ναι, πρέπει να νομιμοποιηθούν και τα δύο, τα ομοόφυλα ζευγάρια πρέπει να έχουν ίσα δικαιώματα με τα ετεροφυλόφυλα",
+          "Yes, both should be legalised, same-sex couples should have the same rights as heterosexual couples",
         answerPoints: [],
       },
       {
         answerId: 2,
-        answerText:
-          "Πρέπει να νομιμοποιηθεί ο γάμος, όχι όμως η υιοθεσία παιδιών",
+        answerText: "Yes for same-sex marriage, but not for adoption",
         answerPoints: [{ party: "disy", value: 1 }],
       },
       {
         answerId: 3,
-        answerText:
-          "Όχι και στα δύο, πρέπει να διαφυλαχθεί ο θεσμός της οικογένειας",
+        answerText: "No, for neither same-sex marriage nor for adoption",
         answerPoints: [],
       },
       {
         answerId: 4,
-        answerText: "Δεν ξέρω / Δεν απαντώ",
+        answerText: "I don't know / Prefer not to say",
         answerPoints: [],
       },
     ],
   },
+
   {
     questionId: 10,
-    questionTitle: "Υποστηρίζεται την δημιουργία Ευρωπαικού Στρατού",
-    questionAspect: "Ευρωπαϊκή Ένωση",
+    questionTitle: "Do you support the creation of a European Army?",
+    questionAspect: "European Union",
     answers: [
       {
         answerId: 1,
-        answerText: "Ναι",
+        answerText: "Yes",
         answerPoints: [],
       },
       {
         answerId: 2,
-        answerText: "Όχι",
-        answerPoints: [{ party: "disy", value: 1 }],
+        answerText: "No",
+        answerPoints: [{ party: "akel", value: 1 }],
       },
       {
         answerId: 3,
-        answerText: "Δεν ξέρω / Δεν απαντώ",
+        answerText: "I don't know / Prefer not to say",
         answerPoints: [],
       },
     ],
@@ -337,56 +353,59 @@ export const questions = [
   {
     questionId: 11,
     questionTitle:
-      "Ποια είναι η άποψη σας όσον αφορά την ένταξη της Κύπρου στον 'Συνεταιρισμό για την Ειρήνη' και το ΝΑΤΟ",
-    questionAspect: "Εξωτερική Πολιτική",
+      "Should the Republic of Cyprus join the 'Patternship for Peace' and NATO?",
+    questionAspect: "Foreign Policy",
     answers: [
       {
         answerId: 1,
         answerText:
-          "Η ΚΔ πρέπει να υποβάλει αίτηση ένταξης στον ΣγτΕ και στόχος για το μέλλον πρέπει να είναι και η ένταξη στο ΝΑΤΟ.",
+          "The RoC should apply to join the PfP and joining NATO should be a long-term goal.",
         answerPoints: [],
       },
       {
         answerId: 2,
-        answerText: "Η ΚΔ πρέπει να ενταχθεί στον ΣγτΕ, όχι όμως στο ΝΑΤΟ",
+        answerText: "The RoC needs to join the PfP, but not NATO",
         answerPoints: [{ party: "disy", value: 1 }],
       },
       {
         answerId: 3,
-        answerText:
-          "Η ΚΔ δεν πρέπει να ενταχθεί ούτε στον ΣγτΕ ούτε φυσικά και στο ΝΑΤΟ",
+        answerText: "The RoC should neither join PfP nor NATO",
         answerPoints: [],
       },
       {
         answerId: 4,
-        answerText: "Δεν ξέρω / Δεν απαντώ",
+        answerText: "I don't know / Prefer not to say",
         answerPoints: [],
       },
     ],
   },
   {
     questionId: 12,
-    questionTitle: "Πρέπει να υπάρξει νομιμοποίηση της Κάνναβης",
-    questionAspect: "Κοινωνικά Θέματα",
+    questionTitle: "Should cannabis be decriminalised?",
+    questionAspect: "Social Issues",
     answers: [
       {
         answerId: 1,
-        answerText: "Ναι, για ιατρική και ψυχαγωγική χρήση.",
+        answerText:
+          "Yes, both for medicinal and recreational purposesphar Ναι, για ιατρική και ψυχαγωγική χρήση.",
         answerPoints: [],
       },
       {
         answerId: 2,
-        answerText: "Ναι, αλλά μόνο για αυστηρά ιατρική χρήση",
+        answerText: "Yes, but strictly for medical use",
         answerPoints: [{ party: "disy", value: 1 }],
       },
       {
         answerId: 3,
-        answerText: "Όχι, η αποποινικοποίηση θα οδηγήσει σε σοβαρά προβλήματα",
-        answerPoints: [],
+        answerText: "No, decriminalising it will lead to serious problems",
+        answerPoints: [
+          { party: "akel", value: 1 },
+          { party: "elam", value: 1 },
+        ],
       },
       {
         answerId: 4,
-        answerText: "Δεν ξέρω / Δεν απαντώ",
+        answerText: "I don't know / Prefer not to say",
         answerPoints: [],
       },
     ],
@@ -394,30 +413,35 @@ export const questions = [
   {
     questionId: 13,
     questionTitle:
-      "Ποια είναι η άποψη σας για τον υποθαλάσσιο αγωγό φυσικού αερίου East Med",
-    questionAspect: "Ενέργεια και Περιβάλλον",
+      "What's your opinion regarding the underwater natural gas pipeline East Med",
+    questionAspect: "Green Politics",
     answers: [
       {
         answerId: 1,
         answerText:
-          "Πρέπει να συνεχιστούν οι προσπάθειες για δημιουργία του East Med ώστε να καταστεί η Κύπρος ενεργειακός κόμβος της Μεσογείου",
-        answerPoints: [],
+          "The ongoing efforts to create East Med should be sustained, as they are crucial for positioning Cyprus as a key energy hub in the Mediterranean.",
+        answerPoints: [
+          { party: "deko", value: 1 },
+          { party: "edek", value: 1 },
+          { party: "elam", value: 1 },
+          { party: "depa", value: 1 },
+        ],
       },
       {
         answerId: 2,
         answerText:
-          "Η δημιουργία του αγωγού θα ήταν ωφέλιμη για την Κύπρο, όμως δεν αποτελεί ρεαλιστική επιλογή",
+          "While the creation of East Med would be beneficial for Cyprus, it is not a realistic option",
         answerPoints: [{ party: "disy", value: 1 }],
       },
       {
         answerId: 3,
         answerText:
-          "Η εξόρυξη ορυκτών καυσίμων ανήκει στο παρελθόν. Πρέπει να επικεντρωθούμε στην ανάπτυξη ΑΠΕ",
+          "Extraction of fossil fuels belongs to the past. We need to focus on Renewable Energy Sources",
         answerPoints: [],
       },
       {
         answerId: 4,
-        answerText: "Δεν ξέρω / Δεν απαντώ",
+        answerText: "I don't know / Prefer not to say",
         answerPoints: [],
       },
     ],

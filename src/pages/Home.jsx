@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import image from "../images/imagev2.jpg";
-import image3 from "../images/image3v2.jpg";
+import image from "../images/imagev3.jpg";
+import image3 from "../images/image3v5.jpg";
 import { useTranslation, Trans } from "react-i18next";
 
 function Home() {

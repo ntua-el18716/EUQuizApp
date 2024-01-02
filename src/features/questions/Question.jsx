@@ -4,7 +4,6 @@ import QuestionTitle from "./QuestionTitle";
 import Button from "../../ui/Button";
 import AnswerItem from "./AnswerItem";
 import {
-  getAnswerOfQuestion,
   getAnswerPerQuestion,
   getNumberOfQuestions,
   goNext,
@@ -15,7 +14,8 @@ import QuestionAspect from "./QuestionAspect";
 import { useTranslation } from "react-i18next";
 
 function Question({ question }) {
-  const { questionId, questionTitle, answers, questionAspect } = question;
+  // const { questionId, questionTitle, answers, questionAspect } = question;
+  const { questionId } = question;
   const numberOfQuestions = useSelector(getNumberOfQuestions);
   // const answer = useSelector(getAnswerOfQuestion);
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ function Question({ question }) {
 
     returnObjects: true,
   });
-  console.log(answersT);
+  // console.log(answersT);
   return (
     <div className="flex flex-col gap-0 bg-cyan-100">
       <div className="flex justify-between bg-cyan-700">
