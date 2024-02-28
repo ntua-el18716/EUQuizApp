@@ -1,0 +1,33 @@
+{
+  "name": "euquizappbackend",
+  "version": "0.0.1",
+  "scripts": {
+    "generate-migration": "drizzle-kit generate:pg",
+    "migrate": "ts-node src/migrate",
+    "introspect": "drizzle-kit introspect:pg",
+    "start": "nodemon server.ts",
+    "drop": "drizzle-kit drop"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.28.6",
+    "eslint": "^8.50.0",
+    "express": "^4.18.2",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.18",
+    "@types/node": "^20.8.0",
+    "@types/pg": "^8.10.3",
+    "drizzle-kit": "^0.19.13",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "main": "main.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
