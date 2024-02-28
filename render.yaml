@@ -1,9 +1,22 @@
-# render.yaml
 services:
-  - name: frontend
+  - type: web
+    name: frontend
+    runtime: docker
+    repo: https://github.com/ntua-el18716/EUQuizApp.git
     buildCommand: npm run build
+    publicDir: build
+    region: oregon # Adjust the region as needed
+    plan: standard # Adjust the plan as needed
+    branch: main # Adjust the branch name
 
-  - name: backend
-    buildCommand: npm run build
-    startCommand: npm start
-#this is modified
+  - type: web
+    name: backend
+    runtime: docker
+    repo: https://github.com/ntua-el18716/EUQuizApp.git
+    buildCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    region: oregon # Adjust the region as needed
+    plan: standard # Adjust the plan as needed
+    branch: main # Adjust the branch name
