@@ -5,6 +5,7 @@
     "generate-migration": "drizzle-kit generate:pg",
     "migrate": "ts-node src/migrate",
     "introspect": "drizzle-kit introspect:pg",
+    "build": "echo 'Building...' && tsc",
     "start": "nodemon server.ts",
     "drop": "drizzle-kit drop"
   },

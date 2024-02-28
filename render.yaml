@@ -1,0 +1,9 @@
+# render.yaml
+
+services:
+  - name: frontend
+    buildCommand: npm run build
+
+  - name: backend
+    buildCommand: npm run build
+    startCommand: npm start
