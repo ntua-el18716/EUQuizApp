@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "dd5d35a3-e27d-440f-abf9-a7d494573f11",
+  "id": "6b4eb8c6-2021-4ce3-8a1d-3336eeb59c3c",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "answers": {
@@ -145,7 +145,7 @@
         },
         "candidateMobileNumber": {
           "name": "candidateMobileNumber",
-          "type": "integer",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         },

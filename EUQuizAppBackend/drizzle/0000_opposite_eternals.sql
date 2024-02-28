@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS "candidates" (
 	"candidateName" jsonb,
 	"candidateParty" text,
 	"candidateBallotNumber" integer,
-	"candidateMobileNumber" integer,
+	"candidateMobileNumber" text,
 	"candidateEmail" text,
 	"candidateWebPage" text,
 	"candidateImg" text

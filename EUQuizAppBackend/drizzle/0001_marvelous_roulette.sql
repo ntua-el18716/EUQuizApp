@@ -1,1 +1,0 @@
-ALTER TABLE "candidates" ALTER COLUMN "candidateMobileNumber" SET DATA TYPE text;
