@@ -1,16 +1,12 @@
 import ResultItem from "./ResultItem";
 
 function ResultsPresentation({ resultsPerParty }) {
-  // const ResultsPresentation = forwardRef(({ resultsPerParty}, screenshotRef) => {
-  // const ResultsPresentation = forwardRef(function ResultsPresentation(
-  //   { resultsPerParty },
-  //   ref
-  // ) {
-
+  console.log(resultsPerParty);
   let results = [];
   for (var party in resultsPerParty) {
     results.push([party, resultsPerParty[party]]);
   }
+  console.log(resultsPerParty);
 
   results.sort(function (a, b) {
     return b[1] - a[1];
@@ -28,7 +24,5 @@ function ResultsPresentation({ resultsPerParty }) {
     </div>
   );
 }
-
-// ResultsPresentation.displayName = "ResultsPresentation";
 
 export default ResultsPresentation;

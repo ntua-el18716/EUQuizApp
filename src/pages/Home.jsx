@@ -1,10 +1,43 @@
 import { Link } from "react-router-dom";
 import image from "../images/imagev3.jpg";
-import image3 from "../images/image3v5.jpg";
-import { useTranslation, Trans } from "react-i18next";
+// import image3 from "../images/image3v5.jpg";
+import image3 from "../images/image3v7.png";
+import { Trans, useTranslation } from "react-i18next";
+import { getQuizData } from "../services/getQuizData";
+import Loader from "react-spinner-loader";
+import {
+  fetchQuizData,
+  getQuizDataStatus,
+} from "../features/questions/questionsSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
 
 function Home() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Dispatch the fetchQuizData action when the component mounts
+    dispatch(fetchQuizData());
+
+    // If you want to dispatch only once (equivalent to componentDidMount),
+    // you can provide an empty dependency array []
+  }, [dispatch]);
+
+  const quizDataStatus = useSelector(getQuizDataStatus);
+
+  if (quizDataStatus === "loading") {
+    // Loading state
+
+    return (
+      <Loader show={true} type="body" stack="vertical" message="Loading Data" />
+    );
+  }
+
+  if (quizDataStatus === "error") {
+    // Error state
+    return <h1 className="bg-red-700 text-5xl">Error fetching quiz data</h1>;
+  }
 
   if (!image) return <h1 className="bg-red-700 text-5xl">Loading</h1>;
   return (
@@ -41,10 +74,16 @@ function Home() {
       >
         {/* // <div className="flex flex-col justify-between pt-6 gap-8 bg-cyan-200"> */}
         {/* <h1 className="py-5 mx-auto text-2xl font-bold bg-indigo-700 text-indigo-50 px-3"> */}
-        <h1 className="mx-auto text-4xl font-bold text-emerald-600">
+        <h1 className="mx-auto text-4xl md:pt-5 font-bold text-emerald-600">
           CYvoteEU
         </h1>
-        <h1 className="mx-auto pl-1 pt-16 md:pt-20 text-3xl font-bold text-white">
+        <h1
+          className={`mx-auto text-3xl font-bold text-white ${
+            i18n.language === "el"
+              ? "pt-11 pl-4 md:pt-[55px] md:pl-0"
+              : "pl-8 pt-6 md:pt-12 mds:pt-0"
+          }`}
+        >
           <Trans i18nKey="welcomeQuestion">
             DO YOU NEED HELP DECIDING WHO TO VOTE FOR?
           </Trans>
@@ -74,10 +113,12 @@ function Home() {
         <div className="mx-auto">
           <Link
             className="hover:bg-em rounded-xl bg-emerald-600 px-7 py-3 text-2xl font-bold text-white hover:bg-emerald-500 hover:transition-opacity hover:bg-gradient-to-r hover:from-teal-500 hover:via-emerald-500 hover:to-teal-500"
+            // disabled={quizDataStatus != "idle"} // Disable the link if loading
             to={"/questions"}
           >
             START THE QUIZ
           </Link>
+          {/* <button onClick={() => dispatch(fetchQuizData())}>Test RTK</button> */}
         </div>
         <div className="mx-auto pb-12 pt-6"></div>
       </div>

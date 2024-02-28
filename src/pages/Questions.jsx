@@ -6,11 +6,21 @@ import {
   getCurrentQuestion,
   getQuestions,
 } from "../features/questions/questionsSlice";
+import { redirect, useNavigate } from "react-router-dom";
+import Home from "./Home";
 
 function Questions() {
   const questions = useSelector(getQuestions);
   const currentQuestion = useSelector(getCurrentQuestion);
-  const aspect = questions[currentQuestion].questionAspect;
+
+  const navigate = useNavigate();
+  if (!questions || !questions[currentQuestion]) {
+    console.log(currentQuestion);
+    // Redirect to the home page if questions are undefined
+    navigate("/");
+    return <Home />;
+  }
+  const aspect = questions[currentQuestion].questionAspect.gr;
 
   return (
     <div className="mx-auto flex w-80 flex-col gap-0 bg-cyan-100 pt-8 md:w-screen md:max-w-[45rem]">

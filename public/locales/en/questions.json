@@ -296,7 +296,6 @@
         }
       ]
     },
-
     {
       "questionId": 10,
       "questionTitle": "Do you support the creation of a European Army?",
@@ -353,7 +352,7 @@
       "answers": [
         {
           "answerId": 1,
-          "answerText": "Yes, both for medicinal and recreational purposesphar Ναι, για ιατρική και ψυχαγωγική χρήση.",
+          "answerText": "Yes, both for medicinal and recreational purposes",
           "answerPoints": []
         },
         {

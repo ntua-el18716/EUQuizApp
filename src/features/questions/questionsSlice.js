@@ -1,9 +1,21 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { questions as questionsArray } from "../../data/questions3";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+// import { questions as questionsArray } from "../../data/questions3";
 
-export const NUMBER_OF_QUESTIONS = questionsArray.length;
+export const fetchQuizData = createAsyncThunk(
+  "questions/getQuizData",
+  async function () {
+    const res = await fetch("http://localhost:3000/getQuizData");
+    // console.log(res);
+    const quizData = await res.json();
 
-const answerPerQuestion = Array(NUMBER_OF_QUESTIONS).fill(0);
+    return quizData.dataArray;
+  },
+);
+
+// export const NUMBER_OF_QUESTIONS = questionsArray.length;
+
+// const answerPerQuestion = Array(NUMBER_OF_QUESTIONS).fill(0);
+const answerPerQuestion = Array(13).fill(0);
 
 // const asp = new Set();
 // const aspArr = [];
@@ -20,22 +32,33 @@ const answerPerQuestion = Array(NUMBER_OF_QUESTIONS).fill(0);
 // }
 
 const aspectsArr = [
-  { aspectId: 1, value: "Cyprus Problem", importance: 1, questions: [] },
-  { aspectId: 2, value: "European Union", importance: 1, questions: [] },
-  { aspectId: 3, value: "Foreign Policy", importance: 1, questions: [] },
-  { aspectId: 4, value: "Economy", importance: 1, questions: [] },
-  { aspectId: 5, value: "Immigration", importance: 1, questions: [] },
-  { aspectId: 6, value: "Green Politics", importance: 1, questions: [] },
-  { aspectId: 7, value: "Social Issues", importance: 1, questions: [] },
+  { aspectId: 1, value: "Cyprus Problem", importance: 1 },
+  { aspectId: 2, value: "European Union", importance: 1 },
+  { aspectId: 3, value: "Foreign Policy", importance: 1 },
+  { aspectId: 4, value: "Economy", importance: 1 },
+  { aspectId: 5, value: "Immigration", importance: 1 },
+  { aspectId: 6, value: "Green Politics", importance: 1 },
+  { aspectId: 7, value: "Social Issues", importance: 1 },
 ];
+// const aspectsArr = [
+//   { aspectId: 1, value: "Cyprus Problem", importance: 1, questions: [] },
+//   { aspectId: 2, value: "European Union", importance: 1, questions: [] },
+//   { aspectId: 3, value: "Foreign Policy", importance: 1, questions: [] },
+//   { aspectId: 4, value: "Economy", importance: 1, questions: [] },
+//   { aspectId: 5, value: "Immigration", importance: 1, questions: [] },
+//   { aspectId: 6, value: "Green Politics", importance: 1, questions: [] },
+//   { aspectId: 7, value: "Social Issues", importance: 1, questions: [] },
+// ];
 
 const initialState = {
   currentQuestion: 0,
   currentAnswer: null,
-  questions: questionsArray,
-  numberOfQuestions: NUMBER_OF_QUESTIONS,
+  // questions: questionsArray,
+  questions: [],
+  numberOfQuestions: 0,
   answerPerQuestion,
   aspects: aspectsArr,
+  status: "idle",
 };
 
 const questionsSlice = createSlice({
@@ -43,11 +66,10 @@ const questionsSlice = createSlice({
   initialState,
   reducers: {
     goNext(state) {
-      if (state.currentQuestion < NUMBER_OF_QUESTIONS - 1)
+      if (state.currentQuestion < state.numberOfQuestions - 1)
         state.currentQuestion += 1;
     },
     goPrevious(state) {
-      console.log(NUMBER_OF_QUESTIONS);
       if (state.currentQuestion > 0) state.currentQuestion -= 1;
     },
     goToIndex(state, action) {
@@ -57,15 +79,36 @@ const questionsSlice = createSlice({
       state.answerPerQuestion[state.currentQuestion] = action.payload;
     },
     setImportance(state, action) {
-      console.log(action.payload);
+      // console.log(action.payload);
       state.aspects[action.payload.index].importance =
         action.payload.importance;
-      console.log(state.aspects[action.payload.index].importance);
+      // console.log(state.aspects[action.payload.index].importance);
     },
-    resetQuestions() {
-      return initialState;
+    resetQuestions(state) {
+      return {
+        ...initialState,
+        questions: state.questions,
+        numberOfQuestions: state.numberOfQuestions,
+      };
     },
   },
+  extraReducers: (builder) =>
+    builder
+      .addCase(fetchQuizData.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(fetchQuizData.fulfilled, (state, action) => {
+        let questionArray = action.payload;
+        state.questions = questionArray;
+        state.numberOfQuestions = questionArray.length;
+        state.status = "fulfilled";
+        const answerPerQuestion = Array(state.numberOfQuestions).fill(0);
+        // const answerPerQuestion = Array(3).fill(0);
+        state.answerPerQuestion = answerPerQuestion;
+      })
+      .addCase(fetchQuizData.rejected, (state) => {
+        state.status = "error";
+      }),
 });
 
 export const {
@@ -96,3 +139,5 @@ export const getAnswerPerQuestion = (state) =>
   state.questions.answerPerQuestion;
 
 export const getAspects = (state) => state.questions.aspects;
+
+export const getQuizDataStatus = (state) => state.questions.status;

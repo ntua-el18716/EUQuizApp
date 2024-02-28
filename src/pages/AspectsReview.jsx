@@ -1,21 +1,25 @@
-import { useDispatch, useSelector } from 'react-redux';
-import AspectList from '../features/aspects/AspectList';
+import { useDispatch, useSelector } from "react-redux";
+import AspectList from "../features/aspects/AspectList";
 import {
   calculateImportanceResults,
   resetResults,
-} from '../features/results/resultsSlice';
-import Button from '../ui/Button';
-import { useNavigate } from 'react-router-dom';
+} from "../features/results/resultsSlice";
+import Button from "../ui/Button";
+import { useNavigate } from "react-router-dom";
 import {
   getAnswerPerQuestion,
   getAspects,
-} from '../features/questions/questionsSlice';
+  getNumberOfQuestions,
+  getQuestions,
+} from "../features/questions/questionsSlice";
 
 function AspectsReview() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const aspects = useSelector(getAspects);
   const answerPerQuestion = useSelector(getAnswerPerQuestion);
+  const questionsArray = useSelector(getQuestions);
+  const numberOfQuestions = useSelector(getNumberOfQuestions);
 
   return (
     <div className="mx-auto flex h-5/6 w-80 flex-col justify-between gap-0 bg-cyan-100 pt-8 md:w-screen md:max-w-3xl">
@@ -28,7 +32,7 @@ function AspectsReview() {
         <Button
           onClick={() => {
             dispatch(resetResults());
-            navigate('/questions');
+            navigate("/questions");
           }}
         >
           Edit Answers
@@ -39,9 +43,11 @@ function AspectsReview() {
               calculateImportanceResults({
                 aspects: aspects,
                 answerPerQuestion: answerPerQuestion,
+                questionsArray: questionsArray,
+                numberOfQuestions: numberOfQuestions,
               }),
             );
-            navigate('/results');
+            navigate("/results");
           }}
         >
           Final Submit

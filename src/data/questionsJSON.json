@@ -1,0 +1,71 @@
+{
+  "question": {
+    "questionIndex": 1,
+    "questionTitle": {
+      "gr": "Τι μορφή λύσης υποστηρίζεις για το Κυπριακό;",
+      "tr": "ΤΒΙ",
+      "en": "What solution model fo you support?"
+    },
+    "questionAspect": {
+      "gr": "Κυπριακό Πρόβλημα",
+      "tr": "ΤΒΙ",
+      "en": "Cyprus Problem"
+    }
+  },
+
+  "answers": [
+    {
+      "answerIndex": 1,
+      "answerText": {
+        "gr": "Κυπριακό Πρόβλημα",
+        "tr": "ΤΒΙ",
+        "en": "Cyprus Problem"
+      },
+      "answerPoints": [
+        { "party": "disy", "value": 1 },
+        { "party": "akel", "value": 1 },
+        { "party": "diko", "value": 1 },
+        { "party": "depa", "value": 1 }
+      ]
+    },
+    {
+      "answerIndex": 2,
+      "answerText": {
+        "gr": "Ενιαίο Κράτος",
+        "tr": "ΤΒΙ",
+        "en": "Unitary state"
+      },
+      "answerPoints": [
+        { "party": "edek", "value": 1 },
+        { "party": "elam", "value": 1 }
+      ]
+    },
+    {
+      "answerIndex": 3,
+      "answerText": {
+        "gr": "Δύο κράτος",
+        "tr": "ΤΒΙ",
+        "en": "Two states"
+      },
+      "answerPoints": [{ "party": "edek", "value": 1 }]
+    },
+    {
+      "answerIndex": 4,
+      "answerText": {
+        "gr": "Διπλή Ένωση",
+        "tr": "ΤΒΙ",
+        "en": "Double Union"
+      },
+      "answerPoints": [{ "party": "edek", "value": 1 }]
+    },
+    {
+      "answerIndex": 5,
+      "answerText": {
+        "gr": "Δεν ξέρω / Δεν απαντώ",
+        "tr": "ΤΒΙ",
+        "en": "I don't not / Prefer not to say"
+      },
+      "answerPoints": [{ "party": "edek", "value": 1 }]
+    }
+  ]
+}

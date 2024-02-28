@@ -5,9 +5,9 @@ import { resetResults } from "../features/results/resultsSlice";
 import { useTranslation } from "react-i18next";
 
 const lngs = {
-  el: { nativeName: "Ελληνικά" },
-  tr: { nativeName: "Türkçe" },
-  en: { nativeName: "English" },
+  tr: { nativeName: "Türkçe", displayValue: "tr" },
+  en: { nativeName: "English", displayValue: "en" },
+  el: { nativeName: "Ελληνικά", displayValue: "gr" },
 };
 
 function Header() {
@@ -18,6 +18,8 @@ function Header() {
     dispatch(resetQuestions());
     dispatch(resetResults());
   }
+
+  // if (i18n.language);
 
   return (
     // <div className="flex-items-center justify-between bg-cyan-700 uppercase">
@@ -33,15 +35,16 @@ function Header() {
         <span className="font-size-md">🇪🇺</span>
       </Link>
 
-      <div className="pr-3 pt-1 items-center">
+      <div className="pr-3 pt-1 items-center font-bold">
         <select
           value={i18n.language}
+          // value={"en"}
           onChange={(e) => i18n.changeLanguage(e.target.value)}
-          className="bg-sky-600 text-cyan-50 font-bold hover:bg-gradient-to-l hover:from-indigo-700 hover:via-sky-700 hover:to-indigo-500 py-3 px-4 justify-center border border-indigo-500 rounded-lg focus:outline-none focus:shadow-outline-indigo uppercase "
+          className="bg-sky-600 text-cyan-50 fontbold hover:bg-gradient-to-l hover:from-sky-700 hover:to-sky-700 py-3 px-4 justify-center border border-indigo-500 rounded-lg focus:outline-none focus:shadow-outline-indigo uppercase "
         >
           {Object.keys(lngs).map((lng) => (
-            <option key={lng} value={lng}>
-              {lng}
+            <option key={lng} value={lng} className="font-bold">
+              {lngs[lng].displayValue}
             </option>
           ))}
         </select>

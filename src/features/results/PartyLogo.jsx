@@ -5,9 +5,8 @@ import Diko from "../../images/partyLogos/diko.svg?react";
 import Elam from "../../images/partyLogos/elam.svg?react";
 import Depa from "../../images/partyLogos/depa.svg?react";
 import Edek from "../../images/partyLogos/edek.svg?react";
+import Volt from "../../images/partyLogos/volt.svg?react";
 function PartyLogo({ party }) {
-  console.log(party);
-
   switch (party) {
     case "disy":
       return <Disy width={130} height={70} />;
@@ -23,6 +22,8 @@ function PartyLogo({ party }) {
       return <Edek width={130} height={70} />;
     case "depa":
       return <Depa width={130} height={70} />;
+    case "volt":
+      return <Volt width={130} height={70} />;
     default:
       return <Greens width={130} height={70} />;
   }

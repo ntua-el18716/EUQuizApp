@@ -6,17 +6,22 @@ import AnswerItem from "./AnswerItem";
 import {
   getAnswerPerQuestion,
   getNumberOfQuestions,
+  getQuestions,
   goNext,
   goPrevious,
 } from "./questionsSlice";
 import { submitAnswers, calculateResults } from "../results/resultsSlice";
 import QuestionAspect from "./QuestionAspect";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 function Question({ question }) {
-  // const { questionId, questionTitle, answers, questionAspect } = question;
-  const { questionId } = question;
+  const { i18n } = useTranslation();
+
+  // const { questionIndex, questionTitle, answers, questionAspect } = question;
+  const { questionIndex } = question;
   const numberOfQuestions = useSelector(getNumberOfQuestions);
+  const questionsArray = useSelector(getQuestions);
   // const answer = useSelector(getAnswerOfQuestion);
   const dispatch = useDispatch();
   const answerPerQuestion = useSelector(getAnswerPerQuestion);
@@ -24,19 +29,40 @@ function Question({ question }) {
 
   const { t } = useTranslation();
 
-  console.log(t("questions.1.questionTitle"), { ns: "questions" });
-  let questionTitleT = t(`questions.${questionId - 1}.questionTitle`, {
-    ns: "questions",
-  });
-  let questionAspectT = t(`questions.${questionId - 1}.questionAspect`, {
-    ns: "questions",
-  });
-  let answersT = t(`questions.${questionId - 1}.answers`, {
-    ns: "questions",
+  let language = i18n.language;
 
-    returnObjects: true,
-  });
-  // console.log(answersT);
+  useEffect(() => {
+    const handlePopstate = (event) => {
+      event.preventDefault();
+      dispatch(goPrevious());
+    };
+
+    // Add event listener for popstate
+    window.addEventListener("popstate", handlePopstate);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("popstate", handlePopstate);
+    };
+  }, [dispatch]);
+
+  let questionTitleT =
+    questionsArray[questionIndex - 1].questionTitle[language];
+  // let questionTitleT = t(`questions.${questionIndex - 1}.questionTitle`, {
+  //   ns: "questions",
+  // });
+  let questionAspectT =
+    questionsArray[questionIndex - 1].questionAspect[language];
+  // let questionAspectT = t(`questions.${questionIndex - 1}.questionAspect`, {
+  //   ns: "questions",
+  // });
+  let answersT = questionsArray[questionIndex - 1].answers;
+  // let answersT = t(`questions.${questionIndex - 1}.answers`, {
+  //   ns: "questions",
+  //   returnObjects: true,
+  // });
+  console.log(answersT);
+
   return (
     <div className="flex flex-col gap-0 bg-cyan-100">
       <div className="flex justify-between bg-cyan-700">
@@ -49,22 +75,37 @@ function Question({ question }) {
       <div>
         <ul className="flex flex-col gap-6 pt-6">
           {answersT.map((answer) => (
-            <AnswerItem answer={answer} key={answer.answerId} />
+            <AnswerItem
+              answer={answer}
+              language={language}
+              key={answer.answerId}
+            />
           ))}
         </ul>
       </div>
 
       <div className="flex justify-between px-6 pb-3 pt-6">
-        <Button onClick={() => dispatch(goPrevious())}>BACK</Button>
-        {questionId !== numberOfQuestions ? (
+        <Button
+          onClick={() => {
+            dispatch(goPrevious());
+          }}
+        >
+          BACK
+        </Button>
+        {questionIndex !== numberOfQuestions ? (
           <Button onClick={() => dispatch(goNext())}>NEXT</Button>
         ) : (
           <Button
             disabled={answerPerQuestion.includes(0)}
             onClick={() => {
-              console.log("sry");
-              dispatch(submitAnswers(answerPerQuestion));
-              dispatch(calculateResults());
+              dispatch(
+                submitAnswers({
+                  answerPerQuestion,
+                  questionsArray,
+                  numberOfQuestions,
+                }),
+              );
+              dispatch(calculateResults({ numberOfQuestions }));
               navigate("/review");
             }}
           >

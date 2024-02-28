@@ -6,6 +6,7 @@ export const parties = {
   edek: 0,
   depa: 0,
   greens: 0,
+  volt: 0,
 };
 
 export const questions = [
