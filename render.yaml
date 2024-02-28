@@ -1,12 +1,12 @@
 services:
-  - type: web
-    name: frontend
-    runtime: docker
-    repo: https://github.com/ntua-el18716/EUQuizApp.git
-    buildCommand: npm run build
-    region: oregon # Adjust the region as needed
-    plan: standard # Adjust the plan as needed
-    branch: main # Adjust the branch name
+  # - type: web
+  #   name: frontend
+  #   runtime: docker
+  #   repo: https://github.com/ntua-el18716/EUQuizApp.git
+  #   buildCommand: npm run build
+  #   region: oregon # Adjust the region as needed
+  #   plan: standard # Adjust the plan as needed
+  #   branch: main # Adjust the branch name
 
   - type: web
     name: backend
