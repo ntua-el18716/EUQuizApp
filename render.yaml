@@ -16,6 +16,6 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-    region: oregon # Adjust the region as needed
-    plan: free # Adjust the plan as needed
-    branch: main # Adjust the branch name
+    region: frankfurt
+    plan: free
+    branch: master
