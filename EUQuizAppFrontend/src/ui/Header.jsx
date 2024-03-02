@@ -35,6 +35,23 @@ function Header() {
         <span className="font-size-md">🇪🇺</span>
       </Link>
 
+      <Link
+        to="/candidateUpdate"
+        className="justify-left flex items-center gap-5 bg-indigo-700 px-6 py-4 text-xl font-bold uppercase text-white"
+        onClick={handleReset}
+      >
+        {/* <h1 className="md:hidden">EU 2023 </h1> */}
+        <h1 className="hidden md:block">Candidates Form</h1>
+      </Link>
+      <Link
+        to="/questionUpdate"
+        className="justify-left flex items-center gap-5 bg-indigo-700 px-6 py-4 text-xl font-bold uppercase text-white"
+        onClick={handleReset}
+      >
+        {/* <h1 className="md:hidden">EU 2023 </h1> */}
+        <h1 className="hidden md:block">Questions Form</h1>
+      </Link>
+
       <div className="pr-3 pt-1 items-center font-bold">
         <select
           value={i18n.language}

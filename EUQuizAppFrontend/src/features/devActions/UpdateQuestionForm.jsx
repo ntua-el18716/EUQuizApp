@@ -59,7 +59,7 @@ function UpdateQuestionForm({ question, insertMode, onRenderList }) {
   return (
     <div className="flex flex-col">
       <h1 className="text-2xl text-indigo-900 text-center pt-5 font-bold font-serif">
-        Update Question Form
+        {insertMode ? "Add Question Form" : "Update Question Form"}
       </h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -72,16 +72,12 @@ function UpdateQuestionForm({ question, insertMode, onRenderList }) {
         </label>
         <input
           className="bg-indigo-600 text-white py-2 px-2"
-          {...register("questionTitle.el", {
-            required: "This is required",
-          })}
+          {...register("questionTitle.el", {})}
           placeholder="Question Title Greek"
         />
         <input
           className="bg-indigo-600 text-white py-2 px-2"
-          {...register("questionTitle.tr", {
-            required: "This is required",
-          })}
+          {...register("questionTitle.tr", {})}
           placeholder="Question Title Turkish"
         />
         <input
@@ -98,23 +94,17 @@ function UpdateQuestionForm({ question, insertMode, onRenderList }) {
         <div className="flex gap-2 justify-between">
           <input
             className="bg-indigo-600 text-white py-2 px-2"
-            {...register("questionAspect.el", {
-              required: "This is required",
-            })}
+            {...register("questionAspect.el", {})}
             placeholder="Question Aspect Greek"
           />
           <input
             className="bg-indigo-600 text-white py-2 px-2"
-            {...register("questionAspect.tr", {
-              required: "This is required",
-            })}
+            {...register("questionAspect.tr", {})}
             placeholder="Question Aspect Turkish"
           />
           <input
             className="bg-indigo-600 text-white py-2 px-2"
-            {...register("questionAspect.en", {
-              required: "This is required",
-            })}
+            {...register("questionAspect.en", {})}
             placeholder="Question Aspect English"
           />
         </div>
@@ -158,16 +148,12 @@ function UpdateQuestionForm({ question, insertMode, onRenderList }) {
                 <div className="flex flex-col gap-1">
                   <input
                     className="bg-indigo-600 text-white py-2 px-2"
-                    {...register(`answers.${index}.answerText.el`, {
-                      required: "This is required",
-                    })}
+                    {...register(`answers.${index}.answerText.el`, {})}
                     placeholder="Answer Text Greek"
                   />
                   <input
                     className="bg-indigo-600 text-white py-2 px-2"
-                    {...register(`answers.${index}.answerText.tr`, {
-                      required: "This is required",
-                    })}
+                    {...register(`answers.${index}.answerText.tr`, {})}
                     placeholder="Answer Text Turkish"
                   />
                   <input

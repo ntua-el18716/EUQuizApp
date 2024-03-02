@@ -14,6 +14,8 @@ import { submitAnswers, calculateResults } from "../results/resultsSlice";
 import QuestionAspect from "./QuestionAspect";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import LeftArrow from "../../images/arrow-left.svg?react";
+import RightArrow from "../../images/arrow-right.svg?react";
 
 function Question({ question }) {
   const { i18n } = useTranslation();
@@ -90,10 +92,17 @@ function Question({ question }) {
             dispatch(goPrevious());
           }}
         >
-          BACK
+          <div className="flex gap-1">
+            <LeftArrow />
+            BACK
+          </div>
         </Button>
         {questionIndex !== numberOfQuestions ? (
-          <Button onClick={() => dispatch(goNext())}>NEXT</Button>
+          <Button onClick={() => dispatch(goNext())}>
+            <div className="flex gap-1">
+              NEXT <RightArrow />
+            </div>
+          </Button>
         ) : (
           <Button
             disabled={answerPerQuestion.includes(0)}

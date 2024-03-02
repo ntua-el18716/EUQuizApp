@@ -6,6 +6,8 @@ import { useDispatch } from "react-redux";
 import { resetResults } from "../features/results/resultsSlice";
 import { resetQuestions } from "../features/questions/questionsSlice";
 import { useNavigate } from "react-router-dom";
+import Home from "../images/home.svg?react";
+
 // import { useScreenshot, createFileName } from "use-react-screenshot";
 
 // import { HiOutlineHome, HiOutlineHomeModern } from "react-icons/hi2";
@@ -36,7 +38,12 @@ function Results() {
       <div className="pb-3 bg-transparent"></div>
       <ResultsMainBody ref={ref} active={active} />
       <div className="flex justify-between pt-3">
-        <Button onClick={handleReset}>Home 🏠</Button>
+        <Button onClick={handleReset}>
+          <div className="flex gap-1">
+            Home
+            <Home />
+          </div>
+        </Button>
         <Button onClick={downloadScreenshot}>Download Screenshot</Button>
       </div>
     </div>

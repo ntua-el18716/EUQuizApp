@@ -41,7 +41,7 @@ function UpdateCandidateForm({ candidate, insertMode, onRenderList }) {
       className="flex flex-col mx-auto  max-w-2xl gap-2"
     >
       <h1 className="text-2xl font-serif text-indigo-900 text-center pt-5 font-bold">
-        Add Candidate Form
+        {insertMode ? "Add Candidate Form" : "Update Candidate Form"}
       </h1>
       {/* Candidate Name */}
       <label className="text-lg font-bold text-indigo-900">
@@ -49,9 +49,7 @@ function UpdateCandidateForm({ candidate, insertMode, onRenderList }) {
       </label>
       <input
         className="bg-indigo-600 text-white py-2 px-2"
-        {...register("candidateName.el", {
-          required: "This is required",
-        })}
+        {...register("candidateName.el")}
         placeholder="Candidate Name in Greek"
       />
       <input
