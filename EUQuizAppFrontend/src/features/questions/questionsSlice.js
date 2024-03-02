@@ -4,7 +4,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const fetchQuizData = createAsyncThunk(
   "questions/getQuizData",
   async function () {
-    const res = await fetch("http://localhost:3000/getQuizData");
+    const res = await fetch("/getQuizData");
     // console.log(res);
     const quizData = await res.json();
     console.log(quizData);
