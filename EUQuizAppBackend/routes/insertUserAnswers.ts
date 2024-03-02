@@ -14,8 +14,10 @@ interface user {
 }
 
 export async function insertUserAnswers(userAnswersData) {
+  console.log(userAnswersData);
   let newUser: user;
-  newUser = userAnswersData.user;
+
+  newUser = userAnswersData.user || {};
 
   try {
     const insertedUser = await db
@@ -25,7 +27,7 @@ export async function insertUserAnswers(userAnswersData) {
 
     let newAnswer: userAnswer;
     let userId = insertedUser[0].insertedId;
-
+    console.log(userId);
     for (const userAnswer of userAnswersData.answers) {
       let newUserAnswer: userAnswer = {
         userId,

@@ -2,7 +2,8 @@
   "name": "euquizapp",
   "private": true,
   "version": "0.0.0",
-  "proxy": "https://eu-quiz-app-backend.vercel.app/",
+  "proxy": "http://localhost:3000/",
+  "proxy2": "https://eu-quiz-app-backend.vercel.app/",
   "type": "module",
   "scripts": {
     "dev": "vite",

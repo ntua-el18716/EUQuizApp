@@ -43,7 +43,7 @@ export async function fetchQuizData(res) {
 
     const sortedQuizData = sortQuizData(dataArray);
 
-    console.log(dataArray);
+    // console.log(dataArray);
     // Now dataArray contains the complete quiz data
     res.status(200).json({ status: "okay", sortedQuizData });
   } catch (error) {

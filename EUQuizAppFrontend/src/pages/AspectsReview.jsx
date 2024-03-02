@@ -7,19 +7,35 @@ import {
 import Button from "../ui/Button";
 import { useNavigate } from "react-router-dom";
 import {
+  getAnswerIdPerQuestion,
   getAnswerPerQuestion,
   getAspects,
   getNumberOfQuestions,
   getQuestions,
 } from "../features/questions/questionsSlice";
+import { insertUserAnswers } from "../services/insertUserAnswers";
 
 function AspectsReview() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const aspects = useSelector(getAspects);
   const answerPerQuestion = useSelector(getAnswerPerQuestion);
+  const answerIdPerQuestion = useSelector(getAnswerIdPerQuestion);
   const questionsArray = useSelector(getQuestions);
   const numberOfQuestions = useSelector(getNumberOfQuestions);
+
+  const handleFinalSubmit = () => {
+    insertUserAnswers({ answers: answerIdPerQuestion });
+    dispatch(
+      calculateImportanceResults({
+        aspects: aspects,
+        answerPerQuestion: answerPerQuestion,
+        questionsArray: questionsArray,
+        numberOfQuestions: numberOfQuestions,
+      }),
+    );
+    navigate("/results");
+  };
 
   return (
     <div className="mx-auto flex h-5/6 w-80 flex-col justify-between gap-0 bg-cyan-100 pt-8 md:w-screen md:max-w-3xl">
@@ -38,17 +54,18 @@ function AspectsReview() {
           Edit Answers
         </Button>
         <Button
-          onClick={() => {
-            dispatch(
-              calculateImportanceResults({
-                aspects: aspects,
-                answerPerQuestion: answerPerQuestion,
-                questionsArray: questionsArray,
-                numberOfQuestions: numberOfQuestions,
-              }),
-            );
-            navigate("/results");
-          }}
+          // onClick={() => {
+          //   dispatch(
+          //     calculateImportanceResults({
+          //       aspects: aspects,
+          //       answerPerQuestion: answerPerQuestion,
+          //       questionsArray: questionsArray,
+          //       numberOfQuestions: numberOfQuestions,
+          //     }),
+          //   );
+          //   navigate("/results");
+          // }}
+          onClick={handleFinalSubmit}
         >
           Final Submit
         </Button>

@@ -20,7 +20,8 @@ export const fetchQuizData = createAsyncThunk(
 // export const NUMBER_OF_QUESTIONS = questionsArray.length;
 
 // const answerPerQuestion = Array(NUMBER_OF_QUESTIONS).fill(0);
-const answerPerQuestion = Array(1).fill(0);
+let answerPerQuestion; // = Array(1).fill(0);
+let answerIdPerQuestion; // = Array(1).fill(0);
 
 // const asp = new Set();
 // const aspArr = [];
@@ -62,6 +63,7 @@ const initialState = {
   questions: [],
   numberOfQuestions: 0,
   answerPerQuestion,
+  answerIdPerQuestion,
   aspects: aspectsArr,
   status: "idle",
 };
@@ -81,7 +83,9 @@ const questionsSlice = createSlice({
       state.currentQuestion = action.payload;
     },
     pickAnswer(state, action) {
-      state.answerPerQuestion[state.currentQuestion] = action.payload;
+      state.answerPerQuestion[state.currentQuestion] = action.payload.answer;
+      state.answerIdPerQuestion[state.currentQuestion] =
+        action.payload.answerId;
     },
     setImportance(state, action) {
       // console.log(action.payload);
@@ -108,9 +112,11 @@ const questionsSlice = createSlice({
         state.questions = questionArray;
         state.numberOfQuestions = questionArray.length;
         state.status = "fulfilled";
-        const answerPerQuestion = Array(state.numberOfQuestions).fill(0);
+        const answerPerQuestion = Array(state.numberOfQuestions).fill(1);
+        const answerIdPerQuestion = Array(state.numberOfQuestions).fill(0);
         // const answerPerQuestion = Array(3).fill(0);
         state.answerPerQuestion = answerPerQuestion;
+        state.answerIdPerQuestion = answerIdPerQuestion;
       })
       .addCase(fetchQuizData.rejected, (state) => {
         state.status = "error";
@@ -143,6 +149,9 @@ export const getAnswerOfQuestion = (state) =>
 
 export const getAnswerPerQuestion = (state) =>
   state.questions.answerPerQuestion;
+
+export const getAnswerIdPerQuestion = (state) =>
+  state.questions.answerIdPerQuestion;
 
 export const getAspects = (state) => state.questions.aspects;
 

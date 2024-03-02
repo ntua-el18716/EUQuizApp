@@ -4,7 +4,7 @@ import { getAnswerOfQuestion, pickAnswer } from "./questionsSlice";
 
 function AnswerItem({ answer, language }) {
   // const { answerId, answerText, answerPoints } = answer;
-  const { answerIndex, answerText } = answer;
+  const { answerIndex, answerText, answerId } = answer;
   const dispatch = useDispatch();
   const answerOfQuestion = useSelector(getAnswerOfQuestion);
   const currentQuestion = answerOfQuestion === answerIndex;
@@ -19,7 +19,9 @@ function AnswerItem({ answer, language }) {
       <label className="flex flex-row gap-2">
         <input
           type="checkbox"
-          onChange={() => dispatch(pickAnswer(answerIndex))}
+          onChange={() =>
+            dispatch(pickAnswer({ answer: answerIndex, answerId: answerId }))
+          }
           className="w-5 content-start"
           checked={answerOfQuestion === answerIndex}
           disabled={answerOfQuestion === answerIndex}
