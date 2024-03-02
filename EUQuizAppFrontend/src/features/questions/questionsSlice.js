@@ -4,7 +4,9 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const fetchQuizData = createAsyncThunk(
   "questions/getQuizData",
   async function () {
-    const res = await fetch("/getQuizData");
+    const res = await fetch(
+      "https://eu-quiz-app-backend.vercel.app/getQuizData",
+    );
     // console.log(res);
     const quizData = await res.json();
     console.log(quizData);
