@@ -1,6 +1,7 @@
 import Disy from "../../images/partyLogos/disy.svg?react";
 import Greens from "../../images/partyLogos/greens.svg?react";
-import Akel from "../../images/partyLogos/akel.svg?react";
+// import Akel from "../../images/partyLogos/akel.svg?react";
+import Akel from "../../images/partyLogos/akelv2.svg?react";
 import Diko from "../../images/partyLogos/diko.svg?react";
 import Elam from "../../images/partyLogos/elam.svg?react";
 import Depa from "../../images/partyLogos/depa.svg?react";

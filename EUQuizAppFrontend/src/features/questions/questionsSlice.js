@@ -7,15 +7,15 @@ export const fetchQuizData = createAsyncThunk(
     const res = await fetch("http://localhost:3000/getQuizData");
     // console.log(res);
     const quizData = await res.json();
-
-    return quizData.dataArray;
+    console.log(quizData);
+    return quizData.sortedQuizData;
   },
 );
 
 // export const NUMBER_OF_QUESTIONS = questionsArray.length;
 
 // const answerPerQuestion = Array(NUMBER_OF_QUESTIONS).fill(0);
-const answerPerQuestion = Array(13).fill(0);
+const answerPerQuestion = Array(1).fill(0);
 
 // const asp = new Set();
 // const aspArr = [];
@@ -99,6 +99,7 @@ const questionsSlice = createSlice({
       })
       .addCase(fetchQuizData.fulfilled, (state, action) => {
         let questionArray = action.payload;
+        // console.log(questionArray);
         state.questions = questionArray;
         state.numberOfQuestions = questionArray.length;
         state.status = "fulfilled";

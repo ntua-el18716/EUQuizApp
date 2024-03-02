@@ -69,4 +69,8 @@ router.get("/getParties", async (req, res) => {
   // res.send("Here are the questions");
 });
 
+router.get("/", (req, res) => {
+  res.send("Welcome to the Backend of the EU Quiz App"); // You can customize the response message
+});
+
 export default router;

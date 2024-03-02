@@ -20,47 +20,14 @@ async function fetchQuizData(res) {
             const answersResult = await src_1.db.query.answers.findMany({
                 where: (0, drizzle_orm_1.eq)(answers_1.answers.questionId, question.questionId),
             });
-            let answersT = {
-                el: [],
-                tr: [],
-                en: [],
-            };
-            for (let i = 0; i < answersResult.length; i++) {
-                answersT.el.push({
-                    answerText: answersResult[i].answerText.el,
-                });
-                answersT.tr.push({
-                    answerText: answersResult[i].answerText.tr,
-                });
-                answersT.en.push({
-                    answerText: answersResult[i].answerText.en,
-                });
-            }
             // console.log(resultObject);
-            let translationData = {
-                el: {
-                    questionTitle: question.questionTitle.el,
-                    questionAspect: question.questionAspect.el,
-                    answers: answersT.el,
-                },
-                tr: {
-                    questionTitle: question.questionTitle.tr,
-                    questionAspect: question.questionAspect.tr,
-                    answers: answersT.tr,
-                },
-                en: {
-                    questionTitle: question.questionTitle.en,
-                    questionAspect: question.questionAspect.en,
-                    answers: answersT.en,
-                },
-            };
             let quizData = {
                 ...question,
                 answers: answersResult,
             };
             dataArray.push(quizData);
         }
-        const sortedQuizData = sortQuizData(dataArray);
+        // const sortedQuizData = sortQuizData(dataArray);
         console.log(dataArray);
         // Now dataArray contains the complete quiz data
         res.status(200).json({ status: "okay", dataArray });

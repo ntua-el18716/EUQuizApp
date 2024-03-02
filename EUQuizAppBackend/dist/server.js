@@ -10,8 +10,13 @@ const app = (0, express_1.default)();
 const port = 3000;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
+// app.get("/", (req, res) => {
+//   return res.json({
+//     status: "success!!!",
+//   });
+// });
 app.use("/", router_1.default);
 app.listen(port, () => {
-    console.log("TypeScript with Express started at http:localhost:3000");
+    console.log("TypeScript with Express starsted at http:localhost:3000");
 });
 exports.default = app;

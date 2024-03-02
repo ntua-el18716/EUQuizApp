@@ -10,7 +10,7 @@ function AnswerItem({ answer, language }) {
   const currentQuestion = answerOfQuestion === answerIndex;
   return (
     <div
-      className={`checkbox-wrapper cursor-pointer  hover:bg-gradient-to-l hover:from-indigo-500 hover:via-sky-600 hover:to-indigo-500  hover:font-semibold hover:text-white ${
+      className={`checkbox-wrapper cursor-pointer hover:bg-gradient-to-l hover:from-indigo-500 hover:via-sky-600 hover:to-indigo-500  hover:font-semibold hover:text-white ${
         currentQuestion
           ? "bg-indigo-600 font-semibold text-white"
           : "bg-cyan-200"
@@ -20,11 +20,11 @@ function AnswerItem({ answer, language }) {
         <input
           type="checkbox"
           onChange={() => dispatch(pickAnswer(answerIndex))}
-          className="w-5"
+          className="w-5 content-start"
           checked={answerOfQuestion === answerIndex}
           disabled={answerOfQuestion === answerIndex}
         />
-        <span className="w-screen px-4 py-2">{answerText[language]} </span>
+        <span className="w-screens px-4 py-2">{answerText[language]}</span>
       </label>
     </div>
   );
