@@ -1,6 +1,8 @@
+import apiBaseUrl from "./apiConfig";
+
 export async function insertCandidate(data) {
   // console.log(data);
-  await fetch("http://localhost:3000/insertCandidate", {
+  await fetch(`${apiBaseUrl}/insertCandidate`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

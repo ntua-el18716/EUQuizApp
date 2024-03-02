@@ -9,7 +9,6 @@ function CandidateUpdate() {
   const [renderList, setRenderList] = useState(false);
 
   useEffect(() => {
-    console.log("hey");
     async function fetchCandidates() {
       const candidatesArray = await getCandidates();
       setCandidates(candidatesArray);

@@ -1,5 +1,7 @@
+import apiBaseUrl from "./apiConfig";
+
 export async function getCandidates() {
-  const res = await fetch("http://localhost:3000/getCandidates");
+  const res = await fetch(`${apiBaseUrl}/getCandidates`);
   const candidates = await res.json();
   // console.log(candidates);
   return candidates.candidatesResult;

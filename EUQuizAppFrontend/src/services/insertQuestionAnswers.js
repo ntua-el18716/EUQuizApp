@@ -1,6 +1,8 @@
+import apiBaseUrl from "./apiConfig";
+
 export async function insertQuestionAnswers(data) {
   console.log(data);
-  await fetch("http://localhost:3000/insertQuestionAnswers", {
+  await fetch(`${apiBaseUrl}/insertQuestionAnswers`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

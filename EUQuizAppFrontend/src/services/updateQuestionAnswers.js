@@ -1,7 +1,9 @@
+import apiBaseUrl from "./apiConfig";
+
 export async function updateQuestionAnswers(data) {
   // console.log(data);
 
-  await fetch("http://localhost:3000/updateQuestionAnswers", {
+  await fetch(`${apiBaseUrl}/updateQuestionAnswers`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

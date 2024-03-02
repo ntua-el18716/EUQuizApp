@@ -1,7 +1,9 @@
+import apiBaseUrl from "./apiConfig";
+
 export async function updateCandidate(data) {
   // console.log(data);
 
-  await fetch("http://localhost:3000/updateCandidate", {
+  await fetch(`${apiBaseUrl}/updateCandidate`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
