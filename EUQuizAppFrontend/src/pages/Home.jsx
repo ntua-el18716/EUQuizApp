@@ -29,7 +29,7 @@ function Home() {
     // Loading state
 
     return (
-      <Loader show={true} type="body" stack="vertical" message="Loading Data" />
+      <Loader show={true} type="body" stack="vertical" message="Loading" />
     );
   }
 
