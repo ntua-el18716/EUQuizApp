@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import apiBaseUrl from "../../services/apiConfig";
+import { sortedQuizData as sortedQuizDatav2 } from "../../data/questions13";
 
 // import { questions as questionsArray } from "../../data/questions3";
 let s = "https://eu-quiz-app-backend.vercel.app";
@@ -12,8 +13,9 @@ export const fetchQuizData = createAsyncThunk(
     // );
     // console.log(res);
     const quizData = await res.json();
-    console.log(quizData);
-    return quizData.sortedQuizData;
+    // console.log(quizData);
+    // return quizData;
+    return sortedQuizDatav2;
   },
 );
 

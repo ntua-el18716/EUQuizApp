@@ -1,10 +1,10 @@
-let sortedQuizData = [
+export const sortedQuizData = [
   {
-    questionId: 22,
+    questionId: 63,
     questionIndex: 1,
     questionTitle: {
       el: "Τι μορφή λύσης υποστηρίζεις για το Κυπριακό;",
-      en: "What solution model do you support for the Cyprus Problems?",
+      en: "What solution model do you support for the Cyprus Problem?",
       tr: "ΤΒΙ",
     },
     questionAspect: {
@@ -15,7 +15,7 @@ let sortedQuizData = [
     answers: [
       {
         answerId: 106,
-        questionId: 22,
+        questionId: 63,
         answerIndex: 1,
         answerText: {
           el: "Διζωνική Δικοινοτική Ομοσπονδία",
@@ -43,7 +43,7 @@ let sortedQuizData = [
       },
       {
         answerId: 110,
-        questionId: 22,
+        questionId: 63,
         answerIndex: 2,
         answerText: {
           el: "Ενιαίο Κράτος",
@@ -55,11 +55,15 @@ let sortedQuizData = [
             party: "edek",
             value: "1",
           },
+          {
+            party: "elam",
+            value: 1,
+          },
         ],
       },
       {
         answerId: 107,
-        questionId: 22,
+        questionId: 63,
         answerIndex: 3,
         answerText: {
           el: "Δύο κράτη",
@@ -70,7 +74,7 @@ let sortedQuizData = [
       },
       {
         answerId: 108,
-        questionId: 22,
+        questionId: 63,
         answerIndex: 4,
         answerText: {
           el: "Διπλή Ένωση",
@@ -81,7 +85,7 @@ let sortedQuizData = [
       },
       {
         answerId: 109,
-        questionId: 22,
+        questionId: 63,
         answerIndex: 5,
         answerText: {
           el: "Δεν ξέρω / Δεν απαντώ",
@@ -93,7 +97,7 @@ let sortedQuizData = [
     ],
   },
   {
-    questionId: 23,
+    questionId: 57,
     questionIndex: 2,
     questionTitle: {
       el: "Τι πιστεύετε για τη διαδικασία ολοκλήρωσης της Ευρωπαϊκής Ένωσης;",
@@ -108,7 +112,7 @@ let sortedQuizData = [
     answers: [
       {
         answerId: 120,
-        questionId: 23,
+        questionId: 57,
         answerIndex: 1,
         answerText: {
           el: "Η ΕΕ πρέπει να εξελιχθεί σε Ευρωπαϊκή Ομοσπονδία",
@@ -124,7 +128,7 @@ let sortedQuizData = [
       },
       {
         answerId: 121,
-        questionId: 23,
+        questionId: 57,
         answerIndex: 2,
         answerText: {
           el: "Η ΕΕ πρέπει να συνεχίσει τη διαδικασία ολοκλήρωσης",
@@ -148,7 +152,7 @@ let sortedQuizData = [
       },
       {
         answerId: 122,
-        questionId: 23,
+        questionId: 57,
         answerIndex: 3,
         answerText: {
           el: "Η ΕΕ πρέπει να παραμείνει όπως είναι",
@@ -159,7 +163,7 @@ let sortedQuizData = [
       },
       {
         answerId: 124,
-        questionId: 23,
+        questionId: 57,
         answerIndex: 4,
         answerText: {
           el: "Τα εθνικά κράτη πρέπει να αποκτήσουν ξανά την εθνική τους κυριαρχία",
@@ -175,11 +179,11 @@ let sortedQuizData = [
       },
       {
         answerId: 123,
-        questionId: 23,
+        questionId: 57,
         answerIndex: 5,
         answerText: {
           el: "Άλλο / Δεν ξέρω / Δεν απαντώ",
-          en: "Other / I don't know / Prefer not to say\"",
+          en: "Other / I don't know / Prefer not to say",
           tr: "TBI",
         },
         answerPoints: [],
@@ -187,7 +191,7 @@ let sortedQuizData = [
     ],
   },
   {
-    questionId: 24,
+    questionId: 69,
     questionIndex: 3,
     questionTitle: {
       el: "Αποδέχεστε την εκ περιτροπής προεδρία στο πλαίσιο μιας συνολικής λύσης για το Κυπριακό;",
@@ -202,7 +206,7 @@ let sortedQuizData = [
     answers: [
       {
         answerId: 149,
-        questionId: 24,
+        questionId: 69,
         answerIndex: 1,
         answerText: {
           el: "Ναι, η εκ περιτροπής προεδρία μπορεί να γίνει αποδεκτή ως μέρος μιας συνολικά αποδεκτής λύσης",
@@ -230,7 +234,7 @@ let sortedQuizData = [
       },
       {
         answerId: 152,
-        questionId: 24,
+        questionId: 69,
         answerIndex: 2,
         answerText: {
           el: "Όχι, καμιά μορφή εκ περιτροπής προεδρίας δεν μπορεί να γίνει  αποδεκτή",
@@ -254,7 +258,7 @@ let sortedQuizData = [
       },
       {
         answerId: 151,
-        questionId: 24,
+        questionId: 69,
         answerIndex: 3,
         answerText: {
           el: "Μόνο εάν είναι με κοινό ψηφοδέλτιο και ενιαία εκλογική βάση",
@@ -270,11 +274,11 @@ let sortedQuizData = [
       },
       {
         answerId: 150,
-        questionId: 24,
+        questionId: 69,
         answerIndex: 4,
         answerText: {
           el: "Άλλο / Δεν ξέρω / Δεν απαντώ",
-          en: "Other / I don't know / Prefer not to say\"",
+          en: "Other / I don't know / Prefer not to say",
           tr: "TBI",
         },
         answerPoints: [],
@@ -282,7 +286,7 @@ let sortedQuizData = [
     ],
   },
   {
-    questionId: 26,
+    questionId: 65,
     questionIndex: 4,
     questionTitle: {
       el: "Ποια στάση πρέπει να τηρήσει η Κύπρος εντός ΕΕ για το Ουρκανικό;",
@@ -297,7 +301,7 @@ let sortedQuizData = [
     answers: [
       {
         answerId: 157,
-        questionId: 26,
+        questionId: 65,
         answerIndex: 1,
         answerText: {
           el: "Πρέπει να συνεχίσει να υποστηρίζει την επιβολή κυρώσεων στην Ρωσία μέχρι την απελευθέρωση της Ουκρανίας",
@@ -325,7 +329,7 @@ let sortedQuizData = [
       },
       {
         answerId: 159,
-        questionId: 26,
+        questionId: 65,
         answerIndex: 2,
         answerText: {
           el: "Πρέπει να υποστηρίξει το τέλος των εχθροπραξιών και την έναρξη ειρηνευτικών διαπραγματεύσεων μεταξύ Ουκρανίας-Ρωσσίας",
@@ -345,11 +349,11 @@ let sortedQuizData = [
       },
       {
         answerId: 158,
-        questionId: 26,
+        questionId: 65,
         answerIndex: 3,
         answerText: {
           el: "Πρέπει να μπλοκάρει μελλοντικές κυρώσεις κατά τις Ρωσίας",
-          en: "Cyprus should block future sanctions to Russia",
+          en: "Cyprus should block future sanctions against Russia",
           tr: "ΤΒΙ",
         },
         answerPoints: [
@@ -361,11 +365,11 @@ let sortedQuizData = [
       },
       {
         answerId: 160,
-        questionId: 26,
+        questionId: 65,
         answerIndex: 4,
         answerText: {
           el: "Άλλο / Δεν ξέρω / Δεν απαντώ",
-          en: "Other / I don't know / Prefer not to say\"",
+          en: "Other / I don't know / Prefer not to say",
           tr: "ΤΒΙ",
         },
         answerPoints: [],
@@ -373,7 +377,7 @@ let sortedQuizData = [
     ],
   },
   {
-    questionId: 25,
+    questionId: 61,
     questionIndex: 5,
     questionTitle: {
       el: "Ποια στάση πρέπει να τηρήσει η Κύπρος στο Μεσανατολίτικο Πρόβλημα;",
@@ -388,7 +392,7 @@ let sortedQuizData = [
     answers: [
       {
         answerId: 153,
-        questionId: 25,
+        questionId: 61,
         answerIndex: 1,
         answerText: {
           el: "Πρέπει να υποστηρίξει την άμεση κατάπαυση του πυρός στην Γάζα και τον τερματισμό της κατοχής",
@@ -416,7 +420,7 @@ let sortedQuizData = [
       },
       {
         answerId: 154,
-        questionId: 25,
+        questionId: 61,
         answerIndex: 2,
         answerText: {
           el: "Πρέπει να υπερασπιστεί το δικαίμα του Ισραήλ στην άμυνα και τον συνεχισμό της επιχείρησης στην Γάζα",
@@ -440,7 +444,7 @@ let sortedQuizData = [
       },
       {
         answerId: 155,
-        questionId: 25,
+        questionId: 61,
         answerIndex: 3,
         answerText: {
           el: "Πρέπει να τηρήσει στάση ουδερότητας",
@@ -451,11 +455,11 @@ let sortedQuizData = [
       },
       {
         answerId: 156,
-        questionId: 25,
+        questionId: 61,
         answerIndex: 4,
         answerText: {
           el: "Άλλο / Δεν ξέρω / Δεν απαντώ",
-          en: "Other / I don't know / Prefer not to say\"",
+          en: "Other / I don't know / Prefer not to say",
           tr: "ΤΒΙ",
         },
         answerPoints: [],
@@ -463,11 +467,11 @@ let sortedQuizData = [
     ],
   },
   {
-    questionId: 27,
+    questionId: 64,
     questionIndex: 6,
     questionTitle: {
       el: "Που πρέπει να επικεντρωθούν οι προσπάθειες της Κυπριακής Δημοκρατίας σε σχέση με την Τουρκία;",
-      en: 'How should the Republic of Cyprus prioritize its efforts in relation to Turkey?"',
+      en: "How should the Republic of Cyprus prioritize its efforts in relation to Turkey?",
       tr: "TBI",
     },
     questionAspect: {
@@ -478,11 +482,11 @@ let sortedQuizData = [
     answers: [
       {
         answerId: 161,
-        questionId: 27,
+        questionId: 64,
         answerIndex: 1,
         answerText: {
           el: "Στην επιβολή κυρώσεων κατά της Τουρκίας",
-          en: "On imposing sanctions to Turkey",
+          en: "On imposing sanctions against Turkey",
           tr: "ΤΒΙ",
         },
         answerPoints: [
@@ -498,11 +502,11 @@ let sortedQuizData = [
       },
       {
         answerId: 162,
-        questionId: 27,
+        questionId: 64,
         answerIndex: 2,
         answerText: {
           el: "Στην εφαρμογή ουσιαστικών Μέτρων Οικοδόμησης Εμπιστοσύνης(χωρίς να αποκλείεται το πιθανό άνοιγμα νέων οδοφραγμάτων)",
-          en: "On implementing Trust Building measures(including possibly opening new crossing points)",
+          en: "On implementing trust Building measures(including possibly opening new crossing points)",
           tr: "ΤΒΙ",
         },
         answerPoints: [
@@ -526,7 +530,7 @@ let sortedQuizData = [
       },
       {
         answerId: 164,
-        questionId: 27,
+        questionId: 64,
         answerIndex: 3,
         answerText: {
           el: "Και στα δύο πιο πάνω",
@@ -546,7 +550,7 @@ let sortedQuizData = [
       },
       {
         answerId: 163,
-        questionId: 27,
+        questionId: 64,
         answerIndex: 4,
         answerText: {
           el: "Στην επιβολή κυρώσεων κατά της Τουρκίας και μέτρων κατά των Τουρκοκυπρίων(συμπεριλαμβανομένου του κλεισίμο των οδοφραγμάτων)",
@@ -557,11 +561,11 @@ let sortedQuizData = [
       },
       {
         answerId: 165,
-        questionId: 27,
+        questionId: 64,
         answerIndex: 5,
         answerText: {
           el: "Άλλο / Δεν ξέρω / Δεν απαντώ",
-          en: "Other / I don't know / Prefer not to say\"",
+          en: "Other / I don't know / Prefer not to say",
           tr: "ΤΒΙ",
         },
         answerPoints: [],
@@ -569,7 +573,7 @@ let sortedQuizData = [
     ],
   },
   {
-    questionId: 28,
+    questionId: 66,
     questionIndex: 7,
     questionTitle: {
       el: "Ποια στρατηγική πρέπει να ακολουθηθεί για την επίτευξη λύσης του Κυπριακού;",
@@ -584,7 +588,7 @@ let sortedQuizData = [
     answers: [
       {
         answerId: 166,
-        questionId: 28,
+        questionId: 66,
         answerIndex: 1,
         answerText: {
           el: "Επικέντρωση στην επανέναρξη των συνομιλιών απο το σημείο που διακόπηκαν στο Κραν Μοντανα αποδεχόμενοι το Πλαίσιο Γκουτέρες ως έχει",
@@ -612,7 +616,7 @@ let sortedQuizData = [
       },
       {
         answerId: 167,
-        questionId: 28,
+        questionId: 66,
         answerIndex: 2,
         answerText: {
           el: "Επικέντρωση στην επανέναρξη των συνομιλιών χωρίς όμως να αποδεκτούμε τις εώς τώρα απαράδεκτες συγκλίσεις",
@@ -632,7 +636,7 @@ let sortedQuizData = [
       },
       {
         answerId: 169,
-        questionId: 28,
+        questionId: 66,
         answerIndex: 3,
         answerText: {
           el: "Επανατοποθέτηση του κυπριακού στην ορθή του βάση ως πρόβλημα εισβολής και κατοχής, απόρριψη των δικοινοτικών συνομιλιών",
@@ -652,11 +656,11 @@ let sortedQuizData = [
       },
       {
         answerId: 168,
-        questionId: 28,
+        questionId: 66,
         answerIndex: 4,
         answerText: {
           el: "Άλλο / Δεν ξέρω / Δεν απαντώ",
-          en: "Other / I don't know / Prefer not to say\"",
+          en: "Other / I don't know / Prefer not to say",
           tr: "TBI",
         },
         answerPoints: [],
@@ -664,7 +668,7 @@ let sortedQuizData = [
     ],
   },
   {
-    questionId: 29,
+    questionId: 68,
     questionIndex: 8,
     questionTitle: {
       el: "Ποια είναι η θέση σας για τις αμβλώσεις;",
@@ -679,7 +683,7 @@ let sortedQuizData = [
     answers: [
       {
         answerId: 170,
-        questionId: 29,
+        questionId: 68,
         answerIndex: 1,
         answerText: {
           el: "Το δικαίωμα της γυναίκας να επιλέγει για το σώμα της πρέπει να διαφυλαχθεί",
@@ -711,7 +715,7 @@ let sortedQuizData = [
       },
       {
         answerId: 171,
-        questionId: 29,
+        questionId: 68,
         answerIndex: 2,
         answerText: {
           el: "Μόνο σε περιπτώσεις βιασμού, ασθένειας του εμβρύου ή κίνδύνου της υγείας της μητέρας",
@@ -731,7 +735,7 @@ let sortedQuizData = [
       },
       {
         answerId: 172,
-        questionId: 29,
+        questionId: 68,
         answerIndex: 3,
         answerText: {
           el: "Πρέπει να απαγορευθούν. Η ζωή του εμβρύου πρέπει να διαφυλαχθεί",
@@ -747,7 +751,7 @@ let sortedQuizData = [
       },
       {
         answerId: 173,
-        questionId: 29,
+        questionId: 68,
         answerIndex: 4,
         answerText: {
           el: "Άλλο / Δεν ξέρω / Δεν απαντώ",
@@ -759,7 +763,7 @@ let sortedQuizData = [
     ],
   },
   {
-    questionId: 30,
+    questionId: 62,
     questionIndex: 9,
     questionTitle: {
       el: "Πρέπει να νομιμοποιηθούν οι γάμοι και οι υιοθεσίες παιδιών από ομόφυλα ζευγάρια;",
@@ -774,7 +778,7 @@ let sortedQuizData = [
     answers: [
       {
         answerId: 201,
-        questionId: 30,
+        questionId: 62,
         answerIndex: 1,
         answerText: {
           el: "Ναι, πρέπει να νομιμοποιηθούν και τα δύο, τα ομοόφυλα ζευγάρια πρέπει να έχουν ίσα δικαιώματα με τα ετεροφυλόφυλα",
@@ -802,7 +806,7 @@ let sortedQuizData = [
       },
       {
         answerId: 202,
-        questionId: 30,
+        questionId: 62,
         answerIndex: 2,
         answerText: {
           el: "Πρέπει να νομιμοποιηθεί ο γάμος, όχι όμως η υιοθεσία παιδιών",
@@ -822,7 +826,7 @@ let sortedQuizData = [
       },
       {
         answerId: 204,
-        questionId: 30,
+        questionId: 62,
         answerIndex: 3,
         answerText: {
           el: "Όχι και στα δύο, πρέπει να διαφυλαχθεί ο θεσμός της οικογένειας",
@@ -842,11 +846,11 @@ let sortedQuizData = [
       },
       {
         answerId: 203,
-        questionId: 30,
+        questionId: 62,
         answerIndex: 4,
         answerText: {
           el: "Άλλο / Δεν ξέρω / Δεν απαντώ",
-          en: "Other / I don't know / Prefer not to say\"",
+          en: "Other / I don't know / Prefer not to say",
           tr: "TBI",
         },
         answerPoints: [],
@@ -854,7 +858,7 @@ let sortedQuizData = [
     ],
   },
   {
-    questionId: 31,
+    questionId: 67,
     questionIndex: 10,
     questionTitle: {
       el: "Υποστηρίζετε την δημιουργία Ευρωπαικού Στρατού;",
@@ -869,7 +873,7 @@ let sortedQuizData = [
     answers: [
       {
         answerId: 175,
-        questionId: 31,
+        questionId: 67,
         answerIndex: 1,
         answerText: {
           el: "Ναι",
@@ -909,7 +913,7 @@ let sortedQuizData = [
       },
       {
         answerId: 176,
-        questionId: 31,
+        questionId: 67,
         answerIndex: 2,
         answerText: {
           el: "Όχι",
@@ -925,7 +929,7 @@ let sortedQuizData = [
       },
       {
         answerId: 177,
-        questionId: 31,
+        questionId: 67,
         answerIndex: 3,
         answerText: {
           el: "Άλλο / Δεν ξέρω / Δεν απαντώ",
@@ -937,7 +941,7 @@ let sortedQuizData = [
     ],
   },
   {
-    questionId: 32,
+    questionId: 58,
     questionIndex: 11,
     questionTitle: {
       el: "Ποια είναι η άποψη σας όσον αφορά την ένταξη της Κύπρου στον 'Συνεταιρισμό για την Ειρήνη' και το ΝΑΤΟ;",
@@ -952,7 +956,7 @@ let sortedQuizData = [
     answers: [
       {
         answerId: 178,
-        questionId: 32,
+        questionId: 58,
         answerIndex: 1,
         answerText: {
           el: "Η ΚΔ πρέπει να υποβάλει αίτηση ένταξης στον ΣγτΕ και στόχος για το μέλλον πρέπει να είναι και η ένταξη στο ΝΑΤΟ",
@@ -976,7 +980,7 @@ let sortedQuizData = [
       },
       {
         answerId: 179,
-        questionId: 32,
+        questionId: 58,
         answerIndex: 2,
         answerText: {
           el: "Η ΚΔ πρέπει να ενταχθεί στον ΣγτΕ, όχι όμως στο ΝΑΤΟ",
@@ -1000,7 +1004,7 @@ let sortedQuizData = [
       },
       {
         answerId: 180,
-        questionId: 32,
+        questionId: 58,
         answerIndex: 3,
         answerText: {
           el: "Η ΚΔ δεν πρέπει να ενταχθεί ούτε στον ΣγτΕ ούτε φυσικά και στο ΝΑΤΟ",
@@ -1020,11 +1024,11 @@ let sortedQuizData = [
       },
       {
         answerId: 181,
-        questionId: 32,
+        questionId: 58,
         answerIndex: 4,
         answerText: {
           el: "Άλλο / Δεν ξέρω / Δεν απαντώ",
-          en: "Other / I don't know / Prefer not to say\"",
+          en: "Other / I don't know / Prefer not to say",
           tr: "TBI",
         },
         answerPoints: [],
@@ -1032,7 +1036,7 @@ let sortedQuizData = [
     ],
   },
   {
-    questionId: 33,
+    questionId: 59,
     questionIndex: 12,
     questionTitle: {
       el: "Πρέπει να υπάρξει νομιμοποίηση της Κάνναβης;",
@@ -1047,7 +1051,7 @@ let sortedQuizData = [
     answers: [
       {
         answerId: 182,
-        questionId: 33,
+        questionId: 59,
         answerIndex: 1,
         answerText: {
           el: "Ναι, για ιατρική και ψυχαγωγική χρήση",
@@ -1067,7 +1071,7 @@ let sortedQuizData = [
       },
       {
         answerId: 185,
-        questionId: 33,
+        questionId: 59,
         answerIndex: 2,
         answerText: {
           el: "Ναι, αλλά μόνο για αυστηρά ιατρική χρήση",
@@ -1095,7 +1099,7 @@ let sortedQuizData = [
       },
       {
         answerId: 183,
-        questionId: 33,
+        questionId: 59,
         answerIndex: 3,
         answerText: {
           el: "Όχι, η αποποινικοποίηση θα οδηγήσει σε σοβαρά προβλήματα",
@@ -1111,11 +1115,11 @@ let sortedQuizData = [
       },
       {
         answerId: 184,
-        questionId: 33,
+        questionId: 59,
         answerIndex: 4,
         answerText: {
           el: "Άλλο / Δεν ξέρω / Δεν απαντώ",
-          en: "Other / I don't know / Prefer not to say\"",
+          en: "Other / I don't know / Prefer not to say",
           tr: "TBI",
         },
         answerPoints: [],
@@ -1123,7 +1127,7 @@ let sortedQuizData = [
     ],
   },
   {
-    questionId: 34,
+    questionId: 60,
     questionIndex: 13,
     questionTitle: {
       el: "Ποια είναι η άποψη σας για τον υποθαλάσσιο αγωγό φυσικού αερίου East Med;",
@@ -1138,7 +1142,7 @@ let sortedQuizData = [
     answers: [
       {
         answerId: 186,
-        questionId: 34,
+        questionId: 60,
         answerIndex: 1,
         answerText: {
           el: "Πρέπει να συνεχιστούν οι προσπάθειες για δημιουργία του East Med ώστε να καταστεί η Κύπρος ενεργειακός κόμβος της Μεσογείου",
@@ -1166,7 +1170,7 @@ let sortedQuizData = [
       },
       {
         answerId: 187,
-        questionId: 34,
+        questionId: 60,
         answerIndex: 2,
         answerText: {
           el: "Η δημιουργία του αγωγού θα ήταν ωφέλιμη για την Κύπρο, όμως δεν αποτελεί ρεαλιστική επιλογή",
@@ -1182,11 +1186,11 @@ let sortedQuizData = [
       },
       {
         answerId: 189,
-        questionId: 34,
+        questionId: 60,
         answerIndex: 3,
         answerText: {
           el: "Η εξόρυξη ορυκτών καυσίμων ανήκει στο παρελθόν. Πρέπει να επικεντρωθούμε στην ανάπτυξη ΑΠΕ",
-          en: "Extraction of fossil fuels belongs to the past. We need to focus on Renewable Energy Sources",
+          en: "Extraction of fossil fuels belongs to the past. We need to focus on Renewable energy Sources",
           tr: "ΤΒΙ",
         },
         answerPoints: [
@@ -1206,11 +1210,11 @@ let sortedQuizData = [
       },
       {
         answerId: 188,
-        questionId: 34,
+        questionId: 60,
         answerIndex: 4,
         answerText: {
           el: "Άλλο / Δεν ξέρω / Δεν απαντώ",
-          en: "Other / I don't know / Prefer not to say\"",
+          en: "Other / I don't know / Prefer not to say",
           tr: "TBI",
         },
         answerPoints: [],

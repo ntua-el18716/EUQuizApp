@@ -44,20 +44,20 @@ function isolateQuestion(dataObject) {
 }
 
 export async function insertQuizData(dataObject) {
+  // console.log(dataObject.questionsArray[6]);
   try {
     dataObject.questionsArray.map(async (question) => {
-      const newQuestion: question = isolateQuestion(dataObject);
+      const newQuestion: question = isolateQuestion(question);
+      console.log(newQuestion);
       const insertedQuestion = await db
         .insert(questions)
         .values(newQuestion)
         .returning({ insertedId: questions.questionId });
-
       let newAnswer: answer;
       let insertedId = insertedQuestion[0].insertedId;
-
       // Use Promise.all to await all promises concurrently
       await Promise.all(
-        dataObject.answers.map(async (answer) => {
+        question.answers.map(async (answer) => {
           newAnswer = { ...answer, questionId: insertedId };
           await db.insert(answers).values(newAnswer);
         })
@@ -66,11 +66,9 @@ export async function insertQuizData(dataObject) {
     console.log("Question and answers inserted successfully.");
   } catch (error) {
     console.error("Error inserting question and answers:", error);
-
     // You can either log the error, handle it gracefully, or throw a custom error
     // For example, if you want to throw a custom error and stop the server from crashing:
     // throw new Error('Invalid data. Unable to insert question and answers.');
-
     // Alternatively, you can handle the error and send an appropriate response to the client
     // For example, sending a 400 Bad Request response:
     return {
