@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import image from "../images/imagev3.jpg";
-// import image3 from "../images/image3v5.jpg";
-import image3 from "../images/image3v7.png";
+import image from "../../public/images/imagev3.jpg";
+import image3 from "../../public/images/image3v7.png";
+
 import { Trans, useTranslation } from "react-i18next";
-import { getQuizData } from "../services/getQuizData";
 import Loader from "react-spinner-loader";
 import {
   fetchQuizData,
@@ -26,7 +25,7 @@ function Home() {
 
   const quizDataStatus = useSelector(getQuizDataStatus);
 
-  if (quizDataStatus === "loading") {
+  if (quizDataStatus === "loading" || !image || !image3) {
     // Loading state
 
     return (

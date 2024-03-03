@@ -6,11 +6,7 @@ import { useDispatch } from "react-redux";
 import { resetResults } from "../features/results/resultsSlice";
 import { resetQuestions } from "../features/questions/questionsSlice";
 import { useNavigate } from "react-router-dom";
-import Home from "../images/home.svg?react";
-
-// import { useScreenshot, createFileName } from "use-react-screenshot";
-
-// import { HiOutlineHome, HiOutlineHomeModern } from "react-icons/hi2";
+import Home from "../../public/images/home.svg?react";
 
 function Results() {
   const [active, setActive] = useState("results");

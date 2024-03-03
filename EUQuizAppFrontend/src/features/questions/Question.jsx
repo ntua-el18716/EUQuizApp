@@ -14,8 +14,8 @@ import { submitAnswers, calculateResults } from "../results/resultsSlice";
 import QuestionAspect from "./QuestionAspect";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-import LeftArrow from "../../images/arrow-left.svg?react";
-import RightArrow from "../../images/arrow-right.svg?react";
+import LeftArrow from "../../../public/images/arrow-left.svg?react";
+import RightArrow from "../../../public/images/arrow-right.svg?react";
 
 function Question({ question }) {
   const { i18n } = useTranslation();
@@ -91,6 +91,7 @@ function Question({ question }) {
           onClick={() => {
             dispatch(goPrevious());
           }}
+          disabled={questionIndex === 1}
         >
           <div className="flex gap-1">
             <LeftArrow />

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Home from "../../images/home.svg?react";
+import Home from "../../../public/images/home.svg?react";
 
 function ListOfQuestions({ questions, questionId, onQuestionId }) {
   const sortedQuestions = questions.sort(

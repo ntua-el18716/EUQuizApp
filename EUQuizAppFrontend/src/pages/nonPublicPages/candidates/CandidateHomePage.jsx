@@ -27,9 +27,6 @@ function CandidateHomePage() {
   }, []);
 
   const party = watch("party");
-  console.log("Party:" + party);
-
-  console.log(parties);
 
   const onSubmit = (data) => console.log(data);
 
@@ -62,13 +59,6 @@ function CandidateHomePage() {
             {party.partyAbbrGr}
           </option>
         ))}
-        {/* <option value="disy">disy</option>
-        <option value="akel">ΑΚΕΛ</option>
-        <option value="diko">diko</option>
-        <option value="edek">edek</option>
-        <option value="depa">depa</option>
-        <option value="greens">greens</option>
-        <option value="volt">volt</option> */}
       </select>
 
       {/* Candidate */}
