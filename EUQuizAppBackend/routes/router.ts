@@ -11,6 +11,7 @@ import { fetchQuizData } from "./getQuestionsAnswers";
 import { fetchParties } from "./getParties";
 import { insertCandidate } from "./insertCandidate";
 import { updateQuestionAnswers } from "./updateQuestionAnswers";
+import { insertQuizData } from "./insertQuizData";
 
 const router = express.Router();
 
@@ -21,6 +22,11 @@ router.use((req, res, next) => {
 
 router.post("/insertQuestionAnswers", async (req, res) => {
   await insertQuestionAndAnswers(req.body);
+  res.send("Question and Answers Added");
+});
+
+router.post("/insertQuizData", async (req, res) => {
+  await insertQuizData(req.body);
   res.send("Question and Answers Added");
 });
 

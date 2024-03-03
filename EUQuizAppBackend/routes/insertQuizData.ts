@@ -43,9 +43,9 @@ function isolateQuestion(dataObject) {
   return newQuestion;
 }
 
-export async function insertQuizDataFull(dataObject) {
+export async function insertQuizData(dataObject) {
   try {
-    dataObject.map(async (question) => {
+    dataObject.questionsArray.map(async (question) => {
       const newQuestion: question = isolateQuestion(dataObject);
       const insertedQuestion = await db
         .insert(questions)
