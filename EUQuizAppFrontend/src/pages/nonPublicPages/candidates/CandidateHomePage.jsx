@@ -59,7 +59,7 @@ function CandidateHomePage() {
         </option>
         {parties.map((party) => (
           <option key={party.partyAbbreviation} value={party.partyAbbreviation}>
-            {party.partyName}
+            {party.partyAbbrGr}
           </option>
         ))}
         {/* <option value="disy">disy</option>

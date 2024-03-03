@@ -6,6 +6,7 @@ import { candidates } from "./candidates";
 export const parties = pgTable("parties", {
   // partyId: serial("partyId").primaryKey(),
   partyName: text("partyName"),
+  partyAbbrGr: text("partyAbbrGr"),
   partyImg: text("partyImg"),
   partyAbbreviation: text("partyAbbreviation")
     .$type<typeof partyEnum>()
