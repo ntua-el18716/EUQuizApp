@@ -93,7 +93,7 @@ function ListOfCandidates({ candidates, candidateId, onCandidateId }) {
           <p className="col-span-2">{candidate.candidateName.en}</p>
           <p className="uppercase col-span-1">{candidate.candidateParty}</p>
           <p className="col-span-2">{candidate.candidateMobileNumber}</p>
-          <p className="col-span-2 pr-2">{candidate.candidateEmail}</p>
+          <p className="col-span-2 pr-8">{candidate.candidateEmail}</p>
         </button>
       ))}
     </ul>
