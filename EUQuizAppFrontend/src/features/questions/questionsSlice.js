@@ -100,6 +100,7 @@ const questionsSlice = createSlice({
         ...initialState,
         questions: state.questions,
         numberOfQuestions: state.numberOfQuestions,
+        answerPerQuestion: state.answerPerQuestion,
       };
     },
   },
