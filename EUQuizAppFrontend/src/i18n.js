@@ -16,7 +16,7 @@ i18n
   .init({
     ns: ["questions", "translation"],
     debug: true,
-    fallbackLng: "tr",
+    fallbackLng: "en",
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
