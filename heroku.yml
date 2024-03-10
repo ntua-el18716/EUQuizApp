@@ -1,0 +1,15 @@
+version: "3.4"
+
+services:
+  api:
+    build:
+      context: ./EUQuizAppBackend
+      target: production
+    ports:
+      - 3000:3000
+  vite:
+    build:
+      context: ./EUQuizAppFrontend
+      target: production
+    ports:
+      - 5173:80
