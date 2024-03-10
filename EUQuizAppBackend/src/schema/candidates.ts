@@ -1,4 +1,11 @@
-import { integer, jsonb, pgTable, serial, text } from "drizzle-orm/pg-core";
+import {
+  boolean,
+  integer,
+  jsonb,
+  pgTable,
+  serial,
+  text,
+} from "drizzle-orm/pg-core";
 import { partyEnum } from "./Enums/partyEnum";
 import { relations } from "drizzle-orm";
 import { candidateAnswers } from "./candidateAnswers";
@@ -16,6 +23,9 @@ export const candidates = pgTable("candidates", {
   candidateEmail: text("candidateEmail"),
   candidateWebPage: text("candidateWebPage"),
   candidateImg: text("candidateImg"),
+  candidateCode: text("candidateCode"),
+  candidateCustomAnswers: text("candidateCustomAnswers").array(),
+  candidateConsent: boolean("candidateConsent"),
 });
 
 export const candidatesRelations = relations(candidates, ({ many, one }) => ({

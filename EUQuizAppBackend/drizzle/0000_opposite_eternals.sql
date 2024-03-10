@@ -50,7 +50,8 @@ CREATE TABLE IF NOT EXISTS "candidates" (
 CREATE TABLE IF NOT EXISTS "parties" (
 	"partyName" text,
 	"partyImg" text,
-	"partyAbbreviation" text PRIMARY KEY NOT NULL
+	"partyAbbreviation" text PRIMARY KEY NOT NULL,
+  "partyAbbrGr" text,
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "questions" (

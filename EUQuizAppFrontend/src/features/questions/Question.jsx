@@ -4,11 +4,16 @@ import QuestionTitle from "./QuestionTitle";
 import Button from "../../ui/Button";
 import AnswerItem from "./AnswerItem";
 import {
+  getAnswerOfQuestion,
   getAnswerPerQuestion,
+  getCandidateCustomAnswerOfQuestion,
+  getCandidateMode,
   getNumberOfQuestions,
   getQuestions,
   goNext,
   goPrevious,
+  pickAnswer,
+  setCandidateCustomAnswer,
 } from "./questionsSlice";
 import { submitAnswers, calculateResults } from "../results/resultsSlice";
 import QuestionAspect from "./QuestionAspect";
@@ -27,6 +32,11 @@ function Question({ question }) {
   // const answer = useSelector(getAnswerOfQuestion);
   const dispatch = useDispatch();
   const answerPerQuestion = useSelector(getAnswerPerQuestion);
+  const candidateCustomAnswerPerQuestion = useSelector(
+    getCandidateCustomAnswerOfQuestion,
+  );
+  const candidateMode = useSelector(getCandidateMode) || false;
+
   const navigate = useNavigate();
 
   const { t } = useTranslation();
@@ -63,7 +73,8 @@ function Question({ question }) {
   //   ns: "questions",
   //   returnObjects: true,
   // });
-  console.log(answersT);
+  // console.log(answersT);
+  const answerOfQuestion = useSelector(getAnswerOfQuestion);
 
   return (
     <div className="flex flex-col gap-0 bg-cyan-100">
@@ -83,6 +94,38 @@ function Question({ question }) {
               key={answer.answerId}
             />
           ))}
+
+          {candidateMode && (
+            <div
+              className={`checkbox-wrapper cursor-pointer hover:bg-gradient-to-l hover:from-indigo-500 hover:via-sky-600 hover:to-indigo-500  hover:font-semibold hover:text-white ${
+                answerOfQuestion === -1
+                  ? "bg-indigo-600 font-semibold text-white placeholder:text-white"
+                  : "bg-cyan-200"
+              }`}
+              onClick={() => dispatch(pickAnswer({ answer: -1, answerId: -1 }))}
+            >
+              <label className="flex gap-1">
+                <input
+                  type="checkbox"
+                  checked={answerOfQuestion === -1 ? true : false}
+                  className="w-5 content-start"
+                  onChange={() => {}}
+                ></input>
+                <input
+                  placeholder="Click here and write a custom answer"
+                  className={`bg-cyan-200 w-full checkbox-wrapper focus:outline-none  hover:bg-gradient-to-l hover:from-indigo-500 hover:via-sky-600 hover:to-indigo-500  hover:font-semibold hover:text-white px-4 py-2 placeholder:italic placeholder:font-sans placeholder:text-slate-700 placeholder:hover:text-white ${
+                    answerOfQuestion === -1
+                      ? "bg-indigo-600 font-semibold text-white placeholder:text-white placeholder:font-normal"
+                      : "bg-cyan-200"
+                  }`}
+                  value={candidateCustomAnswerPerQuestion}
+                  onChange={(e) =>
+                    dispatch(setCandidateCustomAnswer(e.target.value))
+                  }
+                ></input>
+              </label>
+            </div>
+          )}
         </ul>
       </div>
 
@@ -102,6 +145,15 @@ function Question({ question }) {
           <Button onClick={() => dispatch(goNext())}>
             <div className="flex gap-1">
               NEXT <RightArrow />
+            </div>
+          </Button>
+        ) : candidateMode ? (
+          <Button
+            onClick={() => navigate("/candidateReview")}
+            disabled={answerPerQuestion.includes(0)}
+          >
+            <div className="flex gap-1">
+              CONTINUE <RightArrow />
             </div>
           </Button>
         ) : (

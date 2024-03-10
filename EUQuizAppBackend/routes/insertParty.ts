@@ -16,6 +16,5 @@ export async function insertParty(dataObject) {
     console.log("Party inserted succesfully");
   } catch (error) {
     console.log("Error inserting party");
-    throw new Error("Failed to insert party");
   }
 }

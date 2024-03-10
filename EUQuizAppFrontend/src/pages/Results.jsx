@@ -19,12 +19,6 @@ function Results() {
   }
   const ref = useRef(null);
 
-  //eslint-disable-next-line no-unused-vars
-  // const [image, takeScreenshot] = useScreenshot({
-  //   type: "image/jpeg",
-  //   quality: 1.0,
-  // });
-
   // const downloadScreenshot = () => takeScreenshot(ref.current).then(download);
   const downloadScreenshot = () => console.log("tbi");
 

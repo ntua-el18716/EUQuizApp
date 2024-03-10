@@ -1,1 +1,0 @@
-ALTER TABLE "parties" ADD COLUMN "partyAbbrGr" text;

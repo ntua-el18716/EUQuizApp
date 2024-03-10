@@ -9,6 +9,8 @@ import CandidateInsertPage from "./pages/nonPublicPages/candidates/CandidateInse
 import CandidateUpdate from "./pages/nonPublicPages/candidates/CandidateUpdate";
 import QuestionInsertPage from "./pages/nonPublicPages/questions/QuestionInsertPage";
 import QuestionUpdate from "./pages/nonPublicPages/questions/QuestionUpdate";
+import CandidateReview from "./pages/nonPublicPages/candidates/CandidateReview";
+import CandidateThankYou from "./pages/nonPublicPages/candidates/CandidateThankYou";
 
 const developmentRoutes = [
   // Add your extra routes here
@@ -30,6 +32,20 @@ const developmentRoutes = [
   },
 ];
 
+const candidateRoutes = [
+  {
+    path: "/candidateHome",
+    element: <CandidateHomePage />,
+  },
+  {
+    path: "/candidateReview",
+    element: <CandidateReview />,
+  },
+  {
+    path: "/candidateThankYou",
+    element: <CandidateThankYou />,
+  },
+];
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -50,10 +66,7 @@ const router = createBrowserRouter([
         path: "/results",
         element: <Results />,
       },
-      {
-        path: "/candidateHome",
-        element: <CandidateHomePage />,
-      },
+      ...candidateRoutes,
     ],
   },
   ...developmentRoutes,

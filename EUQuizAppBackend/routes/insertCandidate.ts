@@ -23,6 +23,9 @@ export async function insertCandidate(dataObject) {
     console.log("Candidate inserted successfully.");
   } catch (error) {
     console.error("Error inserting candidate:", error);
-    throw new Error("Failed to insert candidate.");
+    return {
+      status: "error",
+      message: "Failed to insert candidate",
+    };
   }
 }

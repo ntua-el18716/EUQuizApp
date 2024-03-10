@@ -4,25 +4,33 @@ import { useEffect, useState } from "react";
 
 function ListOfCandidates({ candidates, candidateId, onCandidateId }) {
   const [filteredCandidates, setFilteredCandidates] = useState(candidates);
+  const [filter, setFilter] = useState("all");
   useEffect(() => {
-    setFilteredCandidates(candidates);
-  }, [candidates]);
+    if (filter === "all") setFilteredCandidates(candidates);
+    else {
+      let f = candidates.filter(
+        (candidate) => candidate.candidateParty === filter,
+      );
+      setFilteredCandidates(f);
+    }
+  }, [candidates, filter]);
 
   // console.log(filteredCandidates);
   const sortedCandidates = filteredCandidates.sort((a, b) =>
     a.candidateParty.localeCompare(b.candidateParty),
   );
 
-  function handleFilter(party) {
-    if (party === "all") {
-      setFilteredCandidates(candidates);
-      return;
-    }
-    let f = candidates.filter(
-      (candidate) => candidate.candidateParty === party,
-    );
-    setFilteredCandidates(f);
-  }
+  // function handleFilter(party) {
+  //   setFilter(filter);
+  //   if (party === "all") {
+  //     setFilteredCandidates(candidates);
+  //     return;
+  //   }
+  //   let f = candidates.filter(
+  //     (candidate) => candidate.candidateParty === party,
+  //   );
+  //   setFilteredCandidates(f);
+  // }
   return (
     <ul className="no-scrollbar max-h-screen h-full flex flex-col gap-4 overflow-hidden overflow-y-auto whitespace-nowrap rounded-lg py-2 px-0.5">
       <div className="flex justify-between px-2 ">
@@ -41,14 +49,17 @@ function ListOfCandidates({ candidates, candidateId, onCandidateId }) {
             className={`bg-indigo-700 flex px-2 py-3 rounded-lg text-lg font-bold uppercase text-white ${
               filteredCandidates.length < 7 ? "block" : "hidden"
             }`}
-            onClick={() => handleFilter("all")}
+            // onClick={() => handleFilter("all")}
+            onClick={() => setFilter("all")}
           >
             Clear Filter
           </button>
           <select
             className=" bg-indigo-700 flex px-2 py-3 rounded-lg text-lg font-bold uppercase text-white "
-            defaultValue=""
-            onChange={(e) => handleFilter(e.target.value)}
+            defaultValue="all"
+            value={filter}
+            // onChange={(e) => handleFilter(e.target.value)}
+            onChange={(e) => setFilter(e.target.value)}
           >
             <option value="all">Filter</option>
             <option value="disy">DISY</option>

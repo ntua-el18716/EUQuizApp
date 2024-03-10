@@ -6,14 +6,15 @@ import {
   getCurrentQuestion,
   getQuestions,
 } from "../features/questions/questionsSlice";
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Home from "./Home";
 
 function Questions() {
   const questions = useSelector(getQuestions);
   const currentQuestion = useSelector(getCurrentQuestion);
-  console.log(questions);
+  // console.log(questions);
   // console.log(currentQuestion);
+
   const navigate = useNavigate();
   if (!questions || !questions[currentQuestion]) {
     console.log(currentQuestion);

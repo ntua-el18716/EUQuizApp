@@ -1,17 +1,26 @@
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { getCandidates } from "../../../services/getCandidates";
 import { getParties } from "../../../services/getParties";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import {
+  fetchQuizData,
+  setCandidateInfo,
+} from "../../../features/questions/questionsSlice";
 
 function CandidateHomePage() {
   const {
-    register,
+    control,
     handleSubmit,
     watch,
+    register,
     formState: { errors },
   } = useForm();
   const [candidates, setCandidates] = useState([]);
   const [parties, setParties] = useState([]);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     async function fetchCandidates() {
@@ -24,11 +33,29 @@ function CandidateHomePage() {
     }
     fetchCandidates();
     fetchParties();
+    dispatch(fetchQuizData());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const party = watch("party");
+  // console.log(candidates);
 
-  const onSubmit = (data) => console.log(data);
+  const navigate = useNavigate();
+  //you need to find the name of the candidate
+  const onSubmit = (data) => {
+    console.log(data);
+    const candidate = candidates.find(
+      (candidate) =>
+        candidate.candidateId === Number(data.candidate.candidateId),
+    );
+    data.candidate = {
+      ...data.candidate,
+      candidateId: Number(data.candidate.candidateId),
+      candidateName: candidate.candidateName,
+    };
+    dispatch(setCandidateInfo(data.candidate));
+    navigate("/questions");
+  };
 
   return (
     <form
@@ -43,44 +70,74 @@ function CandidateHomePage() {
       </p>
 
       {/* Party */}
-      <select
+      <Controller
         name="party"
-        className="bg-indigo-600 text-lg font-semibold rounded-lg text-white px-2 py-4 w-[13rem] md:px-4 md:py-5  md:w-[15rem] mx-auto"
-        defaultValue="party"
-        {...register("party", {
-          required: true,
-        })}
-      >
-        <option value="party" disabled>
-          Party
-        </option>
-        {parties.map((party) => (
-          <option key={party.partyAbbreviation} value={party.partyAbbreviation}>
-            {party.partyAbbrGr}
-          </option>
-        ))}
-      </select>
+        control={control}
+        defaultValue=""
+        rules={{ required: "Please select a party" }}
+        render={({ field }) => (
+          <>
+            <select
+              {...field}
+              className="bg-indigo-600 text-lg font-semibold rounded-lg text-white px-2 py-4 w-[13rem] md:px-4 md:py-5 md:w-[15rem] mx-auto"
+            >
+              <option value="" disabled>
+                Party
+              </option>
+              {parties.map((party) => (
+                <option
+                  key={party.partyAbbreviation}
+                  value={party.partyAbbreviation}
+                >
+                  {party.partyAbbrGr}
+                </option>
+              ))}
+            </select>
+            {errors.party && (
+              <p className="text-red-500">{errors.party.message}</p>
+            )}
+          </>
+        )}
+      />
 
       {/* Candidate */}
-      <select
-        className="bg-indigo-600 text-lg font-semibold rounded-lg text-white px-2 py-4 w-[13rem] md:px-4 md:py-5  md:w-[15rem] mx-auto"
-        defaultValue="candidate"
-        {...register("candidate.candidate")}
-      >
-        <option value="candidate" disabled>
-          Candidate
-        </option>
-        {candidates
-          .filter((candidate) => candidate.candidateParty === party)
-          .map((candidate) => (
-            <option key={candidate.candidateId} value={candidate.candidateId}>
-              {candidate.candidateName.el}
-            </option>
-          ))}
-      </select>
+      <Controller
+        name="candidate.candidateId"
+        control={control}
+        defaultValue=""
+        rules={{ required: "Please select a candidate" }}
+        render={({ field }) => (
+          <>
+            <select
+              {...field}
+              className="bg-indigo-600 text-lg font-semibold rounded-lg text-white px-2 py-4 w-[13rem] md:px-4 md:py-5 md:w-[15rem] mx-auto"
+            >
+              <option value="" disabled>
+                Candidate
+              </option>
+              {candidates
+                .filter((candidate) => candidate.candidateParty === party)
+                .map((candidate) => (
+                  <option
+                    key={candidate.candidateId}
+                    value={candidate.candidateId}
+                  >
+                    {candidate.candidateName.el}
+                  </option>
+                ))}
+            </select>
+            {errors.candidate?.id && (
+              <p className="text-red-500">
+                {errors.candidate.candidateId.message}
+              </p>
+            )}
+          </>
+        )}
+      />
+
       <p className="text-indigo-900 py-1 text-sm/[25px] md:text-base md:p-4 font-semibold">
-        Providing your email and/or mobile number is optional but it will help
-        us to stay in touch with you
+        Providing your email and/or phone number is optional but it will help us
+        to stay in touch with you
       </p>
       {/* Email */}
       <div className="flex flex-col md:flex-row justify-between">
@@ -100,15 +157,25 @@ function CandidateHomePage() {
         </label>
         <input
           className="bg-indigo-600 font-mono font-semibold text-sm md:text-lg rounded-lg text-white px-4 py-2 w-[15rem]  md:w-[25rem] mx-auto truncate"
-          {...register("candidate.candidatePhoneNumber")}
+          {...register("candidate.candidateMobileNumber")}
           placeholder="Enter your Phone Number"
         />
       </div>
-      <div className="pt-4 mx-auto">
+      <div className="pt-4 mx-auto flex gap-2">
         {/* <Button>Start Quiz</Button> */}
-        <button className="w-40 text-lg px-4 py-3 font-bold rounded-md text-cyan-50 bg-gradient-to-r from-sky-600 to-indigo-600  disabled:cursor-not-allowed">
-          Start Quiz
-        </button>
+        <input
+          type="submit"
+          className="hover:bg-em rounded-lg bg-gradient-to-r from-sky-600 to-indigo-600 px-7 py-3 text-lg hover:bg-gradient-to-r hover:from-indigo-600 hover:to-sky-600 font-bold text-white hover:transition-opacity"
+          //disabled={quizDataStatus != "idle"} // Disable the link if loading
+          value="START THE QUIZ"
+        />
+        {/* <Link
+          className="hover:bg-em rounded-lg bg-gradient-to-r from-sky-600 to-indigo-600 px-7 py-3 text-lg hover:bg-gradient-to-r hover:from-indigo-600 hover:to-sky-600 font-bold text-white hover:transition-opacity"
+          //disabled={quizDataStatus != "idle"} // Disable the link if loading
+          to={"/questions"}
+        >
+          START THE QUIZ
+        </Link> */}
       </div>
     </form>
   );

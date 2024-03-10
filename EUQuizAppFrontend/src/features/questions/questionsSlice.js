@@ -3,7 +3,7 @@ import apiBaseUrl from "../../services/apiConfig";
 import { sortedQuizData as sortedQuizDatav2 } from "../../data/questions13";
 
 // import { questions as questionsArray } from "../../data/questions3";
-let s = "https://eu-quiz-app-backend.vercel.app";
+// let s = "https://eu-quiz-app-backend.vercel.app";
 export const fetchQuizData = createAsyncThunk(
   "questions/getQuizData",
   async function () {
@@ -14,7 +14,7 @@ export const fetchQuizData = createAsyncThunk(
     // console.log(res);
     const quizData = await res.json();
     // console.log(quizData);
-    // return quizData;
+    // return quizData.sortedQuizData;
     return sortedQuizDatav2;
   },
 );
@@ -25,19 +25,7 @@ export const fetchQuizData = createAsyncThunk(
 let answerPerQuestion; // = Array(1).fill(0);
 let answerIdPerQuestion; // = Array(1).fill(0);
 
-// const asp = new Set();
-// const aspArr = [];
-// for (let i = 0; i < NUMBER_OF_QUESTIONS; i++) {
-//   asp.add(questionsArray[i].questionAspect);
-// }
-// const aspIterator = asp.values();
-// for (let i = 0; i < asp.size; i++) {
-//   aspArr.push({
-//     aspectId: i,
-//     value: aspIterator.next().value,
-//     importance: 1,
-//   });
-// }
+let candidateCustomAnswerPerQuestion = Array(13).fill("");
 
 const aspectsArr = [
   { aspectId: 1, value: "Cyprus Problem", importance: 1 },
@@ -48,15 +36,6 @@ const aspectsArr = [
   { aspectId: 6, value: "Green Politics", importance: 1 },
   { aspectId: 7, value: "Social Issues", importance: 1 },
 ];
-// const aspectsArr = [
-//   { aspectId: 1, value: "Cyprus Problem", importance: 1, questions: [] },
-//   { aspectId: 2, value: "European Union", importance: 1, questions: [] },
-//   { aspectId: 3, value: "Foreign Policy", importance: 1, questions: [] },
-//   { aspectId: 4, value: "Economy", importance: 1, questions: [] },
-//   { aspectId: 5, value: "Immigration", importance: 1, questions: [] },
-//   { aspectId: 6, value: "Green Politics", importance: 1, questions: [] },
-//   { aspectId: 7, value: "Social Issues", importance: 1, questions: [] },
-// ];
 
 const initialState = {
   currentQuestion: 0,
@@ -68,6 +47,16 @@ const initialState = {
   answerIdPerQuestion,
   aspects: aspectsArr,
   status: "idle",
+  //candidate data variables
+  candidateCustomAnswerPerQuestion,
+  candidateMode: false,
+  candidateInfo: {
+    candidateId: 0,
+    candidateCode: "0",
+    candidateEmail: "",
+    candidateMobileNumber: "",
+    candidateName: { el: "", en: "" },
+  },
 };
 
 const questionsSlice = createSlice({
@@ -88,6 +77,21 @@ const questionsSlice = createSlice({
       state.answerPerQuestion[state.currentQuestion] = action.payload.answer;
       state.answerIdPerQuestion[state.currentQuestion] =
         action.payload.answerId;
+    },
+    setCandidateInfo(state, action) {
+      console.log("data:" + action.payload);
+      state.candidateInfo = { candidateCode: "0", ...action.payload };
+      state.candidateMode = true;
+      console.log(state.candidateMode);
+    },
+    setCandidateCustomAnswer(state, action) {
+      // console.log(action.payload);
+      console.log(state.currentQuestion);
+      state.candidateCustomAnswerPerQuestion[state.currentQuestion] =
+        action.payload;
+      console.log(
+        state.candidateCustomAnswerPerQuestion[state.currentQuestion],
+      );
     },
     setImportance(state, action) {
       // console.log(action.payload);
@@ -132,6 +136,8 @@ export const {
   goToIndex,
   pickAnswer,
   setImportance,
+  setCandidateCustomAnswer,
+  setCandidateInfo,
   resetQuestions,
 } = questionsSlice.actions;
 
@@ -149,6 +155,18 @@ export const getNumberOfQuestions = (state) =>
 
 export const getAnswerOfQuestion = (state) =>
   state.questions.answerPerQuestion[state.questions.currentQuestion];
+
+export const getCandidateCustomAnswerOfQuestion = (state) =>
+  state.questions.candidateCustomAnswerPerQuestion[
+    state.questions.currentQuestion
+  ];
+
+export const getCandidateCustomAnswerPerQuestion = (state) =>
+  state.questions.candidateCustomAnswerPerQuestion;
+
+export const getCandidateMode = (state) => state.questions.candidateMode;
+
+export const getCandidateInfo = (state) => state.questions.candidateInfo;
 
 export const getAnswerPerQuestion = (state) =>
   state.questions.answerPerQuestion;

@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "96b6099b-e45d-46cf-88e1-a487996622f3",
+  "id": "c27aa3cf-90db-49b0-8add-873b69f3bd48",
   "prevId": "6b4eb8c6-2021-4ce3-8a1d-3336eeb59c3c",
   "tables": {
     "answers": {
@@ -164,6 +164,24 @@
         "candidateImg": {
           "name": "candidateImg",
           "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "candidateCode": {
+          "name": "candidateCode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "candidateCustomAnswers": {
+          "name": "candidateCustomAnswers",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "candidateConsent": {
+          "name": "candidateConsent",
+          "type": "boolean",
           "primaryKey": false,
           "notNull": false
         }

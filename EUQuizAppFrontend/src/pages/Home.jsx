@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import image from "../../public/images/imagev3.jpg";
-import image3 from "../../public/images/image3v7.png";
+// import image3 from "../../public/images/image3v7.png";
+import image3 from "../../public/images/image3v7.jpg";
 
 import { Trans, useTranslation } from "react-i18next";
 import Loader from "react-spinner-loader";
@@ -16,11 +17,7 @@ function Home() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Dispatch the fetchQuizData action when the component mounts
     dispatch(fetchQuizData());
-
-    // If you want to dispatch only once (equivalent to componentDidMount),
-    // you can provide an empty dependency array []
   }, [dispatch]);
 
   const quizDataStatus = useSelector(getQuizDataStatus);
@@ -117,7 +114,6 @@ function Home() {
           >
             START THE QUIZ
           </Link>
-          {/* <button onClick={() => dispatch(fetchQuizData())}>Test RTK</button> */}
         </div>
         <div className="mx-auto pb-12 pt-6"></div>
       </div>
