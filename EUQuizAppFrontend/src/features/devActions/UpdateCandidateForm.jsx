@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { updateCandidate } from "../../services/updateCandidate";
 import { insertCandidate } from "../../services/insertCandidate";
+import { useState } from "react";
+import Loader from "react-spinner-loader";
 
 const defaultInsertValue = {
   candidateName: {
@@ -25,15 +27,24 @@ function UpdateCandidateForm({ candidate, insertMode, onRenderList }) {
     values: insertMode ? defaultInsertValue : candidate,
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const onSubmit = async (data) => {
     try {
+      setIsLoading(true);
       insertMode ? await insertCandidate(data) : await updateCandidate(data);
       onRenderList((t) => !t);
       reset();
     } catch (error) {
       console.error("Error updating/inserting candidate:", error);
     }
+    setIsLoading(false);
   };
+
+  if (isLoading)
+    return (
+      <Loader show={true} type="body" stack="vertical" message="Loading" />
+    );
 
   return (
     <form

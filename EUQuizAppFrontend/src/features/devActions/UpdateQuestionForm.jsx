@@ -2,6 +2,8 @@ import { useFieldArray, useForm } from "react-hook-form";
 import AnswerPoints from "./PartyPointsArray";
 import { updateQuestionAnswers } from "../../services/updateQuestionAnswers";
 import { insertQuestionAnswers } from "../../services/insertQuestionAnswers";
+import { useState } from "react";
+import Loader from "react-spinner-loader";
 
 const defaultInsertValue = {
   questionTitle: {
@@ -44,9 +46,12 @@ function UpdateQuestionForm({ question, insertMode, onRenderList }) {
     name: "answers",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   // const onSubmit = (data) => updateQuestionAnswers(data);
   const onSubmit = async (data) => {
     try {
+      setIsLoading(true);
       insertMode
         ? await insertQuestionAnswers(data)
         : await updateQuestionAnswers(data);
@@ -55,7 +60,14 @@ function UpdateQuestionForm({ question, insertMode, onRenderList }) {
     } catch (error) {
       console.error("Error updating/inserting candidate:", error);
     }
+    setIsLoading(false);
   };
+
+  if (isLoading)
+    return (
+      <Loader show={true} type="body" stack="vertical" message="Loading" />
+    );
+
   return (
     <div className="flex flex-col">
       <h1 className="text-2xl text-indigo-900 text-center pt-5 font-bold font-serif">
