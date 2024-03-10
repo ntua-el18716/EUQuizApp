@@ -1,8 +1,7 @@
-version: "3.4"
-  api:
-    build:
+build:
+  docker:
+    api:
       context: .
       target: production
     ports:
       - 3000:3000
- 
