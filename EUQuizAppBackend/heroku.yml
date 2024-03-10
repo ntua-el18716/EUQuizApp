@@ -5,3 +5,4 @@ version: "3.4"
       target: production
     ports:
       - 3000:3000
+ 
