@@ -13,7 +13,7 @@ import { insertParty } from "./routes/insertParty";
 import router from "./routes/router";
 
 const app: express.Application = express();
-const port: number = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors<Request>());
