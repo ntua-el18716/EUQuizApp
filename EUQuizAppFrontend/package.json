@@ -2,8 +2,9 @@
   "name": "euquizapp",
   "private": true,
   "version": "0.0.0",
-  "proxy": "http://localhost:3000/",
+  "proxy": "https://cyvoteeu-ab55554a145c.herokuapp.com/",
   "proxy2": "https://eu-quiz-app-backend.vercel.app/",
+  "proxy3": "http://localhost:3000/",
   "type": "module",
   "scripts": {
     "dev": "vite",
