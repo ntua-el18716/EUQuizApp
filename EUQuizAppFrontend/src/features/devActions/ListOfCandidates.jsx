@@ -33,18 +33,23 @@ function ListOfCandidates({ candidates, candidateId, onCandidateId }) {
   // }
   return (
     <ul className="no-scrollbar max-h-screen h-full flex flex-col gap-4 overflow-hidden overflow-y-auto whitespace-nowrap rounded-lg py-2 px-0.5">
-      <div className="flex justify-between px-2 ">
-        <Link
-          to="/"
-          className=" bg-indigo-700 flex px-2 py-3 rounded-lg text-lg font-bold uppercase text-white my-auto"
-        >
-          <h1 className="hidden md:block pr-1">Home</h1>
-          <Home />
-        </Link>
-        <h1 className="text-2xl text-indigo-900 text-center py-3 font-bold font-serif">
+      <div className="flex justify-between px-2 flex-col sm:flex-row ">
+        <div className="flex gap-2">
+          <Link
+            to="/"
+            className=" bg-indigo-700 flex px-2 py-3 rounded-lg text-lg font-bold uppercase text-white my-auto max-w-[40px] sm:max-w-none"
+          >
+            <h1 className="hidden md:block pr-1">Home</h1>
+            <Home />
+          </Link>
+          <h1 className="text-2xl text-indigo-900 text-center py-3 font-bold font-serif sm:hidden">
+            List of Candidates
+          </h1>
+        </div>
+        <h1 className="text-2xl text-indigo-900 text-center py-3 font-bold font-serif hidden sm:block">
           List of Candidates
         </h1>
-        <div className="flex flex- gap-1">
+        <div className="flex flex-c gap-1">
           <button
             className={`bg-indigo-700 flex px-2 py-3 rounded-lg text-lg font-bold uppercase text-white ${
               filteredCandidates.length < 7 ? "block" : "hidden"
@@ -74,7 +79,15 @@ function ListOfCandidates({ candidates, candidateId, onCandidateId }) {
         </div>
       </div>
       <button
-        className="uppercase font-bold gap-4 p-4 bg-indigo-700 text-white hover:bg-indigo-500 rounded-xl w-1/2 text-center mx-auto"
+        className="uppercase font-bold gap-4 p-4 bg-indigo-700 text-white hover:bg-indigo-500 rounded-xl w-1/2 text-center mx-auto sm:hidden"
+        onClick={() => {
+          onCandidateId(-1);
+        }}
+      >
+        Insert
+      </button>
+      <button
+        className="uppercase font-bold gap-4 p-4 hidden sm:block bg-indigo-700 text-white hover:bg-indigo-500 rounded-xl w-1/2 text-center mx-auto"
         onClick={() => {
           onCandidateId(-1);
         }}
@@ -98,13 +111,23 @@ function ListOfCandidates({ candidates, candidateId, onCandidateId }) {
             alt="Your Image"
             style={{ maxHeight: "60px", width: "auto" }}
             loading="lazy"
-            className="col-span-2"
+            className="col-span-4 sm:col-span-2"
           />
-          <p className="col-span-2">{candidate.candidateName.el}</p>
-          <p className="col-span-2">{candidate.candidateName.en}</p>
-          <p className="uppercase col-span-1">{candidate.candidateParty}</p>
-          <p className="col-span-2">{candidate.candidateMobileNumber}</p>
-          <p className="col-span-2 pr-8">{candidate.candidateEmail}</p>
+          <p className="sm:col-span-2 sm:block hidden">
+            {candidate.candidateName.el}
+          </p>
+          <p className="sm:col-span-2 col-start-5 col-end-11">
+            {candidate.candidateName.en}
+          </p>
+          <p className="uppercase col-span-1 sm:block hidden">
+            {candidate.candidateParty}
+          </p>
+          <p className="sm:col-span-2 sm:block hidden">
+            {candidate.candidateMobileNumber}
+          </p>
+          <p className="sm:col-span-2 pr-8 sm:block hidden">
+            {candidate.candidateEmail}
+          </p>
         </button>
       ))}
     </ul>
