@@ -4,12 +4,12 @@ import express from "express";
 import { insertQuestionAndAnswers } from "./insertQuestionAnswers";
 import { insertUserAnswers } from "./insertUserAnswers";
 import { insertCandidateAnswers } from "./insertCandidateAnswers";
-import { insertParty } from "./insertParty";
+import { insertParties, insertParty } from "./insertParty";
 import { updateCandidate } from "./updateCandidate";
 import { fetchCandidates } from "./getCandidates";
 import { fetchQuizData } from "./getQuestionsAnswers";
 import { fetchParties } from "./getParties";
-import { insertCandidate } from "./insertCandidate";
+import { insertCandidate, insertCandidates } from "./insertCandidate";
 import { updateQuestionAnswers } from "./updateQuestionAnswers";
 import { insertQuizData } from "./insertQuizData";
 
@@ -50,6 +50,11 @@ router.post("/insertCandidate", async (req, res) => {
   res.send("Candidate Added");
 });
 
+router.post("/insertCandidates", async (req, res) => {
+  await insertCandidates(req.body);
+  res.send("Candidates Added");
+});
+
 router.put("/updateCandidate", async (req, res) => {
   await updateCandidate(req.body);
   res.send("Candidate Updated");
@@ -58,6 +63,11 @@ router.put("/updateCandidate", async (req, res) => {
 router.post("/insertParty", async (req, res) => {
   await insertParty(req.body);
   res.send("Party Added");
+});
+
+router.post("/insertParties", async (req, res) => {
+  await insertParties(req.body);
+  res.send("Parties Added");
 });
 
 router.get("/getQuizData", async (req, res) => {

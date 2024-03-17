@@ -29,3 +29,18 @@ export async function insertCandidate(dataObject) {
     };
   }
 }
+
+// Mass Candidate
+export async function insertCandidates(dataObject) {
+  let newCandidate: candidate;
+
+  try {
+    dataObject.candidatesResult.map(async (candidate) => {
+      const { candidateId, ...newCandidate } = candidate;
+      await db.insert(candidates).values(newCandidate);
+    });
+    console.log("Candidates inserted successfully.");
+  } catch (error) {
+    console.error("Error inserting candidates:", error);
+  }
+}

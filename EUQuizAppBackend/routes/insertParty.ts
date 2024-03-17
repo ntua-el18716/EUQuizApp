@@ -18,3 +18,15 @@ export async function insertParty(dataObject) {
     console.log("Error inserting party");
   }
 }
+
+export async function insertParties(dataObject) {
+  try {
+    dataObject.partiesResult.map(async (party) => {
+      const newParty = party;
+      await db.insert(parties).values(newParty);
+    });
+    console.log("Parties inserted succesfully");
+  } catch (error) {
+    console.log("Error inserting parties");
+  }
+}

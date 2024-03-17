@@ -44,7 +44,6 @@ function isolateQuestion(dataObject) {
 }
 
 export async function insertQuizData(dataObject) {
-  // console.log(dataObject.questionsArray[6]);
   try {
     dataObject.questionsArray.map(async (question) => {
       const newQuestion: question = isolateQuestion(question);
@@ -66,14 +65,5 @@ export async function insertQuizData(dataObject) {
     console.log("Question and answers inserted successfully.");
   } catch (error) {
     console.error("Error inserting question and answers:", error);
-    // You can either log the error, handle it gracefully, or throw a custom error
-    // For example, if you want to throw a custom error and stop the server from crashing:
-    // throw new Error('Invalid data. Unable to insert question and answers.');
-    // Alternatively, you can handle the error and send an appropriate response to the client
-    // For example, sending a 400 Bad Request response:
-    return {
-      status: "error",
-      message: "Invalid data. Unable to insert question and answers.",
-    };
   }
 }
