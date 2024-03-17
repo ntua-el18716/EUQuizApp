@@ -19,14 +19,32 @@ export async function insertParty(dataObject) {
   }
 }
 
+// export async function insertParties(dataObject) {
+//   try {
+//     dataObject.partiesResult.map(async (party) => {
+//       const newParty = party;
+//       await db.insert(parties).values(newParty);
+//     });
+//     console.log("Parties inserted succesfully");
+//   } catch (error) {
+//     console.log("Error inserting parties");
+//   }
+// }
 export async function insertParties(dataObject) {
   try {
-    dataObject.partiesResult.map(async (party) => {
-      const newParty = party;
-      await db.insert(parties).values(newParty);
-    });
-    console.log("Parties inserted succesfully");
+    await Promise.all(
+      dataObject.partiesResult.map(async (party) => {
+        try {
+          const newParty = party;
+          await db.insert(parties).values(newParty);
+        } catch (error) {
+          console.error("Error inserting party:", error);
+          throw error; // Rethrow the error to stop further execution
+        }
+      })
+    );
+    console.log("Parties inserted successfully");
   } catch (error) {
-    console.log("Error inserting parties");
+    console.error("Error inserting parties:", error);
   }
 }
