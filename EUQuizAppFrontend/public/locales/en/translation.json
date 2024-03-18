@@ -4,5 +4,34 @@
     "1": "Next June the people of European Union will vote for the next European Parliament.",
     "2": "The goal of this quiz is to help you decide who to vote for based on your beliefs and priorities",
     "3": "Take this quiz now"
+  },
+  "candidateHome": {
+    "title": "Candidate Form for CYvoteEU",
+    "selectInfo": "Please choose your party and then choose your name:",
+    "selectContactInfo": "Providing your email and/or phone number is optional but it will help us to stay in touch with you",
+    "phoneLabel": "Phone Number:"
+  },
+  "candidateReview": {
+    "title": "Review",
+    "reviewText": {
+      "1": "Thank you for taking part in CYvoteEU!",
+      "2": "The goal of the Mαζί-Birlikte initiative is to enhance the participation of Cypriot youth in the EU Elections, enabling them to familiarize themselves with the candidates and, of course, assisting them in making informed choices based on their own beliefs and priorities.",
+      "3": "In this context, we kindly request candidates to grant us their consent for using the answers provided in the quiz. These answers will be utilized on our social media accounts to help individuals with similar opinions understand which candidates align with their beliefs",
+      "4": "Personal Info such as email/phone number WILL NOT be shared"
+    },
+    "consentText": "I consent to give you permission to share my answers",
+    "buttons": {
+      "editAnswers": "Edit my answers",
+      "finalSubmit": "Final Submit"
+    }
+  },
+  "candidateThankYou": {
+    "thankYouText": {
+      "1": "Thank you for contributing to our work",
+      "2": "Thank you for taking part in CYvoteEU!",
+      "3": "As you embark on your campaign journey, we want to wish you the very best of luck. We hope to stay in touch in order to further promote you and your beliefs to the youth of Cyprus",
+      "4": "In case you wish to contact us to ask for information, or to change your answers, or to withdraw your consent, or for any other reason you may contact us in any of the follwing ways:"
+    },
+    "phoneNumber": "Phone Number: 99286084"
   }
 }

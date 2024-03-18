@@ -4,5 +4,34 @@
     "1": "TBI",
     "2": "TBI",
     "3": "ΤΒΙ"
+  },
+  "candidateHome": {
+    "title": "",
+    "selectInfo": "",
+    "selectContactInfo": "",
+    "phoneLabel": ""
+  },
+  "candidateReview": {
+    "title": "",
+    "reviewText": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": ""
+    },
+    "consentText": "",
+    "buttons": {
+      "editAnswers": "",
+      "finalSubmit": ""
+    }
+  },
+  "candidateThankYou": {
+    "thankYouText": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": ""
+    },
+    "phoneNumber": ""
   }
 }

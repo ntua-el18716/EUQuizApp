@@ -8,6 +8,7 @@ import {
   fetchQuizData,
   setCandidateInfo,
 } from "../../../features/questions/questionsSlice";
+import { Trans, useTranslation } from "react-i18next";
 
 function CandidateHomePage() {
   const {
@@ -19,6 +20,7 @@ function CandidateHomePage() {
   } = useForm();
   const [candidates, setCandidates] = useState([]);
   const [parties, setParties] = useState([]);
+  const { i18n } = useTranslation();
 
   const dispatch = useDispatch();
 
@@ -39,7 +41,7 @@ function CandidateHomePage() {
 
   const party = watch("party");
   // console.log(candidates);
-
+  let language = i18n.language;
   const navigate = useNavigate();
   //you need to find the name of the candidate
   const onSubmit = (data) => {
@@ -63,10 +65,10 @@ function CandidateHomePage() {
       className="flex flex-col gap-2 mx-auto w-80 bg-cyan-100 pt-8 md:w-screen md:max-w-[45rem]"
     >
       <h1 className="font-mono text-3xl text-indigo-900 text-center md:pt-5 md:py-7 font-extrabold">
-        Candidate Form for EUQuizCY
+        <Trans i18nKey="candidateHome.title" />
       </h1>
       <p className="text-indigo-900 py-1 text-sm/[25px] md:text-base md:p-4 font-semibold">
-        Please choose your party and then choose your name:
+        <Trans i18nKey="candidateHome.selectInfo" />
       </p>
 
       {/* Party */}
@@ -122,7 +124,7 @@ function CandidateHomePage() {
                     key={candidate.candidateId}
                     value={candidate.candidateId}
                   >
-                    {candidate.candidateName.el}
+                    {candidate.candidateName[language]}
                   </option>
                 ))}
             </select>
@@ -136,8 +138,7 @@ function CandidateHomePage() {
       />
 
       <p className="text-indigo-900 py-1 text-sm/[25px] md:text-base md:p-4 font-semibold">
-        Providing your email and/or phone number is optional but it will help us
-        to stay in touch with you
+        <Trans i18nKey="candidateHome.selectContactInfo" />
       </p>
       {/* Email */}
       <div className="flex flex-col md:flex-row justify-between">
@@ -153,7 +154,7 @@ function CandidateHomePage() {
       {/* Phone Number */}
       <div className="flex flex-col md:flex-row justify-between">
         <label className="font-bold text-indigo-900 text-xl px-4 py-1  w-[15rem]">
-          Phone Number:
+          <Trans i18nKey="candidateHome.phoneLabel" />
         </label>
         <input
           className="bg-indigo-600 font-mono font-semibold text-sm md:text-lg rounded-lg text-white px-4 py-2 w-[15rem]  md:w-[25rem] mx-auto truncate"
