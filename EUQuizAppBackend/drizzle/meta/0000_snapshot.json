@@ -1,8 +1,8 @@
 {
+  "id": "5258c727-3293-451c-b62c-f98880262d01",
+  "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
-  "id": "6b4eb8c6-2021-4ce3-8a1d-3336eeb59c3c",
-  "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "answers": {
       "name": "answers",
@@ -105,8 +105,8 @@
         }
       },
       "compositePrimaryKeys": {
-        "candidateAnswers_candidateId_answerId": {
-          "name": "candidateAnswers_candidateId_answerId",
+        "candidateAnswers_candidateId_answerId_pk": {
+          "name": "candidateAnswers_candidateId_answerId_pk",
           "columns": [
             "candidateId",
             "answerId"
@@ -166,6 +166,24 @@
           "type": "text",
           "primaryKey": false,
           "notNull": false
+        },
+        "candidateCode": {
+          "name": "candidateCode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "candidateCustomAnswers": {
+          "name": "candidateCustomAnswers",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "candidateConsent": {
+          "name": "candidateConsent",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
         }
       },
       "indexes": {},
@@ -179,6 +197,12 @@
       "columns": {
         "partyName": {
           "name": "partyName",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "partyAbbrGr": {
+          "name": "partyAbbrGr",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -282,8 +306,8 @@
         }
       },
       "compositePrimaryKeys": {
-        "userAnswers_userId_answerId": {
-          "name": "userAnswers_userId_answerId",
+        "userAnswers_userId_answerId_pk": {
+          "name": "userAnswers_userId_answerId_pk",
           "columns": [
             "userId",
             "answerId"
@@ -374,8 +398,8 @@
   },
   "schemas": {},
   "_meta": {
+    "columns": {},
     "schemas": {},
-    "tables": {},
-    "columns": {}
+    "tables": {}
   }
 }

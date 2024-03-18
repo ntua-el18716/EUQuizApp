@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS "answers" (
 CREATE TABLE IF NOT EXISTS "candidateAnswers" (
 	"candidateId" integer,
 	"answerId" integer,
-	CONSTRAINT candidateAnswers_candidateId_answerId PRIMARY KEY("candidateId","answerId")
+	CONSTRAINT "candidateAnswers_candidateId_answerId_pk" PRIMARY KEY("candidateId","answerId")
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "candidates" (
@@ -44,14 +44,17 @@ CREATE TABLE IF NOT EXISTS "candidates" (
 	"candidateMobileNumber" text,
 	"candidateEmail" text,
 	"candidateWebPage" text,
-	"candidateImg" text
+	"candidateImg" text,
+	"candidateCode" text,
+	"candidateCustomAnswers" text[],
+	"candidateConsent" boolean
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "parties" (
 	"partyName" text,
+	"partyAbbrGr" text,
 	"partyImg" text,
-	"partyAbbreviation" text PRIMARY KEY NOT NULL,
-  "partyAbbrGr" text,
+	"partyAbbreviation" text PRIMARY KEY NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "questions" (
@@ -64,7 +67,7 @@ CREATE TABLE IF NOT EXISTS "questions" (
 CREATE TABLE IF NOT EXISTS "userAnswers" (
 	"userId" integer,
 	"answerId" integer,
-	CONSTRAINT userAnswers_userId_answerId PRIMARY KEY("userId","answerId")
+	CONSTRAINT "userAnswers_userId_answerId_pk" PRIMARY KEY("userId","answerId")
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "users" (
