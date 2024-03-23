@@ -1,0 +1,9 @@
+SELECT
+  c."candidateId",
+  COUNT(c."answerId") AS common_answers_count
+FROM
+  "candidateAnswers" c
+  WHERE
+  c."answerId" IN (106, 122, 6, 7, 3) -- Array A
+GROUP BY
+  c."candidateId";

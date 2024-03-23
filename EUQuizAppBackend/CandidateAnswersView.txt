@@ -1,0 +1,11 @@
+SELECT
+  c."candidateName" AS candidate_name,
+  q."questionTitle" AS question_title,
+  q."questionIndex" AS question_index,
+  a."answerText" AS answer_text,
+  c."candidateConsent" AS candidate_consent
+FROM
+  candidates c
+  LEFT JOIN "candidateAnswers" ca ON c."candidateId" = ca."candidateId"
+  LEFT JOIN answers a ON ca."answerId" = a."answerId"
+  LEFT JOIN questions q ON a."questionId" = q."questionId";

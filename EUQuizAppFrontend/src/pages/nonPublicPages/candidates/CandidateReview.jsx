@@ -22,6 +22,7 @@ function CandidateReview() {
   const [isLoading, setIsLoading] = useState(false);
   const { i18n } = useTranslation();
   let language = i18n.language;
+  if (language === "tr") language === "en";
 
   const handleSubmit = async () => {
     const {

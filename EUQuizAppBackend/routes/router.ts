@@ -12,6 +12,8 @@ import { fetchParties } from "./getParties";
 import { insertCandidate, insertCandidates } from "./insertCandidate";
 import { updateQuestionAnswers } from "./updateQuestionAnswers";
 import { insertQuizData } from "./insertQuizData";
+import { candidateCalculate } from "./candidateCalculate";
+import { questionStats } from "./questionStats";
 
 const router = express.Router();
 
@@ -82,6 +84,16 @@ router.get("/getCandidates", async (req, res) => {
 
 router.get("/getParties", async (req, res) => {
   await fetchParties(res);
+  // res.send("Here are the questions");
+});
+
+router.get("/candidateCalculate", async (req, res) => {
+  await candidateCalculate(res);
+  // res.send("Here are the questions");
+});
+
+router.get("/questionStats", async (req, res) => {
+  await questionStats(res);
   // res.send("Here are the questions");
 });
 

@@ -22,7 +22,6 @@ function sortQuizData(quizData) {
 
 export async function fetchQuizData(res) {
   try {
-    console.log("I am in");
     const dataArray: {}[] = [];
     const questionsResult = await db.query.questions.findMany();
 

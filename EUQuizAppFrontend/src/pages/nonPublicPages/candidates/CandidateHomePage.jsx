@@ -42,6 +42,8 @@ function CandidateHomePage() {
   const party = watch("party");
   // console.log(candidates);
   let language = i18n.language;
+  if (language === "tr") language === "en";
+
   const navigate = useNavigate();
   //you need to find the name of the candidate
   const onSubmit = (data) => {
@@ -91,7 +93,9 @@ function CandidateHomePage() {
                   key={party.partyAbbreviation}
                   value={party.partyAbbreviation}
                 >
-                  {party.partyAbbrGr}
+                  {language === "el"
+                    ? party.partyAbbrGr
+                    : party.partyAbbreviation}
                 </option>
               ))}
             </select>
