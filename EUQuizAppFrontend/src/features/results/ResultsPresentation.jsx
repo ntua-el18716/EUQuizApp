@@ -1,12 +1,12 @@
 import ResultItem from "./ResultItem";
 
 function ResultsPresentation({ resultsPerParty }) {
-  console.log(resultsPerParty);
+  // console.log(resultsPerParty);
   let results = [];
   for (var party in resultsPerParty) {
     results.push([party, resultsPerParty[party]]);
   }
-  console.log(resultsPerParty);
+  // console.log(resultsPerParty);
 
   results.sort(function (a, b) {
     return b[1] - a[1];

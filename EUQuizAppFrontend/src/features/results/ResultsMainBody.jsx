@@ -5,6 +5,7 @@ import {
   getResultsPerParty,
 } from "./resultsSlice";
 import { forwardRef } from "react";
+import ResultsCandidates from "./ResultsCandidates";
 
 const ResultsMainBody = forwardRef(function ResultsMainBody({ active }, ref) {
   const resultsPerPartyBasic = useSelector(getResultsPerParty);
@@ -25,7 +26,7 @@ const ResultsMainBody = forwardRef(function ResultsMainBody({ active }, ref) {
       {active === "basic-results" && (
         <ResultsPresentation resultsPerParty={resultsPerPartyBasic} />
       )}
-      {active === "info" && <p>info</p>}
+      {active === "info" && <ResultsCandidates />}
     </div>
   );
 });

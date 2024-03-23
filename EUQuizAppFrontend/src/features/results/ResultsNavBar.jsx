@@ -23,7 +23,7 @@ function ResultsNavBar({ active, onActive }) {
           active === "info" ? "bg-indigo-600" : ""
         } p-3`}
       >
-        <button onClick={() => onActive("info")}>INFORMATION</button>
+        <button onClick={() => onActive("info")}>CANDIDATES</button>
       </li>
       <li className={`${active ? "bg-slate-600" : ""} p-3`}>
         <button>SHARE</button>
