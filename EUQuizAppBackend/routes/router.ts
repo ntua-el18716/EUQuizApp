@@ -87,8 +87,10 @@ router.get("/getParties", async (req, res) => {
   // res.send("Here are the questions");
 });
 
-router.get("/candidateCalculate", async (req, res) => {
-  await candidateCalculate(res);
+// router.get("/candidateCalculate", async (req, res) => {
+router.post("/candidateCalculate", async (req, res) => {
+  // await candidateCalculate(res);
+  await candidateCalculate({ req, res });
   // res.send("Here are the questions");
 });
 

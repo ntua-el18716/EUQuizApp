@@ -2,15 +2,24 @@ import { ProgressBar } from "react-progressbar-fancy";
 import { useEffect, useState } from "react";
 import { candidateCalculate } from "../../services/candidateCalculate";
 import Loader from "react-spinner-loader";
+import { useSelector } from "react-redux";
+import {
+  getAnswerIdPerQuestion,
+  getNumberOfQuestions,
+} from "../questions/questionsSlice";
 
 function ResultsCandidates() {
   const [candidates, setCandidates] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  // const answerIdPerQuestionArray = [106, 122, 6, 7, 3, 151, 154, 177]; //useSelector(getAnswerIdPerQuestion);
+  const answerIdPerQuestionArray = useSelector(getAnswerIdPerQuestion);
+  const numberOfQuestions = useSelector(getNumberOfQuestions);
   useEffect(() => {
     async function fetchCandidates() {
       setIsLoading(true);
-      const candidatesArray = await candidateCalculate();
+      const candidatesArray = await candidateCalculate({
+        answerIds: answerIdPerQuestionArray,
+      });
       setCandidates(candidatesArray);
       setIsLoading(false);
     }
@@ -49,11 +58,11 @@ function ResultsCandidates() {
                   {candidate.candidateName.en}
                 </p>
                 <p className="pr-3 text-2xl font-bold text-indigo-800">
-                  {candidate.count * 10 * 2}%
+                  {Math.round((candidate.count / numberOfQuestions) * 100)}%
                 </p>
               </div>
               <ProgressBar
-                score={candidate.count * 10 * 2}
+                score={(candidate.count / numberOfQuestions) * 100}
                 // progressColor="purple"
                 hideText
                 primaryColor="purple"

@@ -4,17 +4,16 @@ import { db } from "../src";
 import { sql, eq, inArray, or, asc, desc } from "drizzle-orm";
 import { candidates } from "../src/schema/candidates";
 
-// Assuming candidateAnswers is defined in your schema
-const answerIds = [106, 122, 6, 7, 3, 151, 154];
+// const answerIds = [106, 122, 6, 7, 3, 151, 154];
 
-// For demonstration, assuming direct grouping and counting is performed via raw SQL
-// export async function candidateCalculate(userAnswersData) {
-export async function candidateCalculate(res) {
+export async function candidateCalculate({ req, res }) {
+  let answerIds = req.body.answerIds;
   const result = await db
     .select({
       candidateId: candidateAnswers.candidateId,
       candidateName: candidates.candidateName,
       candidateImg: candidates.candidateImg,
+      candidateParty: candidates.candidateParty,
       count: sql<number>`cast(count(${candidateAnswers.answerId}) as int)`,
     })
     .from(candidateAnswers)
@@ -26,7 +25,8 @@ export async function candidateCalculate(res) {
     .groupBy(
       candidateAnswers.candidateId,
       candidates.candidateName,
-      candidates.candidateImg
+      candidates.candidateImg,
+      candidates.candidateParty
     )
     // .having(({ count }) => eq(count, 1))
     // .orderBy(({ count }, { desc }) => desc(count));
@@ -34,6 +34,6 @@ export async function candidateCalculate(res) {
 
   // .orderBy(desc({ counter })=>);
 
-  console.log(result);
+  console.log("result=" + result[1]);
   res.status(200).json({ status: "okay", result });
 }
