@@ -20,7 +20,6 @@ function ResultItem({ party, result }) {
 
   return (
     <div className=" flex flex-row items-center justify-between gap-1 px-2 py-1 bg-cyan-200 md:p-4 hover:bg-gradient-to-l hover:from-sky-300 hover:to-cyan-3  00 rounded-lg">
-      {/* // <div className="py-3 flex bg-cyan-300 px-2 hover:bg-gradient-to-l hover:from-sky-400 hover:to-cyan-400 rounded-lg"> */}
       <PartyLogo party={party} />
       <ProgressBar
         score={result}
