@@ -94,7 +94,7 @@ router.post("/candidateCalculate", async (req, res) => {
   // res.send("Here are the questions");
 });
 
-router.get("/questionStats", async (req, res) => {
+router.get("/getQuestionStats", async (req, res) => {
   await questionStats(res);
   // res.send("Here are the questions");
 });

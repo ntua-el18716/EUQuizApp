@@ -11,6 +11,7 @@ import QuestionInsertPage from "./pages/nonPublicPages/questions/QuestionInsertP
 import QuestionUpdate from "./pages/nonPublicPages/questions/QuestionUpdate";
 import CandidateReview from "./pages/nonPublicPages/candidates/CandidateReview";
 import CandidateThankYou from "./pages/nonPublicPages/candidates/CandidateThankYou";
+import CandidateAnswersPerQuestion from "./pages/nonPublicPages/candidates/CandidateAnswersPerQuestion";
 
 const developmentRoutes = [
   // Add your extra routes here
@@ -29,6 +30,10 @@ const developmentRoutes = [
   {
     path: "/questionUpdate",
     element: <QuestionUpdate />,
+  },
+  {
+    path: "/candidateAnswerPerQuestion",
+    element: <CandidateAnswersPerQuestion />,
   },
 ];
 

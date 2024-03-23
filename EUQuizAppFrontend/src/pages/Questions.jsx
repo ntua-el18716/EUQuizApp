@@ -25,7 +25,7 @@ function Questions() {
   const aspect = questions[currentQuestion].questionAspect.en;
 
   return (
-    <div className="mx-auto flex w-80 flex-col gap-0 bg-cyan-100 pt-8 md:w-screen md:max-w-[45rem]">
+    <div className="mx-auto flex w-80 flex-col gap-0 bg-cyan-100 pt-2 md:pt-8 md:w-screen md:max-w-[45rem]">
       <div className="flex w-full flex-row justify-between outline outline-1 outline-cyan-500 ">
         <QuestionNavigation />
       </div>
