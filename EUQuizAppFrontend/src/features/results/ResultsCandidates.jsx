@@ -12,15 +12,21 @@ function ResultsCandidates() {
   const [candidates, setCandidates] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   // const answerIdPerQuestionArray = [106, 122, 6, 7, 3, 151, 154, 177]; //useSelector(getAnswerIdPerQuestion);
-  const answerIdPerQuestionArray = useSelector(getAnswerIdPerQuestion);
+  const answerIdPerQuestionArray = useSelector(getAnswerIdPerQuestion) || [
+    106, 122, 6, 7, 3, 151, 154,
+  ];
   const numberOfQuestions = useSelector(getNumberOfQuestions);
   useEffect(() => {
     async function fetchCandidates() {
-      setIsLoading(true);
-      const candidatesArray = await candidateCalculate({
-        answerIds: answerIdPerQuestionArray,
-      });
-      setCandidates(candidatesArray);
+      try {
+        setIsLoading(true);
+        const candidatesArray = await candidateCalculate({
+          answerIds: answerIdPerQuestionArray,
+        });
+        setCandidates(candidatesArray);
+      } catch (error) {
+        console.error("Error Calculating Candidate matches:", error);
+      }
       setIsLoading(false);
     }
     fetchCandidates();
@@ -36,7 +42,6 @@ function ResultsCandidates() {
       />
     );
 
-  let s = "blue";
   return (
     <div>
       <ul className="flex flex-col gap-1">
