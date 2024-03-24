@@ -16,11 +16,11 @@ function QuestionUpdate() {
     fetchQuestions();
   }, [renderList]);
 
-  console.log(questionId);
+  // console.log(questionId);
   const updateQuestion = questions.find(
     (question) => question.questionId === questionId,
   );
-  console.log(questions);
+  // console.log(questions);
 
   const insertMode = questionId === -1;
 

@@ -22,7 +22,7 @@ function AnswerItem({ answer, language }) {
           onChange={() =>
             dispatch(pickAnswer({ answer: answerIndex, answerId: answerId }))
           }
-          className="w-5 content-start"
+          className="min-w-[17px] content-start"
           checked={answerOfQuestion === answerIndex}
           disabled={answerOfQuestion === answerIndex}
         />

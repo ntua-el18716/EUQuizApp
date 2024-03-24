@@ -8,10 +8,12 @@ import {
 } from "../features/questions/questionsSlice";
 import { useNavigate } from "react-router-dom";
 import Home from "./Home";
+import { useTranslation } from "react-i18next";
 
 function Questions() {
   const questions = useSelector(getQuestions);
   const currentQuestion = useSelector(getCurrentQuestion);
+  const { i18n } = useTranslation();
   // console.log(questions);
   // console.log(currentQuestion);
 
@@ -22,7 +24,9 @@ function Questions() {
     navigate("/");
     return <Home />;
   }
-  const aspect = questions[currentQuestion].questionAspect.en;
+  let language = i18n.language;
+
+  const aspect = questions[currentQuestion].questionAspect[language];
 
   return (
     <div className="mx-auto flex w-80 flex-col gap-0 bg-cyan-100 pt-2 md:pt-8 md:w-screen md:max-w-[45rem]">

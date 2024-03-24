@@ -29,8 +29,8 @@ function Header() {
         className="justify-left flex items-center gap-5 bg-indigo-700 px-6 py-4 text-xl font-bold uppercase text-white"
         onClick={handleReset}
       >
-        <h1 className="md:hidden">EU 2023 </h1>
-        <h1 className="hidden md:block">EU ELECTIONS 2023 </h1>
+        <h1 className="md:hidden">EU 2024 </h1>
+        <h1 className="hidden md:block">EU ELECTIONS 2024 </h1>
 
         <span className="font-size-md">🇪🇺</span>
       </Link>
