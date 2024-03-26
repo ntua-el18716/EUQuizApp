@@ -1,5 +1,5 @@
 import Disy from "../../../public/images/partyLogos/disy.svg?react";
-import Greens from "../../../public/images/partyLogos/greens.svg?react";
+import Greens from "../../../public/images/partyLogos/greensv3.svg?react";
 import Akel from "../../../public/images/partyLogos/akel.svg?react";
 // import Akel from "../../../public/images/partyLogos/akelv2.svg?react";
 import Diko from "../../../public/images/partyLogos/diko.svg?react";
@@ -7,6 +7,7 @@ import Elam from "../../../public/images/partyLogos/elam.svg?react";
 import Depa from "../../../public/images/partyLogos/depa.svg?react";
 import Edek from "../../../public/images/partyLogos/edek.svg?react";
 import Volt from "../../../public/images/partyLogos/volt.svg?react";
+
 function PartyLogo({ party }) {
   switch (party) {
     case "disy":
@@ -25,6 +26,7 @@ function PartyLogo({ party }) {
       return <Depa width={130} height={70} />;
     case "volt":
       return <Volt width={130} height={70} />;
+
     default:
       return <Greens width={130} height={70} />;
   }

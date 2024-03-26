@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { candidateCalculate } from "../../services/candidateCalculate";
 import Loader from "react-spinner-loader";
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 import {
   getAnswerIdPerQuestion,
   getNumberOfQuestions,
@@ -31,7 +32,10 @@ function ResultsCandidates() {
     }
     fetchCandidates();
   }, []);
-  // console.log(candidates);
+
+  const { i18n } = useTranslation();
+  let language = i18n.language;
+  if (language === "tr") language === "en";
   if (isLoading)
     return (
       <Loader
@@ -60,7 +64,7 @@ function ResultsCandidates() {
             <div className="flex flex-col gap-3 w-full">
               <div className="flex justify-between">
                 <p className="pl-4 text-lg font-bold text-purple-900">
-                  {candidate.candidateName.en}
+                  {candidate.candidateName[language]}
                 </p>
                 <p className="pr-3 text-2xl font-bold text-indigo-800">
                   {Math.round((candidate.count / numberOfQuestions) * 100)}%

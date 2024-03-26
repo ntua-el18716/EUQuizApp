@@ -1,3 +1,4 @@
+import EuropeanPartyLogo from "./EuropeanPartyLogo";
 import PartyLogo from "./PartyLogo";
 // import ResultBar from "./ResultBar";
 import { ProgressBar } from "react-progressbar-fancy";
@@ -36,6 +37,7 @@ function ResultItem({ party, result }) {
           {roundedResult}%
         </p>
       </div>
+      <EuropeanPartyLogo party={party} />
     </div>
   );
 }

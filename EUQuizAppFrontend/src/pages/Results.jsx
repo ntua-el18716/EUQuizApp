@@ -7,6 +7,7 @@ import { resetResults } from "../features/results/resultsSlice";
 import { resetQuestions } from "../features/questions/questionsSlice";
 import { useNavigate } from "react-router-dom";
 import Home from "../../public/images/home.svg?react";
+import { takeScreenshot } from "../features/results/ResultsPresentationFancy";
 
 function Results() {
   const [active, setActive] = useState("results");
@@ -20,7 +21,7 @@ function Results() {
   const ref = useRef(null);
 
   // const downloadScreenshot = () => takeScreenshot(ref.current).then(download);
-  const downloadScreenshot = () => console.log("tbi");
+  const downloadScreenshot = () => takeScreenshot();
 
   return (
     <div className="mx-auto w-80 max-w-3xl md:bg-cyan-100 pb-2 pt-6 md:w-screen md:max-w-3xl">

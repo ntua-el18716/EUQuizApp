@@ -1,4 +1,4 @@
-import { ProgressBar } from "react-progressbar-fancy";
+// import { ProgressBar } from "react-progressbar-fancy";
 import ResultItem from "./ResultItem";
 
 function ResultsPresentation({ resultsPerParty }) {
@@ -13,7 +13,7 @@ function ResultsPresentation({ resultsPerParty }) {
     return b[1] - a[1];
   });
   return (
-    <div>
+    <div id="root">
       <ul
         id="print"
         className="no-scrollbar max-h-screen h-full flex flex-col gap-1 overflow-hidden overflow-y-auto whitespace-nowrap rounded-lg py-2 px-0.5"
