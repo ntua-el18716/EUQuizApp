@@ -27,7 +27,7 @@ export async function updateQuestionAnswers(dataObject) {
         // Insert New Answer
         if (!answer.answerId) {
           let newAnswer = { ...answer, questionId: updatedQuestion.questionId };
-          await db.insert(questions).values(newAnswer);
+          await db.insert(answers).values(newAnswer);
         } else {
           // Update the answer
           await db
