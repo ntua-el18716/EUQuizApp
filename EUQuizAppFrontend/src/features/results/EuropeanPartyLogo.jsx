@@ -24,7 +24,6 @@ function EuropeanPartyLogo({ party }) {
       return <EuropeanGreens width={130} height={70} />;
     case "volt":
       return <VoltEuropa width={130} height={70} />;
-
     default:
       return <EuropeanGreens width={130} height={70} />;
   }

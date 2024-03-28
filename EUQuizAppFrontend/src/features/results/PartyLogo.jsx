@@ -36,7 +36,6 @@ function PartyLogo({ party }) {
       return <Depa width={130} height={70} />;
     case "volt":
       return <Volt width={130} height={70} />;
-
     default:
       return <Greens width={130} height={70} />;
   }
