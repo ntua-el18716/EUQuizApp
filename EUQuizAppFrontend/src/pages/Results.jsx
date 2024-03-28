@@ -7,7 +7,7 @@ import { resetResults } from "../features/results/resultsSlice";
 import { resetQuestions } from "../features/questions/questionsSlice";
 import { useNavigate } from "react-router-dom";
 import Home from "../../public/images/home.svg?react";
-import { takeScreenshot } from "../features/results/ResultsPresentationFancy";
+import { takeScreenshot } from "../utils/takeScreenshot";
 
 function Results() {
   const [active, setActive] = useState("results");
