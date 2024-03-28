@@ -14,7 +14,7 @@ function PartyLogo({ party }) {
       return (
         <div className=" max-h-[102px] msin-w-[88.2666px] px-[13.8833px]">
           <img
-            src="../../../public/images/partyLogos/disyv2.svg"
+            src="/images/partyLogos/disyv2.svg"
             alt="Disy SVG"
             width="88.2666px"
             height="102px"
