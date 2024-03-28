@@ -1,13 +1,10 @@
-import EuropeanPartyLogo from "./EuropeanPartyLogo";
 import PartyLogo from "./PartyLogo";
-// import ResultBar from "./ResultBar";
 import { ProgressBar } from "react-progressbar-fancy";
 
 // import Disy from '../../images/disy.svg?react';
-function ResultItem({ party, result }) {
+export function ResultItem({ party, result }) {
   const roundedResult = Math.round(result);
   // let roundedResult = result > 0 ? Math.round(result) : "   0";
-
   let colors = {
     akel: { primaryColor: "red", secondaryColor: "white" },
     disy: { primaryColor: "blue", secondaryColor: "white" },
@@ -20,15 +17,13 @@ function ResultItem({ party, result }) {
   };
 
   return (
-    <div className="flex flex-row items-center justify-between gap-1 px-2 py-1 bg-cyan-200 md:p-4 hover:bg-gradient-to-l hover:from-sky-300 hover:to-cyan-3 rounded-lg">
+    <div className=" flex flex-row items-center justify-between gap-1 px-2 py-1 bg-cyan-200 md:p-4 hover:bg-gradient-to-l hover:from-sky-300 hover:to-cyan-3 rounded-lg">
       <PartyLogo party={party} />
       <ProgressBar
         score={result}
         hideText
         primaryColor="purple"
         secondaryColor="blue"
-        // primaryColor={colors[party]?.primaryColor}
-        // secondaryColor={colors[party]?.secondaryColor}
       />
       {/* <ResultBar result={result} /> */}
       <div className="flex h-full align-middle text-lg text-center font-semibold text-indigo-950">
@@ -37,9 +32,7 @@ function ResultItem({ party, result }) {
           {roundedResult}%
         </p>
       </div>
-      <EuropeanPartyLogo party={party} />
+      {/* <EuropeanPartyLogo party={party} /> */}
     </div>
   );
 }
-
-export default ResultItem;

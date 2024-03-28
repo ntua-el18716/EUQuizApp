@@ -1,4 +1,4 @@
-import Epp from "../../../public/images/europeanGroupLogos/epp.svg?react";
+import Epp from "../../../public/images/europeanGroupLogos/eppv3.svg?react";
 import SD from "../../../public/images/europeanGroupLogos/s&d.svg?react";
 import GueNgl from "../../../public/images/europeanGroupLogos/gue.svg?react";
 import Alde from "../../../public/images/europeanGroupLogos/alde.svg?react";
