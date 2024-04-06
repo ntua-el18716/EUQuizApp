@@ -1,8 +1,10 @@
 import Epp from "../../../public/images/europeanGroupLogos/eppv3.svg?react";
+// import SD from "../../../public/images/europeanGroupLogos/s&d.svg?react";
 import SD from "../../../public/images/europeanGroupLogos/s&d.svg?react";
 import GueNgl from "../../../public/images/europeanGroupLogos/gue.svg?react";
 import Alde from "../../../public/images/europeanGroupLogos/alde.svg?react";
-import EuropeanGreens from "../../../public/images/europeanGroupLogos/europeanGreens.svg?react";
+// import EuropeanGreens from "../../../public/images/europeanGroupLogos/europeanGreens.svg?react";
+import EuropeanGreensEFA from "../../../public/images/europeanGroupLogos/GreensEFA.svg?react";
 import VoltEuropa from "../../../public/images/europeanGroupLogos/voltStars.svg?react";
 import Ecr from "../../../public/images/europeanGroupLogos/ecr.svg?react";
 
@@ -21,11 +23,13 @@ function EuropeanPartyLogo({ party }) {
     case "depa":
       return <Alde width={130} height={70} />;
     case "greens":
-      return <EuropeanGreens width={130} height={70} />;
+      // return <EuropeanGreens width={130} height={70} />;
+      return <EuropeanGreensEFA width={130} height={70} />;
     case "volt":
-      return <VoltEuropa width={130} height={70} />;
+      return <EuropeanGreensEFA width={130} height={70} />;
+    // return <VoltEuropa width={130} height={70} />;
     default:
-      return <EuropeanGreens width={130} height={70} />;
+      return <SD width={130} height={70} />;
   }
 }
 

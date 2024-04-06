@@ -13,7 +13,6 @@ function sortQuizData(quizData) {
 }
 async function fetchQuizData(res) {
     try {
-        console.log("I am in");
         const dataArray = [];
         const questionsResult = await src_1.db.query.questions.findMany();
         for (const question of questionsResult) {
@@ -27,10 +26,10 @@ async function fetchQuizData(res) {
             };
             dataArray.push(quizData);
         }
-        // const sortedQuizData = sortQuizData(dataArray);
-        console.log(dataArray);
+        const sortedQuizData = sortQuizData(dataArray);
+        // console.log(dataArray);
         // Now dataArray contains the complete quiz data
-        res.status(200).json({ status: "okay", dataArray });
+        res.status(200).json({ status: "okay", sortedQuizData });
     }
     catch (error) {
         console.error("Error fetching quiz data:", error);

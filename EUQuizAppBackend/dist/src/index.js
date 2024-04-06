@@ -47,5 +47,8 @@ const schema = {
 dotenv.config();
 const pool = new pg_1.Pool({
     connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false,
+    },
 });
 exports.db = (0, node_postgres_1.drizzle)(pool, { schema: schema });

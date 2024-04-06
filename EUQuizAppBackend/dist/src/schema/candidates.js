@@ -14,6 +14,9 @@ exports.candidates = (0, pg_core_1.pgTable)("candidates", {
     candidateEmail: (0, pg_core_1.text)("candidateEmail"),
     candidateWebPage: (0, pg_core_1.text)("candidateWebPage"),
     candidateImg: (0, pg_core_1.text)("candidateImg"),
+    candidateCode: (0, pg_core_1.text)("candidateCode"),
+    candidateCustomAnswers: (0, pg_core_1.text)("candidateCustomAnswers").array(),
+    candidateConsent: (0, pg_core_1.boolean)("candidateConsent"),
 });
 exports.candidatesRelations = (0, drizzle_orm_1.relations)(exports.candidates, ({ many, one }) => ({
     candidateAnswers: many(candidateAnswers_1.candidateAnswers),

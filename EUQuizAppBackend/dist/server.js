@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const router_1 = __importDefault(require("./routes/router"));
 const app = (0, express_1.default)();
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 // app.get("/", (req, res) => {

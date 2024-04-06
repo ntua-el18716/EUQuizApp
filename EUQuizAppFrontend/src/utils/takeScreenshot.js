@@ -1,6 +1,7 @@
 import html2canvas from "html2canvas";
 
 export const takeScreenshot = () => {
+  // const element = document.getElementById("candidate");
   const element = document.getElementById("print");
 
   const style = document.createElement("style");
@@ -11,6 +12,7 @@ export const takeScreenshot = () => {
 
   if (!element) return;
   html2canvas(element, {
+    // scale: 2,
     windowWidth: element.scrollWidth,
     windowHeight: element.scrollHeight,
   }).then((canvas) => {

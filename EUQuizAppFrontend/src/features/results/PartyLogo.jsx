@@ -1,4 +1,4 @@
-// import Disy from "../../../public/images/partyLogos/disyv2.svg?react";
+import Disy from "../../../public/images/partyLogos/disyv2.svg?react";
 import Greens from "../../../public/images/partyLogos/greensv3.svg?react";
 import Akel from "../../../public/images/partyLogos/akel.svg?react";
 import Diko from "../../../public/images/partyLogos/diko.svg?react";
@@ -10,6 +10,9 @@ import Volt from "../../../public/images/partyLogos/volt.svg?react";
 function PartyLogo({ party }) {
   switch (party) {
     case "disy":
+      return <Disy width={130} height={70} />;
+
+    case "disys":
       // return <Disy width={130} height={70} />;
       return (
         <div className=" max-h-[102px] msin-w-[88.2666px] px-[13.8833px]">

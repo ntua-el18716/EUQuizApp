@@ -47,7 +47,7 @@ function ResultsCandidates() {
     );
 
   return (
-    <div>
+    <div id="candidate">
       <ul className="flex flex-col gap-1">
         {candidates.map((candidate) => (
           <li

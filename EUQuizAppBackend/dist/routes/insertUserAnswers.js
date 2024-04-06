@@ -5,8 +5,9 @@ const userAnswers_1 = require("./../src/schema/userAnswers");
 const src_1 = require("../src");
 const users_1 = require("../src/schema/users");
 async function insertUserAnswers(userAnswersData) {
+    console.log(userAnswersData);
     let newUser;
-    newUser = userAnswersData.user;
+    newUser = userAnswersData.user || {};
     try {
         const insertedUser = await src_1.db
             .insert(users_1.users)
@@ -14,6 +15,7 @@ async function insertUserAnswers(userAnswersData) {
             .returning({ insertedId: users_1.users.userId });
         let newAnswer;
         let userId = insertedUser[0].insertedId;
+        console.log(userId);
         for (const userAnswer of userAnswersData.answers) {
             let newUserAnswer = {
                 userId,

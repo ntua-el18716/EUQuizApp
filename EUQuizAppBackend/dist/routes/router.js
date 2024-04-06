@@ -15,6 +15,9 @@ const getQuestionsAnswers_1 = require("./getQuestionsAnswers");
 const getParties_1 = require("./getParties");
 const insertCandidate_1 = require("./insertCandidate");
 const updateQuestionAnswers_1 = require("./updateQuestionAnswers");
+const insertQuizData_1 = require("./insertQuizData");
+const candidateCalculate_1 = require("./candidateCalculate");
+const questionStats_1 = require("./questionStats");
 const router = express_1.default.Router();
 router.use((req, res, next) => {
     console.log("newRequest");
@@ -22,6 +25,10 @@ router.use((req, res, next) => {
 });
 router.post("/insertQuestionAnswers", async (req, res) => {
     await (0, insertQuestionAnswers_1.insertQuestionAndAnswers)(req.body);
+    res.send("Question and Answers Added");
+});
+router.post("/insertQuizData", async (req, res) => {
+    await (0, insertQuizData_1.insertQuizData)(req.body);
     res.send("Question and Answers Added");
 });
 router.put("/updateQuestionAnswers", async (req, res) => {
@@ -40,6 +47,10 @@ router.post("/insertCandidate", async (req, res) => {
     await (0, insertCandidate_1.insertCandidate)(req.body);
     res.send("Candidate Added");
 });
+router.post("/insertCandidates", async (req, res) => {
+    await (0, insertCandidate_1.insertCandidates)(req.body);
+    res.send("Candidates Added");
+});
 router.put("/updateCandidate", async (req, res) => {
     await (0, updateCandidate_1.updateCandidate)(req.body);
     res.send("Candidate Updated");
@@ -47,6 +58,10 @@ router.put("/updateCandidate", async (req, res) => {
 router.post("/insertParty", async (req, res) => {
     await (0, insertParty_1.insertParty)(req.body);
     res.send("Party Added");
+});
+router.post("/insertParties", async (req, res) => {
+    await (0, insertParty_1.insertParties)(req.body);
+    res.send("Parties Added");
 });
 router.get("/getQuizData", async (req, res) => {
     await (0, getQuestionsAnswers_1.fetchQuizData)(res);
@@ -58,6 +73,16 @@ router.get("/getCandidates", async (req, res) => {
 });
 router.get("/getParties", async (req, res) => {
     await (0, getParties_1.fetchParties)(res);
+    // res.send("Here are the questions");
+});
+// router.get("/candidateCalculate", async (req, res) => {
+router.post("/candidateCalculate", async (req, res) => {
+    // await candidateCalculate(res);
+    await (0, candidateCalculate_1.candidateCalculate)({ req, res });
+    // res.send("Here are the questions");
+});
+router.get("/getQuestionStats", async (req, res) => {
+    await (0, questionStats_1.questionStats)(res);
     // res.send("Here are the questions");
 });
 router.get("/", (req, res) => {

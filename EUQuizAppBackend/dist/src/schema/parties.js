@@ -7,6 +7,7 @@ const candidates_1 = require("./candidates");
 exports.parties = (0, pg_core_1.pgTable)("parties", {
     // partyId: serial("partyId").primaryKey(),
     partyName: (0, pg_core_1.text)("partyName"),
+    partyAbbrGr: (0, pg_core_1.text)("partyAbbrGr"),
     partyImg: (0, pg_core_1.text)("partyImg"),
     partyAbbreviation: (0, pg_core_1.text)("partyAbbreviation")
         .$type()
