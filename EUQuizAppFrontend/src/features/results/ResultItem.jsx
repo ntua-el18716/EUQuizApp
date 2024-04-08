@@ -40,7 +40,7 @@ function ResultItem({ party, result }) {
         </div>
         <EuropeanPartyLogo party={party} />
       </div>
-      <div className="p-4 flex flex-col gap-2 text-indigo-900 font-semibold">
+      <div className="p-4 flex flex-col gap-2 text-indigo-900 font-semibold hidden">
         <p>ΑΚΕΛ Αριστερά Κοινωνική Συμμαχία</p>
         <p>The Left in the European Parliament – GUE/NGL</p>
         <p>Website Link: www.akel.com</p>

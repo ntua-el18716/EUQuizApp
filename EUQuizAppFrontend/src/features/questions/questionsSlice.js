@@ -14,8 +14,8 @@ export const fetchQuizData = createAsyncThunk(
     // console.log(res);
     const quizData = await res.json();
     // console.log(quizData);
-    // return quizData.sortedQuizData;
-    return sortedQuizDatav2;
+    return quizData.sortedQuizData;
+    // return sortedQuizDatav2;
   },
 );
 
