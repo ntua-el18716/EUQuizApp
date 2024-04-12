@@ -12,6 +12,7 @@ export const candidateAnswers = pgTable(
       () => candidates.candidateId
     ),
     answerId: integer("answerId").references(() => answers.answerId),
+    candidateAnswerCode: text("candidateAnswerCode"),
   },
   (table) => {
     return {

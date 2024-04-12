@@ -10,9 +10,10 @@ interface candidateAnswer {
 }
 
 export async function insertCandidateAnswers(candidateAnswersData) {
-  // console.log(candidateAnswersData);
+  console.log(candidateAnswersData);
   const { candidateId, ...updatedCandidate } =
     candidateAnswersData.candidateInfo;
+  const candidateCode = candidateAnswersData.candidateCode;
   await db
     .update(candidates)
     .set(updatedCandidate)
@@ -28,6 +29,7 @@ export async function insertCandidateAnswers(candidateAnswersData) {
     let newCandidateAnswer = {
       candidateId: candidateId,
       answerId: candidateAnswer,
+      candidateAnswerCode: candidateCode,
     };
     try {
       await db.insert(candidateAnswers).values(newCandidateAnswer);

@@ -8,6 +8,20 @@
       "when": 1710694522533,
       "tag": "0000_unknown_leo",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1712914036296,
+      "tag": "0001_concerned_shadowcat",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1712923509329,
+      "tag": "0002_good_oracle",
+      "breakpoints": true
     }
   ]
 }

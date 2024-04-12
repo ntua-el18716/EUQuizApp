@@ -1,0 +1,1 @@
+ALTER TABLE "candidateAnswers" ALTER COLUMN "candidateAnswerCode" SET DATA TYPE text;

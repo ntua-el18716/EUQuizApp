@@ -31,13 +31,13 @@ function CandidateReview() {
       candidateEmail,
       candidateMobileNumber,
       candidateName,
+      candidateImg,
     } = {
       ...candidateInfo,
     };
     const candidateInfoObject = {
       candidateId,
       candidateConsent,
-      candidateCode,
       candidateCustomAnswers: candidateCustomAnswerPerQuestion,
     };
 
@@ -51,6 +51,7 @@ function CandidateReview() {
 
     let candidateAnswersData = {
       candidateInfo: candidateInfoObject,
+      candidateCode,
       answerIdPerQuestion,
     };
     try {
@@ -73,6 +74,14 @@ function CandidateReview() {
       <h1 className="font-mono text-3xl text-indigo-900 text-center md:pt-5 md:py-1 font-extrabold">
         <Trans i18nKey="candidateReview.title" />
       </h1>
+
+      <img
+        src={`/images/candidateImages/${candidateInfo.candidateImg}.jpg`}
+        alt="Your Image"
+        style={{ maxWidth: "100px", height: "auto" }}
+        loading="lazy"
+        className="mx-auto hidden sm:block"
+      />
 
       <p className="font-mono text-2xl text-indigo-900 text-center md:pt-2 md:py-3 font-extrabold">
         {candidateInfo.candidateName[language]}

@@ -25,7 +25,7 @@ export const fetchQuizData = createAsyncThunk(
 let answerPerQuestion; // = Array(1).fill(0);
 let answerIdPerQuestion; // = Array(1).fill(0);
 
-let candidateCustomAnswerPerQuestion = Array(13).fill("");
+let candidateCustomAnswerPerQuestion = Array(21).fill("");
 
 const aspectsArr = [
   { aspectId: 1, value: "Cyprus Problem", importance: 1 },
@@ -80,7 +80,8 @@ const questionsSlice = createSlice({
     },
     setCandidateInfo(state, action) {
       console.log("data:" + action.payload);
-      state.candidateInfo = { candidateCode: "0", ...action.payload };
+      // state.candidateInfo = { candidateCode: "0", ...action.payload };
+      state.candidateInfo = action.payload;
       state.candidateMode = true;
       console.log(state.candidateMode);
     },

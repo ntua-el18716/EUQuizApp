@@ -47,7 +47,7 @@ function CandidateHomePage() {
   const navigate = useNavigate();
   //you need to find the name of the candidate
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     const candidate = candidates.find(
       (candidate) =>
         candidate.candidateId === Number(data.candidate.candidateId),
@@ -56,6 +56,7 @@ function CandidateHomePage() {
       ...data.candidate,
       candidateId: Number(data.candidate.candidateId),
       candidateName: candidate.candidateName,
+      candidateImg: candidate.candidateImg,
     };
     dispatch(setCandidateInfo(data.candidate));
     navigate("/questions");
@@ -141,6 +142,11 @@ function CandidateHomePage() {
         )}
       />
 
+      <input
+        className="bg-indigo-600 font-mono font-semibold text-sm md:text-lg rounded-lg text-white px-4 py-2 w-[7rem]  md:w-[12rem] mx-auto truncate text-center"
+        {...register("candidate.candidateCode")}
+        placeholder="Enter your Code"
+      />
       <p className="text-indigo-900 py-1 text-sm/[25px] md:text-base md:p-4 font-semibold">
         <Trans i18nKey="candidateHome.selectContactInfo" />
       </p>

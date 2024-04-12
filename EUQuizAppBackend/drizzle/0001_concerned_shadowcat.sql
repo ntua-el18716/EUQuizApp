@@ -1,0 +1,1 @@
+ALTER TABLE "candidateAnswers" ADD COLUMN "candidateAnswerCode" integer;
