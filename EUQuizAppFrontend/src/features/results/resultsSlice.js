@@ -47,7 +47,7 @@ const resultsSlice = createSlice({
       const answerPerQuestion = action.payload.answerPerQuestion;
       let importanceSum = 0;
       aspects.map((aspect) => (importanceSum += aspect.importance));
-      importanceSum -= 2;
+      // importanceSum -= 2;
       for (let i = 0; i < numberOfQuestions; i++) {
         let answerPoints =
           action.payload.questionsArray[i].answers[answerPerQuestion[i] - 1]

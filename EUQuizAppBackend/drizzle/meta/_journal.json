@@ -22,6 +22,13 @@
       "when": 1712923509329,
       "tag": "0002_good_oracle",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1713945936659,
+      "tag": "0003_next_talisman",
+      "breakpoints": true
     }
   ]
 }

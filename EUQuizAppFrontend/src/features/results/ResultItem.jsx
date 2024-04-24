@@ -23,6 +23,7 @@ function ResultItem({ party, result }) {
     <div className="flex flex-col bg-cyan-200 hover:from-sky-300 hover:to-cyan-3 rounded-lg hover:bg-gradient-to-l cursor-pointer">
       <div className="flex flex-row items-center justify-between gap-1 px-2 py-1  md:p-4 ">
         <PartyLogo party={party} />
+
         <ProgressBar
           score={result}
           hideText
@@ -40,10 +41,27 @@ function ResultItem({ party, result }) {
         </div>
         <EuropeanPartyLogo party={party} />
       </div>
-      <div className="p-4 flex flex-col gap-2 text-indigo-900 font-semibold hidden">
-        <p>ΑΚΕΛ Αριστερά Κοινωνική Συμμαχία</p>
-        <p>The Left in the European Parliament – GUE/NGL</p>
-        <p>Website Link: www.akel.com</p>
+      <div className="p-4 flex flex-col gap-2 text-indigo-900 font-semibold ">
+        <p className="font-bold text-lg">
+          ΑΚΕΛ - Αριστερά - Κοινωνική Συμμαχία
+        </p>
+        <a
+          href="https://akel.org.cy/"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:underline"
+        >
+          <p>The Left in the European Parliament – GUE/NGL</p>
+        </a>
+        {/* <a href="http://www.akel.com">Website Link: www.akel.com</a> */}
+        <a
+          href="https://akel.org.cy/"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:underline"
+        >
+          Website
+        </a>
       </div>
     </div>
   );
