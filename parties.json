@@ -1,0 +1,116 @@
+{
+  "partiesResult": [
+    {
+      "partyName": "Ανορθωτικό Κόμμα Εργαζόμενου Λαού",
+      "partyAbbrGr": "ΑΚΕΛ",
+      "partyImg": "akelv2",
+      "partyAbbreviation": "akel",
+      "partyWebsite": "https://akel.org.cy/",
+      "europeanGroupName": "GUE/NGL",
+      "europeanGroupWebsite": "https://left.eu/",
+      "partyElectionName": {
+        "el": "ΑΚΕΛ - Αριστερά - Κοινωνική Συμμαχία",
+        "en": "AKEL - Left - Social Alliance",
+        "tr": "AKEL-Sol-Toplumsal İttifak"
+      }
+    },
+    {
+      "partyName": "Κίνημα Σοσιαλδημοκρατών ΕΔΕΚ",
+      "partyAbbrGr": "ΕΔΕΚ",
+      "partyImg": "edek",
+      "partyAbbreviation": "edek",
+      "partyWebsite": "https://www.edek.org.cy/%CE%95%CE%BA%CE%BB%CE%BF%CE%B3%CE%AD%CF%82",
+      "europeanGroupName": "S&D",
+      "europeanGroupWebsite": "https://www.socialistsanddemocrats.eu/",
+      "partyElectionName": {
+        "el": "ΕΔΕΚ Σοσιαλλιστικό Κόμμα ",
+        "en": "EDEK Socialist Party",
+        "tr": "EDEK Sosyalist Partisi"
+      }
+    },
+    {
+      "partyName": "Δημοκρατικός Συναγερμός",
+      "partyAbbrGr": "ΔΗΣΥ",
+      "partyImg": "disy",
+      "partyAbbreviation": "disy",
+      "partyWebsite": "https://disy.org.cy/elections/",
+      "europeanGroupName": "EPP",
+      "europeanGroupWebsite": "https://www.epp.eu/",
+      "partyElectionName": {
+        "el": "Δημοκρατικός Συναγερμός (ΔΗΣΥ)",
+        "en": "Democratic Rally (DISY)",
+        "tr": "Demokratik Seferberlik (DISY)"
+      }
+    },
+    {
+      "partyName": "Δημοκρατικό Κόμμα",
+      "partyAbbrGr": "ΔΗΚΟ",
+      "partyImg": "diko",
+      "partyAbbreviation": "diko",
+      "partyWebsite": "https://democraticparty.org.cy/",
+      "europeanGroupName": "S&D",
+      "europeanGroupWebsite": "https://www.socialistsanddemocrats.eu/",
+      "partyElectionName": {
+        "el": "Δημοκρατικό Κόμμα (ΔΗΚΟ)",
+        "en": "Democratic Party (DIKO)",
+        "tr": "Demokratik Parti (DIKO)"
+      }
+    },
+    {
+      "partyName": "Δημοκρατική Παράταξη",
+      "partyAbbrGr": "ΔΗΠΑ",
+      "partyImg": "depa",
+      "partyAbbreviation": "depa",
+      "partyWebsite": "https://depa.cy/",
+      "europeanGroupName": "Renew Europe",
+      "europeanGroupWebsite": "https://www.reneweuropegroup.eu/",
+      "partyElectionName": {
+        "el": "Δημοκρατική Παράταξη (ΔΗΠΑ)",
+        "en": "Democratic Alignment (DIPA)",
+        "tr": "Demokratik Ittifak"
+      }
+    },
+    {
+      "partyName": "Volt Cyprus",
+      "partyAbbrGr": "Volt",
+      "partyImg": "volt",
+      "partyAbbreviation": "volt",
+      "partyWebsite": "https://voltcyprus.org/",
+      "europeanGroupName": "The Greens/EFA",
+      "europeanGroupWebsite": "https://www.greens-efa.eu/en/",
+      "partyElectionName": {
+        "el": "VOLT Κύπρος",
+        "en": "VOLT Cyprus",
+        "tr": "VOLT Kıbrıs"
+      }
+    },
+    {
+      "partyName": "ΕΘνικό Λαϊκό Μέτωπο",
+      "partyAbbrGr": "ΕΛΑΜ",
+      "partyImg": "elam",
+      "partyAbbreviation": "elam",
+      "partyWebsite": "https://elamcy.com/ypopsifioi-evroekloges-2024/",
+      "europeanGroupName": "ECR",
+      "europeanGroupWebsite": "https://www.ecrgroup.eu/",
+      "partyElectionName": {
+        "el": "Εθνικό Λαϊκό Μέτωπο (ΕΛΑΜ)",
+        "en": "National People's Front? (ELAM)",
+        "tr": "Milli Halk Cephesi (ELAM)"
+      }
+    },
+    {
+      "partyName": "Κίνημα Οικολόγων Συνεργασία Πολιτών",
+      "partyAbbrGr": "Οικολόγοι",
+      "partyImg": "greens",
+      "partyAbbreviation": "greens",
+      "partyWebsite": "https://cyprusgreens.org/project_category/euroelections2024/",
+      "europeanGroupName": "The Greens/EFA",
+      "europeanGroupWebsite": "https://www.greens-efa.eu/en/",
+      "partyElectionName": {
+        "el": "Κίνημα Οικολόγων - Συνεργασία Πολιτών",
+        "en": "Cyprus Greens - Citiens'Alliance",
+        "tr": "Kıbrıs Yeşiller Partisi - Vatandaşlar İşbirliği"
+      }
+    }
+  ]
+}
