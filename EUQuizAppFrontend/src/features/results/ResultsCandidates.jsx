@@ -35,7 +35,7 @@ function ResultsCandidates() {
 
   const { i18n } = useTranslation();
   let language = i18n.language;
-  if (language === "tr") language === "en";
+  if (language === "tr") language = "en";
   if (isLoading)
     return (
       <Loader
@@ -59,25 +59,35 @@ function ResultsCandidates() {
               alt="Your Image"
               style={{ maxHeight: "65px", width: "auto" }}
               loading="lazy"
-              className="col-span-4 sm:col-span-2"
+              className="col-span-4 sm:col-span-2 hidden sm:block"
+            />
+            <img
+              src={`/images/candidateImages/${candidate.candidateImg}.jpg`}
+              alt="Your Image"
+              // style={{ maxHeight: "45px", width: "auto" }}
+              style={{ maxWidth: "68px", height: "auto" }}
+              loading="lazy"
+              className="col-span-4 sm:col-span-2 sm:hidden"
             />
             <div className="flex flex-col gap-3 w-full">
               <div className="flex justify-between">
-                <p className="pl-4 text-lg font-bold text-purple-900">
+                <p className="pl-2 sm:pl-4 text-sm sm:text-lg font-bold text-purple-900">
                   {candidate.candidateName[language]}
                 </p>
-                <p className="pr-3 text-2xl font-bold text-indigo-800">
+                <p className="pr-3 text-xl sm:text-2xl font-bold text-indigo-800">
                   {Math.round((candidate.count / numberOfQuestions) * 100)}%
                 </p>
               </div>
-              <ProgressBar
-                score={(candidate.count / numberOfQuestions) * 100}
-                // progressColor="purple"
-                hideText
-                primaryColor="purple"
-                secondaryColor="blue"
-                className="font-bold text-xl text-purple-500"
-              />
+              <div className="max-w-[150px] sm:max-w-none">
+                <ProgressBar
+                  score={(candidate.count / numberOfQuestions) * 100}
+                  // progressColor="purple"
+                  hideText
+                  primaryColor="purple"
+                  secondaryColor="blue"
+                  className="font-bold text-xl text-purple-500"
+                />
+              </div>
             </div>
             <div className="w-[100px] max-h-[65px] content-center">
               <img
@@ -86,9 +96,9 @@ function ResultsCandidates() {
                 style={{
                   objectFit: "contain",
                   margin: "auto",
-                  backgroundPosition: "center",
-                  maxHeight: "65px",
-                  // maxWidth: "70px",
+                  // backgroundPosition: "center",
+                  // maxHeight: "65px",
+                  maxWidth: "65px",
                   // width: "70px",
                   height: "auto",
                 }}

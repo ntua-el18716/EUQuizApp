@@ -6,6 +6,7 @@ import image3 from "../../public/images/image3v7.jpg";
 import { Trans, useTranslation } from "react-i18next";
 import Loader from "react-spinner-loader";
 import {
+  fetchPartiesData,
   fetchQuizData,
   getQuizDataStatus,
 } from "../features/questions/questionsSlice";
@@ -18,6 +19,7 @@ function Home() {
 
   useEffect(() => {
     dispatch(fetchQuizData());
+    dispatch(fetchPartiesData());
   }, [dispatch]);
 
   const quizDataStatus = useSelector(getQuizDataStatus);

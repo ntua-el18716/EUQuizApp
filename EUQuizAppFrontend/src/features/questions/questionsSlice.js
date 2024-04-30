@@ -19,6 +19,15 @@ export const fetchQuizData = createAsyncThunk(
   },
 );
 
+export const fetchPartiesData = createAsyncThunk(
+  "data/fetchPartiesData",
+  async function () {
+    const res = await fetch(`${apiBaseUrl}/getParties`);
+    const partiesData = await res.json();
+    return partiesData;
+  },
+);
+
 // export const NUMBER_OF_QUESTIONS = questionsArray.length;
 
 // const answerPerQuestion = Array(NUMBER_OF_QUESTIONS).fill(0);
@@ -47,6 +56,7 @@ const initialState = {
   answerIdPerQuestion,
   aspects: aspectsArr,
   status: "idle",
+  partiesStatus: "idle",
   //candidate data variables
   candidateCustomAnswerPerQuestion,
   candidateMode: false,
@@ -57,6 +67,7 @@ const initialState = {
     candidateMobileNumber: "",
     candidateName: { el: "", en: "" },
   },
+  parties: [],
 };
 
 const questionsSlice = createSlice({
@@ -109,7 +120,7 @@ const questionsSlice = createSlice({
       };
     },
   },
-  extraReducers: (builder) =>
+  extraReducers: (builder) => {
     builder
       .addCase(fetchQuizData.pending, (state) => {
         state.status = "loading";
@@ -129,6 +140,19 @@ const questionsSlice = createSlice({
       .addCase(fetchQuizData.rejected, (state) => {
         state.status = "error";
       }),
+      builder
+        .addCase(fetchPartiesData.pending, (state) => {
+          state.partiesStatus = "loading";
+        })
+        .addCase(fetchPartiesData.fulfilled, (state, action) => {
+          state.partiesStatus = "fulfilled";
+          state.parties = action.payload.partiesResult;
+        })
+        .addCase(fetchPartiesData.rejected, (state, action) => {
+          state.partiesStatus = "failed";
+          state.error = action.error.message;
+        });
+  },
 });
 
 export const {
@@ -177,4 +201,8 @@ export const getAnswerIdPerQuestion = (state) =>
 
 export const getAspects = (state) => state.questions.aspects;
 
+export const getParties = (state) => state.questions.parties;
+
 export const getQuizDataStatus = (state) => state.questions.status;
+
+export const getPartiesStatus = (state) => state.questions.partiesStatus;

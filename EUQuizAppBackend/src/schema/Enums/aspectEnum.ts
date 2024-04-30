@@ -8,6 +8,7 @@ export const grAspectsEnum = pgEnum("grAspectsEnum", [
   "Μεταναστευτικό",
   "Περιβάλλον",
   "Κοινωνικά Θέματα",
+  "Τουρκοκύπριοι",
 ]);
 
 export const enAspectsEnum = pgEnum("enAspectsEnum", [
@@ -18,6 +19,7 @@ export const enAspectsEnum = pgEnum("enAspectsEnum", [
   "Immigration",
   "Green Politics",
   "Social Issues",
+  "Turkish Cypriots",
 ]);
 
 export const trAspectsEnum = pgEnum("trAspectsEnum", [
@@ -28,4 +30,5 @@ export const trAspectsEnum = pgEnum("trAspectsEnum", [
   "Μεταναστευτικό",
   "Περιβάλλον",
   "Κοινωνικά Θέματα",
+  "Τουρκοκύπριοι",
 ]);

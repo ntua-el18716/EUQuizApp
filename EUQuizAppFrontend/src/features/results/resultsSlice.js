@@ -66,7 +66,8 @@ const resultsSlice = createSlice({
         state.importantPointsPerParty[party] =
           (state.importantPointsPerParty[party] / numberOfQuestions) *
           // ((100 * aspects.length) / importanceSum);
-          ((100 * 5) / importanceSum);
+          // ((100 * 5) / importanceSum);
+          ((100 * 7) / importanceSum);
       });
     },
 
