@@ -90,7 +90,11 @@ function CandidateHomePage() {
                 Party
               </option>
               {parties.map((party) => (
-                <option key={party.partyAbbrGr} value={party.partyAbbreviation}>
+                <option
+                  key={party.partyAbbrGr}
+                  value={party.partyAbbreviation}
+                  className="uppercase"
+                >
                   {language === "el"
                     ? party.partyAbbrGr
                     : party.partyAbbreviation}

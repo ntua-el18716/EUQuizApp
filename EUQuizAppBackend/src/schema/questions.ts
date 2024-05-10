@@ -20,6 +20,11 @@ export const questions = pgTable("questions", {
     tr: typeof trAspectsEnum;
     en: typeof enAspectsEnum;
   }>(),
+  questionInfo: jsonb("questionInfo").$type<{
+    el: string;
+    tr: string;
+    en: string;
+  }>(),
 });
 
 export const questionsAnswersRelations = relations(questions, ({ many }) => ({

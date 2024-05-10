@@ -1,0 +1,198 @@
+{
+  "questionsForTCs": [
+    {
+      "questionId": 29,
+      "questionIndex": 22,
+      "questionTitle": {
+        "el": "Η υιοθέτηση του Ευρώ από την Τουρκοκυπριακή Κοινότητα πριν την λύση του Κυπριακού θα ήταν θετικό βήμα;",
+        "en": "Would the adoption of the Euro by the Turkish Cypriot Community before the solution of the Cyprus problem be a positive step?",
+        "tr": ""
+      },
+      "questionAspect": {
+        "el": "Τουρκοκύπριοι",
+        "en": "Turkish Cypriots",
+        "tr": ""
+      },
+      "questionInfo": null,
+      "answers": [
+        {
+          "answerId": 37,
+          "questionId": 29,
+          "answerIndex": 1,
+          "answerText": {
+            "el": "Ναι, θα φέρει τους Τουρκοκυπρίους πιο κοντά στην ΕΕ",
+            "en": "Yes, it will bring Turkish Cypriots closer to the EU",
+            "tr": ""
+          },
+          "answerPoints": []
+        },
+        {
+          "answerId": 38,
+          "questionId": 29,
+          "answerIndex": 2,
+          "answerText": {
+            "el": "Όχι, αυτό πρέπει να γίνει μετά την λύση του Κυπριακού",
+            "en": "No, this should happen after the solution of the Cyprus problem",
+            "tr": ""
+          },
+          "answerPoints": []
+        },
+        {
+          "answerId": 39,
+          "questionId": 29,
+          "answerIndex": 3,
+          "answerText": {
+            "el": "Άλλο / Δεν ξέρω / Δεν απαντώ",
+            "en": "Other / I don't know / Prefer not to say",
+            "tr": ""
+          },
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 30,
+      "questionIndex": 23,
+      "questionTitle": {
+        "el": "Πρέπει η Τουρκική γλώσσα να υιοθετηθεί ως επίσημη γλώσσα της ΕΕ;",
+        "en": "Should the Turkish language be adopted as an official language of the EU?",
+        "tr": ""
+      },
+      "questionAspect": {
+        "el": "Τουρκοκύπριοι",
+        "en": "Turkish Cypriots",
+        "tr": ""
+      },
+      "questionInfo": null,
+      "answers": [
+        {
+          "answerId": 40,
+          "questionId": 30,
+          "answerIndex": 1,
+          "answerText": {
+            "el": "Ναι, αφού είναι επίσημη γλώσσα της Κυπριακής Δημοκρατίας",
+            "en": "Yes, since it's an official language of the Republic of Cyprus",
+            "tr": ""
+          },
+          "answerPoints": []
+        },
+        {
+          "answerId": 41,
+          "questionId": 30,
+          "answerIndex": 2,
+          "answerText": {
+            "el": "Ναι, μετά την λύση του Κυπριακού",
+            "en": "Yes, after the solution of the Cyprus Problem",
+            "tr": ""
+          },
+          "answerPoints": []
+        },
+        {
+          "answerId": 42,
+          "questionId": 30,
+          "answerIndex": 3,
+          "answerText": {
+            "el": "Όχι",
+            "en": "No",
+            "tr": "Hayir"
+          },
+          "answerPoints": []
+        },
+        {
+          "answerId": 43,
+          "questionId": 30,
+          "answerIndex": 4,
+          "answerText": {
+            "el": "Άλλο / Δεν ξέρω / Δεν απαντώ",
+            "en": "Other / I don't know / Prefer not to say",
+            "tr": ""
+          },
+          "answerPoints": []
+        }
+      ]
+    },
+    {
+      "questionId": 31,
+      "questionIndex": 24,
+      "questionTitle": {
+        "el": "Πρέπει τα παιδιά μεικτών γάμων μεταξύ Κυπρίων και Τούρκων εποίκων να λαμβάνουν Κυπριακή ιθαγένεια;",
+        "en": "Should children of mixed marriages between Cypriots and Turkish settlers receive Cypriot citizenship?",
+        "tr": ""
+      },
+      "questionAspect": {
+        "el": "Τουρκοκύπριοι",
+        "en": "Turkish Cypriots",
+        "tr": ""
+      },
+      "questionInfo": null,
+      "answers": [
+        {
+          "answerId": 44,
+          "questionId": 31,
+          "answerIndex": 1,
+          "answerText": {
+            "el": "Ναι, είναι δικαίωμα τους που τους στερήται από την ΚΔ",
+            "en": "Yes, it is their right, which is denied to them by the RoC",
+            "tr": ""
+          },
+          "answerPoints": []
+        },
+        {
+          "answerId": 45,
+          "questionId": 31,
+          "answerIndex": 2,
+          "answerText": {
+            "el": "Ναι, πρέπει όμως να υπάρξει συνεργασία με την Κυβέρνηση της ΚΔ ώστε να βρεθεί αμοιβαία αποδεκτή λύση σε αυτό το ανθρωπιστικό πρόβλημα",
+            "en": "Yes, but cooperation with the RoC is required to find a mutually acceptable solution to this humanitarian issue",
+            "tr": ""
+          },
+          "answerPoints": []
+        },
+        {
+          "answerId": 47,
+          "questionId": 31,
+          "answerIndex": 3,
+          "answerText": {
+            "el": "Μόνο εάν πληρούνται τα κριτήρια που έθεσε η απόφαση του Υπουργικού Συμβουλίου",
+            "en": "Only if the criteria set by the Council of Ministers are satisfied",
+            "tr": ""
+          },
+          "answerPoints": []
+        },
+        {
+          "answerId": 46,
+          "questionId": 31,
+          "answerIndex": 4,
+          "answerText": {
+            "el": "Το πρόβλημα θα λυθεί με την λύση του Κυπριακού",
+            "en": "This problem will be resolved with the solution of the Cyprus Problem",
+            "tr": ""
+          },
+          "answerPoints": []
+        },
+        {
+          "answerId": 49,
+          "questionId": 31,
+          "answerIndex": 5,
+          "answerText": {
+            "el": "Όχι, αποτελούν προϊόν παρανομίας αφού ο εποικισμός είναι έγκλημα πολέμου",
+            "en": "No, the product of illegality and war crime, settling, cannot be legalized",
+            "tr": ""
+          },
+          "answerPoints": []
+        },
+        {
+          "answerId": 48,
+          "questionId": 31,
+          "answerIndex": 6,
+          "answerText": {
+            "el": "Άλλο / Δεν ξέρω / Δεν απαντώ",
+            "en": "Other / I don't know / Prefer not to say",
+            "tr": ""
+          },
+          "answerPoints": []
+        }
+      ]
+    }
+  ]
+}

@@ -29,6 +29,13 @@
       "when": 1713945936659,
       "tag": "0003_next_talisman",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1714494551346,
+      "tag": "0004_gigantic_veda",
+      "breakpoints": true
     }
   ]
 }

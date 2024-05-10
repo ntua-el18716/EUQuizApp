@@ -132,6 +132,27 @@ function UpdateQuestionForm({ question, insertMode, onRenderList }) {
           })}
           placeholder="Question Index"
         />
+
+        {/* Question Info */}
+        <label className="text-lg font-bold text-indigo-900">
+          Question Info
+        </label>
+        <input
+          className="bg-indigo-600 text-white py-2 px-2"
+          {...register("questionInfo.el", {})}
+          placeholder="Question Info Greek"
+        />
+        <input
+          className="bg-indigo-600 text-white py-2 px-2"
+          {...register("questionInfo.tr", {})}
+          placeholder="Question Info Turkish"
+        />
+        <input
+          className="bg-indigo-600 text-white py-2 px-2"
+          {...register("questionInfo.en", {})}
+          placeholder="Question Info English"
+        />
+
         {/* ANSWERS */}
         {/* Answer Text */}
         <label className="text-lg font-bold text-indigo-900">Answers</label>

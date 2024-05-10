@@ -18,12 +18,13 @@ import {
 import { submitAnswers, calculateResults } from "../results/resultsSlice";
 import QuestionAspect from "./QuestionAspect";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import LeftArrow from "../../../public/images/arrow-left.svg?react";
 import RightArrow from "../../../public/images/arrow-right.svg?react";
 
 function Question({ question }) {
   const { i18n } = useTranslation();
+  const [isExpandInfo, setIsExpandInfo] = useState(false);
 
   // const { questionIndex, questionTitle, answers, questionAspect } = question;
   const { questionIndex } = question;
@@ -58,6 +59,9 @@ function Question({ question }) {
     };
   }, [dispatch]);
 
+  let existsInfo = questionsArray[questionIndex - 1]?.questionInfo[language];
+  console.log(questionsArray[questionIndex - 1]?.questionInfo[language]);
+  console.log("here" + existsInfo);
   let questionTitleT =
     questionsArray[questionIndex - 1].questionTitle[language];
   // let questionTitleT = t(`questions.${questionIndex - 1}.questionTitle`, {
@@ -84,9 +88,30 @@ function Question({ question }) {
           <QuestionAspect aspect={questionAspectT} />
         </div>
       </div>
+      <div
+        className={`pt-0.5 ${isExpandInfo ? "bg-dindigo-600" : ""} ${
+          !existsInfo ? "hidden" : "flex gap-2"
+        }`}
+      >
+        <button
+          className={`${
+            isExpandInfo ? "p-1" : "p-2"
+          } italisc text-sm text-left bg-indigo-700 text-white w-max p-1 whitespace-nowrap rounded-lg font-semibold   `}
+          onClick={() => setIsExpandInfo((isExpandInfo) => !isExpandInfo)}
+        >
+          {isExpandInfo ? "Show Less" : "Show More"}
+        </button>
+        <p
+          className={`${
+            isExpandInfo ? "" : "hidden"
+          } text-sm italic bg-indigo-700 text-white p-1 rounded-lg `}
+        >
+          {questionsArray[questionIndex - 1]?.questionInfo[language]}
+        </p>
+      </div>
       {/* <Answers /> */}
       <div>
-        <ul className="flex flex-col gap-3 pt-3 md:gap-6 md:pt-6">
+        <ul className="flex flex-col gap-3 pt-2 md:gap-6 md:pt-4">
           {answersT.map((answer) => (
             <AnswerItem
               answer={answer}
