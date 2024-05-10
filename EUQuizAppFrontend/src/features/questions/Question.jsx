@@ -111,7 +111,7 @@ function Question({ question }) {
       </div>
       {/* <Answers /> */}
       <div>
-        <ul className="flex flex-col gap-3 pt-2 md:gap-6 md:pt-4">
+        <ul className="flex flex-col gap-3 pt-1 md:gap-6 md:pt-4">
           {answersT.map((answer) => (
             <AnswerItem
               answer={answer}
