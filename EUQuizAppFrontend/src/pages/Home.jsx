@@ -72,7 +72,7 @@ function Home() {
       >
         {/* // <div className="flex flex-col justify-between pt-6 gap-8 bg-cyan-200"> */}
         {/* <h1 className="py-5 mx-auto text-2xl font-bold bg-indigo-700 text-indigo-50 px-3"> */}
-        <h1 className="mx-auto text-4xl md:pt-5 font-bold text-emerald-600">
+        <h1 className="mx-auto text-4xl md:pt-5 font-bold text-emerald-600 [text-shadow:_0_1px_0_rgb(0_0_0_/_80%)]">
           CYvoteEU
         </h1>
         <h1

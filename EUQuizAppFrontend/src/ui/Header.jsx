@@ -26,13 +26,25 @@ function Header() {
     <div className="flex justify-between bg-indigo-700">
       <Link
         to="/"
-        className="justify-left flex items-center gap-5 bg-indigo-700 px-6 py-4 text-xl font-bold uppercase text-white"
+        className="justify-left flex items-center gap-5 bg-indigo-700 p-2 px-4 bold uppercase text-white"
         onClick={handleReset}
       >
-        <h1 className="md:hidden">EU 2024 </h1>
+        {/* <h1 className="md:hidden">EU 2024 </h1>
         <h1 className="hidden md:block">EU ELECTIONS 2024 </h1>
 
-        <span className="font-size-md">🇪🇺</span>
+        <span className="font-size-md">🇪🇺</span> */}
+        <div>
+          <img
+            src={`/images/logov5.png`}
+            alt="Your Image"
+            style={{
+              maxHeight: "40px",
+              width: "auto",
+            }}
+            loading="lazy"
+            className=" mx-auto hidden sm:block"
+          />
+        </div>
       </Link>
 
       {/* <Link

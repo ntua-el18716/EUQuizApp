@@ -84,7 +84,9 @@ function CandidateHomePage() {
           <>
             <select
               {...field}
-              className="bg-indigo-600 text-lg font-semibold rounded-lg text-white px-2 py-4 w-[13rem] md:px-4 md:py-5 md:w-[15rem] mx-auto"
+              className={`bg-indigo-600 text-lg font-semibold rounded-lg text-white px-2 py-4 w-[13rem] md:px-4 md:py-5 md:w-[15rem] mx-auto ${
+                language !== "el" ? "uppercase" : ""
+              }`}
             >
               <option value="" disabled>
                 Party
@@ -93,7 +95,7 @@ function CandidateHomePage() {
                 <option
                   key={party.partyAbbrGr}
                   value={party.partyAbbreviation}
-                  className="uppercase"
+                  className={`${language !== "el" ? "uppercase" : ""}`}
                 >
                   {language === "el"
                     ? party.partyAbbrGr
@@ -144,9 +146,14 @@ function CandidateHomePage() {
       />
 
       <input
-        className="bg-indigo-600 font-mono font-semibold text-sm md:text-lg rounded-lg text-white px-4 py-2 w-[7rem]  md:w-[12rem] mx-auto truncate text-center"
+        className="hidden md:block bg-indigo-600 font-mono font-semibold text-sm md:text-lg rounded-lg text-white px-4 py-2 w-[7rem]  md:w-[12rem] mx-auto truncate text-center"
         {...register("candidate.candidateCode")}
         placeholder="Enter your Code"
+      />
+      <input
+        className="md:hidden uppercase bg-indigo-600 font-mono font-semibold text-lg   md:text-lg rounded-lg text-white px-4 py-2 w-[7rem]  md:w-[12rem] mx-auto truncate text-center"
+        {...register("candidate.candidateCode")}
+        placeholder="Code"
       />
       <p className="text-indigo-900 py-1 text-sm/[25px] md:text-base md:p-4 font-semibold">
         <Trans i18nKey="candidateHome.selectContactInfo" />
