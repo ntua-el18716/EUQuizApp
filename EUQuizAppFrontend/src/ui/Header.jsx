@@ -42,7 +42,7 @@ function Header() {
               width: "auto",
             }}
             loading="lazy"
-            className=" mx-auto hidden sm:block"
+            className=" mx-auto"
           />
         </div>
       </Link>
