@@ -15,7 +15,7 @@ function QuestionStatsView({ question }) {
             <p className="p-2 font-semibold">{answer.answerIndex}.</p>
             <p className="p-2">{answer.answerText.en}</p>
           </div>
-          <ul className="grid grid-cols-2 gap-2 py-2 pb-4">
+          <ul className="grid grid-cols-6 gap-2 py-2 pb-4">
             {answer.candidates.map((candidate) => (
               <li
                 key={candidate.candidateId}
@@ -30,24 +30,27 @@ function QuestionStatsView({ question }) {
                   alt="Your Image"
                   style={{ maxHeight: "60px", width: "auto" }}
                   loading="lazy"
-                  className="col-span-4 sm:col-span-2"
+                  className="col-span-2 sm:col-span-2"
                 />
-                <p>{candidate?.candidateName.en}</p>
-                <p>{candidate?.candidateConsent ? "✔" : "❌"}</p>
-                <img
-                  src={`/images/partyLogos/${candidate?.candidateParty}.png`}
-                  alt="Your Image"
-                  style={{
-                    objectFit: "contain",
-                    margin: "auto",
-                    backgroundPosition: "center",
-                    maxHeight: "65px",
-                    // maxWidth: "70px",
-                    // width: "70px",
-                    height: "auto",
-                  }}
-                  loading="lazy"
-                />
+                {/* <p>{candidate?.candidateName.en}</p> */}
+                <div className="flex flex-col gap-3">
+                  <p>{candidate?.candidateConsent ? "✔" : "❌"}</p>
+                  <img
+                    src={`/images/partyLogos/${candidate?.candidateParty}.png`}
+                    alt="Your Image"
+                    style={{
+                      objectFit: "contain",
+                      margin: "auto",
+                      backgroundPosition: "center",
+                      maxHeight:
+                        candidate?.candidateParty === "volt" ? "16px" : "25px",
+                      // maxWidth: "70px",
+                      // width: "70px",
+                      height: "auto",
+                    }}
+                    loading="lazy"
+                  />
+                </div>
               </li>
             ))}
           </ul>
