@@ -1,6 +1,5 @@
 // apiConfig.js
-// const apiBaseUrl = "https://eu-quiz-app-backend.vercel.app"; // Update this path according to your API structure
-const apiBaseUrl = "http://localhost:3000"; // Localhost
-// const apiBaseUrl = "https://cyvoteeu-ab55554a145c.herokuapp.com"; // Localhost
+const apiBaseUrl = "https://euquizappbackend.onrender.com"; // Replace with your Render backend URL
+// const apiBaseUrl = "http://localhost:3000"; // Localhost for development
 
 export default apiBaseUrl;
