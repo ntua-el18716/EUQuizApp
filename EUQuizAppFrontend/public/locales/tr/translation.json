@@ -1,9 +1,9 @@
 {
-  "welcomeQuestion": "Hoshkeldin",
+  "welcomeQuestion": "KİME OY VERECEĞİNİZE KARAR VERMEKTE YARDIMA İHTİYACINIZ VAR MI?",
   "welcomeText": {
-    "1": "TBI",
-    "2": "TBI",
-    "3": "ΤΒΙ"
+    "1": "",
+    "2": "Bu testin amacı, inançlarınıza ve önceliklerinize göre kime oy vereceğinize karar vermenize yardımcı olmaktır.",
+    "3": "Bu testi şimdi çöz!"
   },
   "candidateHome": {
     "title": "",

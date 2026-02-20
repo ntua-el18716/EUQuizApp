@@ -1221,4 +1221,646 @@ export const sortedQuizData = [
       },
     ],
   },
+  {
+    questionId: 71,
+    questionIndex: 14,
+    questionTitle: {
+      el: "Πόσο δύναμη θα έπρεπε να έχει το Ευρωπαϊκό Κοινοβούλιο στη λήψη αποφάσεων της ΕΕ;",
+      en: "How much power should the European Parliament have in EU decision-making?",
+      tr: "Avrupa Parlamentosu AB kararlarında ne kadar güce sahip olmalıdır?",
+    },
+    questionAspect: {
+      el: "Ευρωπαϊκή Ένωση",
+      en: "European Union",
+      tr: "Avrupa Birliği",
+    },
+    answers: [
+      {
+        answerId: 301,
+        questionId: 71,
+        answerIndex: 1,
+        answerText: {
+          el: "Πολύ περισσότερη δύναμη",
+          en: "Much more power",
+          tr: "Çok daha fazla güç",
+        },
+        answerPoints: [
+          { party: "greens", value: 1 },
+          { party: "volt", value: 1 },
+          { party: "akel", value: 1 },
+        ],
+      },
+      {
+        answerId: 302,
+        questionId: 71,
+        answerIndex: 2,
+        answerText: {
+          el: "Λίγο περισσότερη δύναμη",
+          en: "Slightly more power",
+          tr: "Biraz daha fazla güç",
+        },
+        answerPoints: [
+          { party: "diko", value: 1 },
+          { party: "depa", value: 1 },
+        ],
+      },
+      {
+        answerId: 303,
+        questionId: 71,
+        answerIndex: 3,
+        answerText: {
+          el: "Η τρέχουσα κατάσταση είναι κατάλληλη",
+          en: "Current situation is appropriate",
+          tr: "Mevcut durum uygun",
+        },
+        answerPoints: [
+          { party: "disy", value: 1 },
+          { party: "edek", value: 1 },
+        ],
+      },
+      {
+        answerId: 304,
+        questionId: 71,
+        answerIndex: 4,
+        answerText: {
+          el: "Λιγότερη δύναμη",
+          en: "Less power",
+          tr: "Daha az güç",
+        },
+        answerPoints: [{ party: "elam", value: 1 }],
+      },
+      {
+        answerId: 305,
+        questionId: 71,
+        answerIndex: 5,
+        answerText: {
+          el: "Δεν ξέρω / Δεν απαντώ",
+          en: "I don't know / Prefer not to say",
+          tr: "Bilmiyorum / Cevap vermek istemiyorum",
+        },
+        answerPoints: [],
+      },
+    ],
+  },
+  {
+    questionId: 72,
+    questionIndex: 15,
+    questionTitle: {
+      el: "Πώς θα πρέπει η ΕΕ να αντιμετωπίσει τη μετανάστευση;",
+      en: "How should the EU address immigration challenges?",
+      tr: "AB göç zorlukları ile nasıl başa çıkmalıdır?",
+    },
+    questionAspect: {
+      el: "Μεταναστευτικό",
+      en: "Immigration",
+      tr: "Göç",
+    },
+    answers: [
+      {
+        answerId: 306,
+        questionId: 72,
+        answerIndex: 1,
+        answerText: {
+          el: "Ανοιχτά σύνορα και ευέλικτη πολιτική αποδοχής",
+          en: "Open borders and flexible acceptance policy",
+          tr: "Açık sınırlar ve esnek kabul politikası",
+        },
+        answerPoints: [
+          { party: "akel", value: 1 },
+          { party: "volt", value: 1 },
+        ],
+      },
+      {
+        answerId: 307,
+        questionId: 72,
+        answerIndex: 2,
+        answerText: {
+          el: "Ελεγχόμενη μετανάστευση με κοινούς κανόνες",
+          en: "Controlled migration with common rules",
+          tr: "Ortak kurallarla kontrollü göç",
+        },
+        answerPoints: [
+          { party: "disy", value: 1 },
+          { party: "diko", value: 1 },
+          { party: "depa", value: 1 },
+        ],
+      },
+      {
+        answerId: 308,
+        questionId: 72,
+        answerIndex: 3,
+        answerText: {
+          el: "Περιοριστική πολιτική και δυσμενής αντιμετώπιση",
+          en: "Restrictive policy and harder treatment",
+          tr: "Kısıtlayıcı politika ve sert muamele",
+        },
+        answerPoints: [{ party: "elam", value: 1 }],
+      },
+      {
+        answerId: 309,
+        questionId: 72,
+        answerIndex: 4,
+        answerText: {
+          el: "Κάθε κράτος θα πρέπει να αποφασίσει ανεξάρτητα",
+          en: "Each country should decide independently",
+          tr: "Her ülke bağımsız olarak karar vermelidir",
+        },
+        answerPoints: [{ party: "edek", value: 1 }],
+      },
+      {
+        answerId: 310,
+        questionId: 72,
+        answerIndex: 5,
+        answerText: {
+          el: "Δεν ξέρω / Δεν απαντώ",
+          en: "I don't know / Prefer not to say",
+          tr: "Bilmiyorum / Cevap vermek istemiyorum",
+        },
+        answerPoints: [],
+      },
+    ],
+  },
+  {
+    questionId: 73,
+    questionIndex: 16,
+    questionTitle: {
+      el: "Πώς θα πρέπει να ισορροπήσει η Ευρώπη μεταξύ οικονομικής ανάπτυξης και περιβαλλοντικής προστασίας;",
+      en: "How should Europe balance economic growth with environmental protection?",
+      tr: "Avrupa ekonomik büyüme ile çevre korumayı nasıl dengelemeli?",
+    },
+    questionAspect: {
+      el: "Περιβάλλον",
+      en: "Green Politics",
+      tr: "Yeşil Siyaset",
+    },
+    answers: [
+      {
+        answerId: 311,
+        questionId: 73,
+        answerIndex: 1,
+        answerText: {
+          el: "Προτεραιότητα στο περιβάλλον ακόμα κι αν κοστίσει την ανάπτυξη",
+          en: "Prioritize environment even if it slows growth",
+          tr: "Büyümeyi yavaşlansa da çevreyi önceliklendirin",
+        },
+        answerPoints: [
+          { party: "greens", value: 1 },
+          { party: "akel", value: 1 },
+          { party: "volt", value: 1 },
+        ],
+      },
+      {
+        answerId: 312,
+        questionId: 73,
+        answerIndex: 2,
+        answerText: {
+          el: "Ισορροπημένη προσέγγιση με έμφαση στη χρήση ΑΠΕ",
+          en: "Balanced approach with emphasis on renewables",
+          tr: "Yenilenebilir enerjiye vurgu ile dengeli yaklaşım",
+        },
+        answerPoints: [
+          { party: "disy", value: 1 },
+          { party: "diko", value: 1 },
+          { party: "depa", value: 1 },
+          { party: "edek", value: 1 },
+        ],
+      },
+      {
+        answerId: 313,
+        questionId: 73,
+        answerIndex: 3,
+        answerText: {
+          el: "Προτεραιότητα στην ανάπτυξη και την απασχόληση",
+          en: "Prioritize development and employment",
+          tr: "Kalkınma ve istihdam önceliklendirin",
+        },
+        answerPoints: [{ party: "elam", value: 1 }],
+      },
+      {
+        answerId: 314,
+        questionId: 73,
+        answerIndex: 4,
+        answerText: {
+          el: "Επιστροφή σε παραδοσιακές ενεργειακές πηγές",
+          en: "Return to traditional energy sources",
+          tr: "Geleneksel enerji kaynaklarına dönüş",
+        },
+        answerPoints: [],
+      },
+      {
+        answerId: 315,
+        questionId: 73,
+        answerIndex: 5,
+        answerText: {
+          el: "Δεν ξέρω / Δεν απαντώ",
+          en: "I don't know / Prefer not to say",
+          tr: "Bilmiyorum / Cevap vermek istemiyorum",
+        },
+        answerPoints: [],
+      },
+    ],
+  },
+  {
+    questionId: 74,
+    questionIndex: 17,
+    questionTitle: {
+      el: "Πόσα χρήματα θα πρέπει να δαπανά η ΕΕ για άμυνα;",
+      en: "How much should the EU spend on defense?",
+      tr: "AB savunmaya ne kadar harcama yapmalıdır?",
+    },
+    questionAspect: {
+      el: "Εξωτερική Πολιτική",
+      en: "Foreign Policy",
+      tr: "Dış Politika",
+    },
+    answers: [
+      {
+        answerId: 316,
+        questionId: 74,
+        answerIndex: 1,
+        answerText: {
+          el: "Σημαντική αύξηση για ισχυρή ευρωπαϊκή άμυνα",
+          en: "Significant increase for strong European defense",
+          tr: "Güçlü Avrupa savunması için önemli artış",
+        },
+        answerPoints: [
+          { party: "disy", value: 1 },
+          { party: "elam", value: 1 },
+        ],
+      },
+      {
+        answerId: 317,
+        questionId: 74,
+        answerIndex: 2,
+        answerText: {
+          el: "Μετριοπαθής αύξηση για συνεργασία",
+          en: "Moderate increase for cooperation",
+          tr: "İşbirliği için ılımlı artış",
+        },
+        answerPoints: [
+          { party: "diko", value: 1 },
+          { party: "depa", value: 1 },
+          { party: "edek", value: 1 },
+        ],
+      },
+      {
+        answerId: 318,
+        questionId: 74,
+        answerIndex: 3,
+        answerText: {
+          el: "Διατήρηση τρέχοντων επιπέδων",
+          en: "Maintain current levels",
+          tr: "Mevcut seviyeleri koru",
+        },
+        answerPoints: [{ party: "akel", value: 1 }],
+      },
+      {
+        answerId: 319,
+        questionId: 74,
+        answerIndex: 4,
+        answerText: {
+          el: "Μείωση εξόδων άμυνας μέσω διπλωματίας",
+          en: "Reduce defense spending through diplomacy",
+          tr: "Diplomasi yoluyla savunma harcamalarını azaltın",
+        },
+        answerPoints: [
+          { party: "greens", value: 1 },
+          { party: "volt", value: 1 },
+        ],
+      },
+      {
+        answerId: 320,
+        questionId: 74,
+        answerIndex: 5,
+        answerText: {
+          el: "Δεν ξέρω / Δεν απαντώ",
+          en: "I don't know / Prefer not to say",
+          tr: "Bilmiyorum / Cevap vermek istemiyorum",
+        },
+        answerPoints: [],
+      },
+    ],
+  },
+  {
+    questionId: 75,
+    questionIndex: 18,
+    questionTitle: {
+      el: "Τι επίπεδο υγειονομικής περίθαλψης θα πρέπει να εγγυηθεί στους ευρωπαίους πολίτες;",
+      en: "What level of healthcare should be guaranteed to European citizens?",
+      tr: "Avrupa vatandaşlarına hangi düzeyde sağlık hizmetleri garanti edilmelidir?",
+    },
+    questionAspect: {
+      el: "Κοινωνικά Θέματα",
+      en: "Social Issues",
+      tr: "Sosyal Meseleler",
+    },
+    answers: [
+      {
+        answerId: 321,
+        questionId: 75,
+        answerIndex: 1,
+        answerText: {
+          el: "Εθνικό σύστημα υγείας χωρίς κόστος για τον πολίτη",
+          en: "National health system free for citizens",
+          tr: "Vatandaş için ücretsiz ulusal sağlık sistemi",
+        },
+        answerPoints: [
+          { party: "akel", value: 1 },
+          { party: "volt", value: 1 },
+        ],
+      },
+      {
+        answerId: 322,
+        questionId: 75,
+        answerIndex: 2,
+        answerText: {
+          el: "Πολυ-επίπεδο σύστημα με βασική κάλυψη για όλους",
+          en: "Multi-tier system with basic coverage for all",
+          tr: "Tüm için temel kapsama ile çok katmanlı sistem",
+        },
+        answerPoints: [
+          { party: "disy", value: 1 },
+          { party: "diko", value: 1 },
+          { party: "depa", value: 1 },
+        ],
+      },
+      {
+        answerId: 323,
+        questionId: 75,
+        answerIndex: 3,
+        answerText: {
+          el: "Ιδιωτική αγορά με ελάχιστη κρατική παρέμβαση",
+          en: "Private market with minimal state intervention",
+          tr: "Minimal devlet müdahalesi ile özel pazar",
+        },
+        answerPoints: [{ party: "elam", value: 1 }],
+      },
+      {
+        answerId: 324,
+        questionId: 75,
+        answerIndex: 4,
+        answerText: {
+          el: "Καθολική κάλυψη με δημόσιο και ιδιωτικό σύστημα",
+          en: "Universal coverage with public and private system",
+          tr: "Kamu ve özel sistemle evrensel kapsama",
+        },
+        answerPoints: [
+          { party: "edek", value: 1 },
+          { party: "greens", value: 1 },
+        ],
+      },
+      {
+        answerId: 325,
+        questionId: 75,
+        answerIndex: 5,
+        answerText: {
+          el: "Δεν ξέρω / Δεν απαντώ",
+          en: "I don't know / Prefer not to say",
+          tr: "Bilmiyorum / Cevap vermek istemiyorum",
+        },
+        answerPoints: [],
+      },
+    ],
+  },
+  {
+    questionId: 76,
+    questionIndex: 19,
+    questionTitle: {
+      el: "Πρέπει η ΕΕ να εναρμονίσει τους φορολογικούς συντελεστές μεταξύ των κρατών μελών;",
+      en: "Should the EU harmonize tax rates between member states?",
+      tr: "AB üye devletler arasında vergi oranlarını uyumlu hale getirmeli mi?",
+    },
+    questionAspect: {
+      el: "Οικονομία",
+      en: "Economy",
+      tr: "Ekonomi",
+    },
+    answers: [
+      {
+        answerId: 326,
+        questionId: 76,
+        answerIndex: 1,
+        answerText: {
+          el: "Ναι, πλήρης εναρμόνιση για δίκαιο ανταγωνισμό",
+          en: "Yes, full harmonization for fair competition",
+          tr: "Evet, adil rekabet için tam uyum",
+        },
+        answerPoints: [
+          { party: "akel", value: 1 },
+          { party: "greens", value: 1 },
+        ],
+      },
+      {
+        answerId: 327,
+        questionId: 76,
+        answerIndex: 2,
+        answerText: {
+          el: "Μερική εναρμόνιση για εταιρες και κεφάλαιο",
+          en: "Partial harmonization for corporations and capital",
+          tr: "Şirketler ve sermaye için kısmi uyum",
+        },
+        answerPoints: [
+          { party: "diko", value: 1 },
+          { party: "volt", value: 1 },
+        ],
+      },
+      {
+        answerId: 328,
+        questionId: 76,
+        answerIndex: 3,
+        answerText: {
+          el: "Κάθε κράτος ανεξάρτητα να καθορίσει",
+          en: "Each state should decide independently",
+          tr: "Her devlet bağımsız olarak karar versin",
+        },
+        answerPoints: [
+          { party: "disy", value: 1 },
+          { party: "elam", value: 1 },
+        ],
+      },
+      {
+        answerId: 329,
+        questionId: 76,
+        answerIndex: 4,
+        answerText: {
+          el: "Μείωση φόρων όλων αν υπάρχει αναγκαία ρύθμιση",
+          en: "Lower taxes for all with necessary regulation",
+          tr: "Gerekli düzenleme ile herkesle düşük vergiler",
+        },
+        answerPoints: [{ party: "edek", value: 1 }],
+      },
+      {
+        answerId: 330,
+        questionId: 76,
+        answerIndex: 5,
+        answerText: {
+          el: "Δεν ξέρω / Δεν απαντώ",
+          en: "I don't know / Prefer not to say",
+          tr: "Bilmiyorum / Cevap vermek istemiyorum",
+        },
+        answerPoints: [],
+      },
+    ],
+  },
+  {
+    questionId: 77,
+    questionIndex: 20,
+    questionTitle: {
+      el: "Πώς θα πρέπει να ρυθμιστεί η ψηφιακή τεχνολογία και τα μέσα κοινωνικής δικτύωσης;",
+      en: "How should digital technology and social media be regulated?",
+      tr: "Dijital teknoloji ve sosyal medya nasıl düzenlenmelidir?",
+    },
+    questionAspect: {
+      el: "Ευρωπαϊκή Ένωση",
+      en: "European Union",
+      tr: "Avrupa Birliği",
+    },
+    answers: [
+      {
+        answerId: 331,
+        questionId: 77,
+        answerIndex: 1,
+        answerText: {
+          el: "Αυστηρή ρύθμιση για προστασία δεδομένων και ασφάλειας",
+          en: "Strict regulation for data protection and safety",
+          tr: "Veri koruması ve güvenliği için sıkı düzenleme",
+        },
+        answerPoints: [
+          { party: "greens", value: 1 },
+          { party: "akel", value: 1 },
+          { party: "volt", value: 1 },
+        ],
+      },
+      {
+        answerId: 332,
+        questionId: 77,
+        answerIndex: 2,
+        answerText: {
+          el: "Ισορροπημένη ρύθμιση με ακόμα καινοτομία",
+          en: "Balanced regulation allowing for innovation",
+          tr: "İnovasyona izin veren dengeli düzenleme",
+        },
+        answerPoints: [
+          { party: "disy", value: 1 },
+          { party: "diko", value: 1 },
+          { party: "depa", value: 1 },
+          { party: "edek", value: 1 },
+        ],
+      },
+      {
+        answerId: 333,
+        questionId: 77,
+        answerIndex: 3,
+        answerText: {
+          el: "Ελάχιστη ρύθμιση για ελεύθερο διαδίκτυο",
+          en: "Minimal regulation for free internet",
+          tr: "Özgür internet için minimal düzenleme",
+        },
+        answerPoints: [{ party: "elam", value: 1 }],
+      },
+      {
+        answerId: 334,
+        questionId: 77,
+        answerIndex: 4,
+        answerText: {
+          el: "Δημόσια κυριαρχία με εθνικές πλατφόρμες",
+          en: "Public sovereignty with national platforms",
+          tr: "Ulusal platformlarla kamu egemenliği",
+        },
+        answerPoints: [],
+      },
+      {
+        answerId: 335,
+        questionId: 77,
+        answerIndex: 5,
+        answerText: {
+          el: "Δεν ξέρω / Δεν απαντώ",
+          en: "I don't know / Prefer not to say",
+          tr: "Bilmiyorum / Cevap vermek istemiyorum",
+        },
+        answerPoints: [],
+      },
+    ],
+  },
+  {
+    questionId: 78,
+    questionIndex: 21,
+    questionTitle: {
+      el: "Ποια θέση έχει η Κύπρος για τη σχέση της ΕΕ με την Τουρκία;",
+      en: "What stance should Cyprus take on EU-Turkey relations?",
+      tr: "Kıbrıs AB-Türkiye ilişkilerine hangi pozisyon almalıdır?",
+    },
+    questionAspect: {
+      el: "Εξωτερική Πολιτική",
+      en: "Foreign Policy",
+      tr: "Dış Politika",
+    },
+    answers: [
+      {
+        answerId: 336,
+        questionId: 78,
+        answerIndex: 1,
+        answerText: {
+          el: "Σκληρή στάση με κυρώσεις έως ότου λυθεί το κυπριακό",
+          en: "Hard stance with sanctions until Cyprus problem is resolved",
+          tr: "Kıbrıs sorunu çözülene kadar yaptırımlarla sert tavır",
+        },
+        answerPoints: [
+          { party: "akel", value: 1 },
+          { party: "disy", value: 1 },
+        ],
+      },
+      {
+        answerId: 337,
+        questionId: 78,
+        answerIndex: 2,
+        answerText: {
+          el: "Διαλόγου και διαπραγματεύσεων με την Τουρκία",
+          en: "Dialogue and negotiations with Turkey",
+          tr: "Türkiye ile diyalog ve müzakereleri",
+        },
+        answerPoints: [
+          { party: "diko", value: 1 },
+          { party: "depa", value: 1 },
+          { party: "greens", value: 1 },
+        ],
+      },
+      {
+        answerId: 338,
+        questionId: 78,
+        answerIndex: 3,
+        answerText: {
+          el: "Ενίσχυση σχέσεων με την Τουρκία ως κύριας δύναμης της περιοχής",
+          en: "Strengthening relations with Turkey as a key regional power",
+          tr: "Türkiye ile ilişkileri bölgenin ana gücü olarak güçlendirmek",
+        },
+        answerPoints: [{ party: "volt", value: 1 }],
+      },
+      {
+        answerId: 339,
+        questionId: 78,
+        answerIndex: 4,
+        answerText: {
+          el: "Ουδέτερη θέση, κάθε κράτος τα δικά του συμφέροντα",
+          en: "Neutral stance, each country pursues its interests",
+          tr: "Tarafsız tutum, her ülke kendi çıkarlarını peşinde",
+        },
+        answerPoints: [
+          { party: "edek", value: 1 },
+          { party: "elam", value: 1 },
+        ],
+      },
+      {
+        answerId: 340,
+        questionId: 78,
+        answerIndex: 5,
+        answerText: {
+          el: "Δεν ξέρω / Δεν απαντώ",
+          en: "I don't know / Prefer not to say",
+          tr: "Bilmiyorum / Cevap vermek istemiyorum",
+        },
+        answerPoints: [],
+      },
+    ],
+  },
 ];
