@@ -1,3 +1,9 @@
 {
+  "buildCommand": "npm run build",
+  "functions": {
+    "api/**": {
+      "runtime": "nodejs24.x"
+    }
+  },
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
